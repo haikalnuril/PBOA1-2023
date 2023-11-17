@@ -1,0 +1,14 @@
+C:\Users\yovit\OneDrive\Documents\PBO\Grafik-Halaman Validasi SKPI-Halaman Data\Grafik-Halaman Validasi SKPI-Halaman Data\bin\Debug\Grafik-Halaman Validasi SKPI-Halaman Data.exe.config
+C:\Users\yovit\OneDrive\Documents\PBO\Grafik-Halaman Validasi SKPI-Halaman Data\Grafik-Halaman Validasi SKPI-Halaman Data\bin\Debug\Grafik-Halaman Validasi SKPI-Halaman Data.exe
+C:\Users\yovit\OneDrive\Documents\PBO\Grafik-Halaman Validasi SKPI-Halaman Data\Grafik-Halaman Validasi SKPI-Halaman Data\bin\Debug\Grafik-Halaman Validasi SKPI-Halaman Data.pdb
+C:\Users\yovit\OneDrive\Documents\PBO\Grafik-Halaman Validasi SKPI-Halaman Data\Grafik-Halaman Validasi SKPI-Halaman Data\obj\Debug\Grafik-Halaman Validasi SKPI-Halaman Data.csproj.AssemblyReference.cache
+C:\Users\yovit\OneDrive\Documents\PBO\Grafik-Halaman Validasi SKPI-Halaman Data\Grafik-Halaman Validasi SKPI-Halaman Data\obj\Debug\Grafik_Halaman_Validasi_SKPI_Halaman_Data.Form1.resources
+C:\Users\yovit\OneDrive\Documents\PBO\Grafik-Halaman Validasi SKPI-Halaman Data\Grafik-Halaman Validasi SKPI-Halaman Data\obj\Debug\Grafik_Halaman_Validasi_SKPI_Halaman_Data.Form2.resources
+C:\Users\yovit\OneDrive\Documents\PBO\Grafik-Halaman Validasi SKPI-Halaman Data\Grafik-Halaman Validasi SKPI-Halaman Data\obj\Debug\Grafik_Halaman_Validasi_SKPI_Halaman_Data.Form3.resources
+C:\Users\yovit\OneDrive\Documents\PBO\Grafik-Halaman Validasi SKPI-Halaman Data\Grafik-Halaman Validasi SKPI-Halaman Data\obj\Debug\Grafik_Halaman_Validasi_SKPI_Halaman_Data.Form4.resources
+C:\Users\yovit\OneDrive\Documents\PBO\Grafik-Halaman Validasi SKPI-Halaman Data\Grafik-Halaman Validasi SKPI-Halaman Data\obj\Debug\Grafik_Halaman_Validasi_SKPI_Halaman_Data.Form5.resources
+C:\Users\yovit\OneDrive\Documents\PBO\Grafik-Halaman Validasi SKPI-Halaman Data\Grafik-Halaman Validasi SKPI-Halaman Data\obj\Debug\Grafik_Halaman_Validasi_SKPI_Halaman_Data.Properties.Resources.resources
+C:\Users\yovit\OneDrive\Documents\PBO\Grafik-Halaman Validasi SKPI-Halaman Data\Grafik-Halaman Validasi SKPI-Halaman Data\obj\Debug\Grafik-Halaman Validasi SKPI-Halaman Data.csproj.GenerateResource.cache
+C:\Users\yovit\OneDrive\Documents\PBO\Grafik-Halaman Validasi SKPI-Halaman Data\Grafik-Halaman Validasi SKPI-Halaman Data\obj\Debug\Grafik-Halaman Validasi SKPI-Halaman Data.csproj.CoreCompileInputs.cache
+C:\Users\yovit\OneDrive\Documents\PBO\Grafik-Halaman Validasi SKPI-Halaman Data\Grafik-Halaman Validasi SKPI-Halaman Data\obj\Debug\Grafik-Halaman Validasi SKPI-Halaman Data.exe
+C:\Users\yovit\OneDrive\Documents\PBO\Grafik-Halaman Validasi SKPI-Halaman Data\Grafik-Halaman Validasi SKPI-Halaman Data\obj\Debug\Grafik-Halaman Validasi SKPI-Halaman Data.pdb
