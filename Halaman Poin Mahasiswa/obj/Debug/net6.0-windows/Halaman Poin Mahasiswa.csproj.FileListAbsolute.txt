@@ -1,0 +1,17 @@
+C:\Users\Carenina Zahra\source\repos\Halaman Poin Mahasiswa\bin\Debug\net6.0-windows\Halaman Poin Mahasiswa.exe
+C:\Users\Carenina Zahra\source\repos\Halaman Poin Mahasiswa\bin\Debug\net6.0-windows\Halaman Poin Mahasiswa.deps.json
+C:\Users\Carenina Zahra\source\repos\Halaman Poin Mahasiswa\bin\Debug\net6.0-windows\Halaman Poin Mahasiswa.runtimeconfig.json
+C:\Users\Carenina Zahra\source\repos\Halaman Poin Mahasiswa\bin\Debug\net6.0-windows\Halaman Poin Mahasiswa.dll
+C:\Users\Carenina Zahra\source\repos\Halaman Poin Mahasiswa\bin\Debug\net6.0-windows\Halaman Poin Mahasiswa.pdb
+C:\Users\Carenina Zahra\source\repos\Halaman Poin Mahasiswa\obj\Debug\net6.0-windows\Halaman_Poin_Mahasiswa.Form1.resources
+C:\Users\Carenina Zahra\source\repos\Halaman Poin Mahasiswa\obj\Debug\net6.0-windows\Halaman_Poin_Mahasiswa.Properties.Resources.resources
+C:\Users\Carenina Zahra\source\repos\Halaman Poin Mahasiswa\obj\Debug\net6.0-windows\Halaman Poin Mahasiswa.csproj.GenerateResource.cache
+C:\Users\Carenina Zahra\source\repos\Halaman Poin Mahasiswa\obj\Debug\net6.0-windows\Halaman Poin Mahasiswa.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Carenina Zahra\source\repos\Halaman Poin Mahasiswa\obj\Debug\net6.0-windows\Halaman Poin Mahasiswa.AssemblyInfoInputs.cache
+C:\Users\Carenina Zahra\source\repos\Halaman Poin Mahasiswa\obj\Debug\net6.0-windows\Halaman Poin Mahasiswa.AssemblyInfo.cs
+C:\Users\Carenina Zahra\source\repos\Halaman Poin Mahasiswa\obj\Debug\net6.0-windows\Halaman Poin Mahasiswa.csproj.CoreCompileInputs.cache
+C:\Users\Carenina Zahra\source\repos\Halaman Poin Mahasiswa\obj\Debug\net6.0-windows\Halaman Poin Mahasiswa.dll
+C:\Users\Carenina Zahra\source\repos\Halaman Poin Mahasiswa\obj\Debug\net6.0-windows\refint\Halaman Poin Mahasiswa.dll
+C:\Users\Carenina Zahra\source\repos\Halaman Poin Mahasiswa\obj\Debug\net6.0-windows\Halaman Poin Mahasiswa.pdb
+C:\Users\Carenina Zahra\source\repos\Halaman Poin Mahasiswa\obj\Debug\net6.0-windows\Halaman Poin Mahasiswa.genruntimeconfig.cache
+C:\Users\Carenina Zahra\source\repos\Halaman Poin Mahasiswa\obj\Debug\net6.0-windows\ref\Halaman Poin Mahasiswa.dll
