@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lenov\\Downloads\\Login\\Login.csproj": {}
+    "D:\\KULIAH SISTEM INFORMASI\\SEMESTER 3\\PBO\\Projek\\PBOA1-2023\\Login\\Login.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lenov\\Downloads\\Login\\Login.csproj": {
+    "D:\\KULIAH SISTEM INFORMASI\\SEMESTER 3\\PBO\\Projek\\PBOA1-2023\\Login\\Login.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lenov\\Downloads\\Login\\Login.csproj",
+        "projectUniqueName": "D:\\KULIAH SISTEM INFORMASI\\SEMESTER 3\\PBO\\Projek\\PBOA1-2023\\Login\\Login.csproj",
         "projectName": "Login",
-        "projectPath": "C:\\Users\\Lenov\\Downloads\\Login\\Login.csproj",
-        "packagesPath": "C:\\Users\\Lenov\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lenov\\Downloads\\Login\\obj\\",
+        "projectPath": "D:\\KULIAH SISTEM INFORMASI\\SEMESTER 3\\PBO\\Projek\\PBOA1-2023\\Login\\Login.csproj",
+        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+        "outputPath": "D:\\KULIAH SISTEM INFORMASI\\SEMESTER 3\\PBO\\Projek\\PBOA1-2023\\Login\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Lenov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
