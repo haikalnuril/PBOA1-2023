@@ -1,0 +1,66 @@
+C:\Users\ASUS\Documents\Visual Studio Lita\Fasilkom Point\Fasilkom Point\bin\Debug\net6.0-windows\Fasilkom Point.exe
+C:\Users\ASUS\Documents\Visual Studio Lita\Fasilkom Point\Fasilkom Point\bin\Debug\net6.0-windows\Fasilkom Point.deps.json
+C:\Users\ASUS\Documents\Visual Studio Lita\Fasilkom Point\Fasilkom Point\bin\Debug\net6.0-windows\Fasilkom Point.runtimeconfig.json
+C:\Users\ASUS\Documents\Visual Studio Lita\Fasilkom Point\Fasilkom Point\bin\Debug\net6.0-windows\Fasilkom Point.dll
+C:\Users\ASUS\Documents\Visual Studio Lita\Fasilkom Point\Fasilkom Point\bin\Debug\net6.0-windows\Fasilkom Point.pdb
+C:\Users\ASUS\Documents\Visual Studio Lita\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom_Point.Form1.resources
+C:\Users\ASUS\Documents\Visual Studio Lita\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom_Point.Form2.resources
+C:\Users\ASUS\Documents\Visual Studio Lita\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom_Point.Properties.Resources.resources
+C:\Users\ASUS\Documents\Visual Studio Lita\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom Point.csproj.GenerateResource.cache
+C:\Users\ASUS\Documents\Visual Studio Lita\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom Point.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\Documents\Visual Studio Lita\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom Point.AssemblyInfoInputs.cache
+C:\Users\ASUS\Documents\Visual Studio Lita\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom Point.AssemblyInfo.cs
+C:\Users\ASUS\Documents\Visual Studio Lita\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom Point.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Documents\Visual Studio Lita\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom Point.dll
+C:\Users\ASUS\Documents\Visual Studio Lita\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\refint\Fasilkom Point.dll
+C:\Users\ASUS\Documents\Visual Studio Lita\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom Point.pdb
+C:\Users\ASUS\Documents\Visual Studio Lita\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom Point.genruntimeconfig.cache
+C:\Users\ASUS\Documents\Visual Studio Lita\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\ref\Fasilkom Point.dll
+C:\Users\ASUS\Documents\Visual Studio Lita\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom_Point.Form3.resources
+C:\Users\ASUS\Documents\Visual Studio Lita\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom_Point.Form4.resources
+C:\Users\satri\Downloads\Fasilkom Point\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom Point.dll
+C:\Users\satri\Downloads\Fasilkom Point\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\refint\Fasilkom Point.dll
+C:\Users\satri\Downloads\Fasilkom Point\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom Point.pdb
+C:\Users\satri\Downloads\Fasilkom Point\Fasilkom Point\Fasilkom Point\bin\Debug\net6.0-windows\Fasilkom Point.exe
+C:\Users\satri\Downloads\Fasilkom Point\Fasilkom Point\Fasilkom Point\bin\Debug\net6.0-windows\Fasilkom Point.deps.json
+C:\Users\satri\Downloads\Fasilkom Point\Fasilkom Point\Fasilkom Point\bin\Debug\net6.0-windows\Fasilkom Point.runtimeconfig.json
+C:\Users\satri\Downloads\Fasilkom Point\Fasilkom Point\Fasilkom Point\bin\Debug\net6.0-windows\Fasilkom Point.dll
+C:\Users\satri\Downloads\Fasilkom Point\Fasilkom Point\Fasilkom Point\bin\Debug\net6.0-windows\Fasilkom Point.pdb
+C:\Users\satri\Downloads\Fasilkom Point\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom_Point.Form1.resources
+C:\Users\satri\Downloads\Fasilkom Point\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom_Point.Properties.Resources.resources
+C:\Users\satri\Downloads\Fasilkom Point\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom Point.csproj.GenerateResource.cache
+C:\Users\satri\Downloads\Fasilkom Point\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom Point.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\satri\Downloads\Fasilkom Point\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom Point.AssemblyInfoInputs.cache
+C:\Users\satri\Downloads\Fasilkom Point\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom Point.AssemblyInfo.cs
+C:\Users\satri\Downloads\Fasilkom Point\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom Point.csproj.CoreCompileInputs.cache
+C:\Users\satri\Downloads\Fasilkom Point\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom Point.genruntimeconfig.cache
+C:\Users\satri\Downloads\Fasilkom Point\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\ref\Fasilkom Point.dll
+C:\Users\satri\Downloads\Fasilkom Point\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom_Point.LihatSKPI.resources
+C:\Users\satri\Downloads\Fasilkom Point\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom_Point.RekapDataSKPI.resources
+C:\Users\satri\Downloads\Fasilkom Point\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom_Point.EntriDataKegiatan.resources
+C:\Users\satri\Downloads\Fasilkom Point\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom_Point.EntriDataPrestasi.resources
+C:\Users\satri\Downloads\Fasilkom Point\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom_Point.EntryData.resources
+C:\Users\satri\Downloads\Fasilkom Point\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom_Point.EntryDataSertifikasi.resources
+C:\Kuliah\Semester 3\Pemrograman Berbasis Objek (PBO)\Fasilkom Point\Fasilkom Point\Fasilkom Point\bin\Debug\net6.0-windows\Fasilkom Point.exe
+C:\Kuliah\Semester 3\Pemrograman Berbasis Objek (PBO)\Fasilkom Point\Fasilkom Point\Fasilkom Point\bin\Debug\net6.0-windows\Fasilkom Point.deps.json
+C:\Kuliah\Semester 3\Pemrograman Berbasis Objek (PBO)\Fasilkom Point\Fasilkom Point\Fasilkom Point\bin\Debug\net6.0-windows\Fasilkom Point.runtimeconfig.json
+C:\Kuliah\Semester 3\Pemrograman Berbasis Objek (PBO)\Fasilkom Point\Fasilkom Point\Fasilkom Point\bin\Debug\net6.0-windows\Fasilkom Point.dll
+C:\Kuliah\Semester 3\Pemrograman Berbasis Objek (PBO)\Fasilkom Point\Fasilkom Point\Fasilkom Point\bin\Debug\net6.0-windows\Fasilkom Point.pdb
+C:\Kuliah\Semester 3\Pemrograman Berbasis Objek (PBO)\Fasilkom Point\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom_Point.EntriDataKegiatan.resources
+C:\Kuliah\Semester 3\Pemrograman Berbasis Objek (PBO)\Fasilkom Point\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom_Point.EntriDataPrestasi.resources
+C:\Kuliah\Semester 3\Pemrograman Berbasis Objek (PBO)\Fasilkom Point\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom_Point.EntryData.resources
+C:\Kuliah\Semester 3\Pemrograman Berbasis Objek (PBO)\Fasilkom Point\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom_Point.EntryDataSertifikasi.resources
+C:\Kuliah\Semester 3\Pemrograman Berbasis Objek (PBO)\Fasilkom Point\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom_Point.Form1.resources
+C:\Kuliah\Semester 3\Pemrograman Berbasis Objek (PBO)\Fasilkom Point\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom_Point.LihatSKPI.resources
+C:\Kuliah\Semester 3\Pemrograman Berbasis Objek (PBO)\Fasilkom Point\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom_Point.Properties.Resources.resources
+C:\Kuliah\Semester 3\Pemrograman Berbasis Objek (PBO)\Fasilkom Point\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom_Point.RekapDataSKPI.resources
+C:\Kuliah\Semester 3\Pemrograman Berbasis Objek (PBO)\Fasilkom Point\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom Point.csproj.GenerateResource.cache
+C:\Kuliah\Semester 3\Pemrograman Berbasis Objek (PBO)\Fasilkom Point\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom Point.GeneratedMSBuildEditorConfig.editorconfig
+C:\Kuliah\Semester 3\Pemrograman Berbasis Objek (PBO)\Fasilkom Point\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom Point.AssemblyInfoInputs.cache
+C:\Kuliah\Semester 3\Pemrograman Berbasis Objek (PBO)\Fasilkom Point\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom Point.AssemblyInfo.cs
+C:\Kuliah\Semester 3\Pemrograman Berbasis Objek (PBO)\Fasilkom Point\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom Point.csproj.CoreCompileInputs.cache
+C:\Kuliah\Semester 3\Pemrograman Berbasis Objek (PBO)\Fasilkom Point\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom Point.dll
+C:\Kuliah\Semester 3\Pemrograman Berbasis Objek (PBO)\Fasilkom Point\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\refint\Fasilkom Point.dll
+C:\Kuliah\Semester 3\Pemrograman Berbasis Objek (PBO)\Fasilkom Point\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom Point.pdb
+C:\Kuliah\Semester 3\Pemrograman Berbasis Objek (PBO)\Fasilkom Point\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\Fasilkom Point.genruntimeconfig.cache
+C:\Kuliah\Semester 3\Pemrograman Berbasis Objek (PBO)\Fasilkom Point\Fasilkom Point\Fasilkom Point\obj\Debug\net6.0-windows\ref\Fasilkom Point.dll
