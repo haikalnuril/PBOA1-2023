@@ -19,12 +19,14 @@ namespace Grafik_Halaman_Validasi_SKPI_Halaman_Data
 
         private void button2_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Form4 form4 = new Form4();
             form4.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Form1 form1 = new Form1();
             form1.Show();
         }
