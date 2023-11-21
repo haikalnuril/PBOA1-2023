@@ -19,6 +19,7 @@ namespace Grafik_Halaman_Validasi_SKPI_Halaman_Data
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Form1 form1 = new Form1();
             form1.Show();
         }
