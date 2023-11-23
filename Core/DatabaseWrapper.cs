@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataSKPIMahasiswa.App.Core
+namespace ngikutin_nama_folder_besar.App.Core
 {
 	internal class DatabaseWrapper
 	{
