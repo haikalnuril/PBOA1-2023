@@ -14,7 +14,6 @@ namespace FASILKOMPOINT
 {
     public partial class Form1 : Form
     {
-        public string username;
         public Form1()
         {
             InitializeComponent();
