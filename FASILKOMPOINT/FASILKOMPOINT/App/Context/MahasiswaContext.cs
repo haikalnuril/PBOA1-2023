@@ -28,7 +28,7 @@ namespace FASILKOMPOINT.App.Context
         }
         public static DataTable showSearchDataSKPIMahasiswa(string nama)
         {
-            string query = $"SELECT mahasiswa.nama AS Nama, {table}.mahasiswa_username AS NIM, prodi.nama_prodi AS Prodi, SUM(poin.poin) AS Poin FROM {table} JOIN mahasiswa ON mahasiswa.username = {table}.mahasiswa_username JOIN prodi ON mahasiswa.prodi_id_prodi = prodi.id_prodi JOIN poin ON {table}.poin_id_poin = poin.id_poin WHERE mahasiswa.nama ILIKE @nama||'%' AND {table}.is_acc = 'disetujui' GROUP BY {table}.mahasiswa_username, mahasiswa.nama, prodi.nama_prodi;";
+            string query = $"SELECT mahasiswa.nama AS Nama, {table}.mahasiswa_username AS NIM, prodi.nama_prodi AS Prodi, SUM(poin.poin) AS Poin FROM {table} JOIN mahasiswa ON mahasiswa.username = {table}.mahasiswa_username JOIN prodi ON mahasiswa.prodi_id_prodi = prodi.id_prodi JOIN poin ON {table}.poin_id_poin = poin.id_poin WHERE mahasiswa.nama ILIKE '%'||@nama||'%' AND {table}.is_acc = 'disetujui' GROUP BY {table}.mahasiswa_username, mahasiswa.nama, prodi.nama_prodi;";
             NpgsqlParameter[] parameters = 
             {
                 new NpgsqlParameter("@nama", NpgsqlDbType.Varchar){Value = nama},
