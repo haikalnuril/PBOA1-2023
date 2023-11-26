@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\asus\\source\\repos\\FASILKOMPOINT\\FASILKOMPOINT\\FASILKOMPOINT.csproj": {}
+    "D:\\FASILKOMPOINT\\FASILKOMPOINT\\FASILKOMPOINT\\FASILKOMPOINT.csproj": {}
   },
   "projects": {
-    "C:\\Users\\asus\\source\\repos\\FASILKOMPOINT\\FASILKOMPOINT\\FASILKOMPOINT.csproj": {
+    "D:\\FASILKOMPOINT\\FASILKOMPOINT\\FASILKOMPOINT\\FASILKOMPOINT.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\asus\\source\\repos\\FASILKOMPOINT\\FASILKOMPOINT\\FASILKOMPOINT.csproj",
+        "projectUniqueName": "D:\\FASILKOMPOINT\\FASILKOMPOINT\\FASILKOMPOINT\\FASILKOMPOINT.csproj",
         "projectName": "FASILKOMPOINT",
-        "projectPath": "C:\\Users\\asus\\source\\repos\\FASILKOMPOINT\\FASILKOMPOINT\\FASILKOMPOINT.csproj",
+        "projectPath": "D:\\FASILKOMPOINT\\FASILKOMPOINT\\FASILKOMPOINT\\FASILKOMPOINT.csproj",
         "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\asus\\source\\repos\\FASILKOMPOINT\\FASILKOMPOINT\\obj\\",
+        "outputPath": "D:\\FASILKOMPOINT\\FASILKOMPOINT\\FASILKOMPOINT\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
