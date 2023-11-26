@@ -32,6 +32,16 @@ namespace FASILKOMPOINT.App.Context
             DataTable dataMahasiswa = queryExecutor(query);
             return dataMahasiswa;
         }
+        public static DataTable showSearchDataSKPIMahasiswa(string username)
+        {
+            string query = $"SELECT mahasiswa.nama AS Nama, {table}.mahasiswa_username AS NIM, prodi.nama_prodi AS Prodi, SUM(poin.poin) AS Poin FROM {table} JOIN mahasiswa ON mahasiswa.username = {table}.mahasiswa_username JOIN prodi ON mahasiswa.prodi_id_prodi = prodi.id_prodi JOIN poin ON {table}.poin_id_poin = poin.id_poin WHERE {table}.mahasiswa_username = @username GROUP BY {table}.mahasiswa_username, mahasiswa.nama, prodi.nama_prodi;";
+            NpgsqlParameter[] parameters = 
+            {
+                new NpgsqlParameter("@username", NpgsqlDbType.Varchar){Value = username},
+            };
+            DataTable dataMahasiswa = queryExecutor(query, parameters);
+            return dataMahasiswa;
+        }
         public static DataTable showDetailSKPI(string username)
         {
             string query = $"";
