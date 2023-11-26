@@ -28,7 +28,7 @@ namespace FASILKOMPOINT.App.Context
         }
         public static DataTable showValidasiSKPI()
         {
-            string query = $"SELECT mahasiswa.nama AS Nama_Mahasiswa, {table}.mahasiswa_username AS NIM, prodi.nama_prodi AS Prodi FROM {table} JOIN mahasiswa ON mahasiswa.username = {table}.mahasiswa_username JOIN prodi ON mahasiswa.prodi_id_prodi = prodi.id_prodi";
+            string query = $"SELECT mahasiswa.nama AS Nama_Mahasiswa, {table}.mahasiswa_username AS NIM, prodi.nama_prodi AS Prodi FROM {table} JOIN mahasiswa ON mahasiswa.username = {table}.mahasiswa_username JOIN prodi ON mahasiswa.prodi_id_prodi = prodi.id_prodi WHERE is_acc = 'menunggu'";
             DataTable dataMahasiswa = queryExecutor(query);
             return dataMahasiswa;
         }
