@@ -14,6 +14,7 @@ namespace FASILKOMPOINT
 {
     public partial class Form1 : Form
     {
+        public string username;
         public Form1()
         {
             InitializeComponent();
@@ -27,6 +28,45 @@ namespace FASILKOMPOINT
         private void tabelDataSKPIMahasiswa_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+        private void SearchNama_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                ExecuteSearch();
+                e.Handled = true;
+            }
+        }
+        private void ExecuteSearch()
+        {
+            string nama = SearchNama.Text;
+            try
+            {
+                if (string.IsNullOrWhiteSpace(nama))
+                {
+                    tabelDataSKPIMahasiswa.DataSource = MahasiswaContext.showDataSKPIMahasiswa();
+                }
+                else
+                {
+                    tabelDataSKPIMahasiswa.DataSource = MahasiswaContext.showSearchDataSKPIMahasiswa(nama);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex, "Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void SearchNama_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(SearchNama.Text))
+            {
+                tabelDataSKPIMahasiswa.DataSource = MahasiswaContext.showDataSKPIMahasiswa();
+            }
+        }
+
+        private void ButtonSearch_Click(object sender, EventArgs e)
+        {
+            ExecuteSearch();
         }
     }
 }
