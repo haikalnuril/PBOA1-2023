@@ -1,9 +1,9 @@
 ﻿using FASILKOMPOINT.App.Context;
-using FASILKOMPOINT.App.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,37 +14,59 @@ namespace FASILKOMPOINT
 {
     public partial class Form1 : Form
     {
+        public string username;
         public Form1()
         {
             InitializeComponent();
+            tabelDataSKPIMahasiswa.DataSource = MahasiswaContext.showDataSKPIMahasiswa();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
-
-        private void masukbutton_Click(object sender, EventArgs e)
+        private void tabelDataSKPIMahasiswa_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            string username = usernametb.Text;
-            string password = passwordtb.Text;
-            int id_role = UserContext.CekLogin(username, password);
-            if (id_role == 1)
+
+        }
+        private void SearchNama_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
             {
-                MessageBox.Show("Halo SKPI", "Halo", MessageBoxButtons.OK);
-
+                ExecuteSearch();
+                e.Handled = true;
             }
-            else if (id_role == 2)
+        }
+        private void ExecuteSearch()
+        {
+            string nama = SearchNama.Text;
+            try
             {
-                MessageBox.Show("Halo Tata Usaha", "Halo", MessageBoxButtons.OK);
-
+                if (string.IsNullOrWhiteSpace(nama))
+                {
+                    tabelDataSKPIMahasiswa.DataSource = MahasiswaContext.showDataSKPIMahasiswa();
+                }
+                else
+                {
+                    tabelDataSKPIMahasiswa.DataSource = MahasiswaContext.showSearchDataSKPIMahasiswa(nama);
+                }
             }
-            else if (id_role == 3)
+            catch (Exception ex)
             {
-                MessageBox.Show("Halo Mahasiswa", "Halo", MessageBoxButtons.OK);
-
+                MessageBox.Show("Error: " + ex, "Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+        private void SearchNama_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(SearchNama.Text))
+            {
+                tabelDataSKPIMahasiswa.DataSource = MahasiswaContext.showDataSKPIMahasiswa();
+            }
+        }
 
+        private void ButtonSearch_Click(object sender, EventArgs e)
+        {
+            ExecuteSearch();
         }
     }
 }

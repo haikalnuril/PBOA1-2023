@@ -1,73 +1,50 @@
-﻿//using fasilkompoint.app.context;
-//using system;
-//using system.collections.generic;
-//using system.componentmodel;
-//using system.data;
-//using system.diagnostics.eventing.reader;
-//using system.drawing;
-//using system.linq;
-//using system.text;
-//using system.threading.tasks;
-//using system.windows.forms;
+﻿using FASILKOMPOINT.App.Context;
+using FASILKOMPOINT.App.Models;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
-//namespace fasilkompoint
-//{
-//    public partial class form2 : form
-//    {
-//        public string username;
-//        public form2()
-//        {
-//            initializecomponent();
-//            tabeldataskpimahasiswa.datasource = mahasiswacontext.showdataskpimahasiswa();
-//            ///tabeldataskpimahasiswa.datasource = aktivitaskeikutsertaancontext.showkeikutsertaan("222410101002", 601);
-//        }
+namespace FASILKOMPOINT
+{
+    public partial class Form2 : Form
+    {
+        public Form2()
+        {
+            InitializeComponent();
+        }
 
-//        private void form1_load(object sender, eventargs e)
-//        {
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
-//        }
-//        private void tabeldataskpimahasiswa_cellcontentclick(object sender, datagridviewcelleventargs e)
-//        {
+        }
 
-//        }
-//        private void searchnama_keypress(object sender, keypresseventargs e)
-//        {
-//            if (e.keychar == (char)keys.enter)
-//            {
-//                executesearch();
-//                e.handled = true;
-//            }
-//        }
-//        private void executesearch()
-//        {
-//            string nama = searchnama.text;
-//            try
-//            {
-//                if (string.isnullorwhitespace(nama))
-//                {
-//                    tabeldataskpimahasiswa.datasource = mahasiswacontext.showdataskpimahasiswa();
-//                }
-//                else
-//                {
-//                    tabeldataskpimahasiswa.datasource = mahasiswacontext.showsearchdataskpimahasiswa(nama);
-//                }
-//            }
-//            catch (exception ex)
-//            {
-//                messagebox.show("error: " + ex, "kesalahan", messageboxbuttons.ok, messageboxicon.error);
-//            }
-//        }
-//        private void searchnama_textchanged(object sender, eventargs e)
-//        {
-//            if (string.isnullorwhitespace(searchnama.text))
-//            {
-//                tabeldataskpimahasiswa.datasource = mahasiswacontext.showdataskpimahasiswa();
-//            }
-//        }
+        private void masukbutton_Click(object sender, EventArgs e)
+        {
+            string username = usernametb.Text;
+            string password = passwordtb.Text;
+            int id_role = UserContext.CekLogin(username, password);
+            if (id_role == 1)
+            {
+                MessageBox.Show("Halo SKPI", "Halo", MessageBoxButtons.OK);
 
-//        private void buttonsearch_click(object sender, eventargs e)
-//        {
-//            executesearch();
-//        }
-//    }
-//}
+            }
+            else if (id_role == 2)
+            {
+                MessageBox.Show("Halo Tata Usaha", "Halo", MessageBoxButtons.OK);
+
+            }
+            else if (id_role == 3)
+            {
+                MessageBox.Show("Halo Mahasiswa", "Halo", MessageBoxButtons.OK);
+
+            }
+
+        }
+    }
+}

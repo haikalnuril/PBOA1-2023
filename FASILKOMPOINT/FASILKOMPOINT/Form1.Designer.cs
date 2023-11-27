@@ -28,54 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
-            usernametb = new TextBox();
-            passwordtb = new TextBox();
-            masukbutton = new Button();
+            tabelDataSKPIMahasiswa = new DataGridView();
+            SearchNama = new TextBox();
+            ButtonSearch = new Button();
+            ((System.ComponentModel.ISupportInitialize)tabelDataSKPIMahasiswa).BeginInit();
             SuspendLayout();
             // 
-            // usernametb
+            // tabelDataSKPIMahasiswa
             // 
-            usernametb.Location = new Point(234, 173);
-            usernametb.Name = "usernametb";
-            usernametb.Size = new Size(248, 27);
-            usernametb.TabIndex = 0;
+            tabelDataSKPIMahasiswa.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            tabelDataSKPIMahasiswa.Location = new Point(12, 89);
+            tabelDataSKPIMahasiswa.Name = "tabelDataSKPIMahasiswa";
+            tabelDataSKPIMahasiswa.RowHeadersWidth = 51;
+            tabelDataSKPIMahasiswa.RowTemplate.Height = 29;
+            tabelDataSKPIMahasiswa.Size = new Size(865, 351);
+            tabelDataSKPIMahasiswa.TabIndex = 0;
             // 
-            // passwordtb
+            // SearchNama
             // 
-            passwordtb.Location = new Point(234, 230);
-            passwordtb.Name = "passwordtb";
-            passwordtb.Size = new Size(248, 27);
-            passwordtb.TabIndex = 1;
+            SearchNama.Cursor = Cursors.IBeam;
+            SearchNama.Location = new Point(41, 44);
+            SearchNama.Name = "SearchNama";
+            SearchNama.Size = new Size(214, 27);
+            SearchNama.TabIndex = 1;
+            SearchNama.TextChanged += SearchNama_TextChanged;
+            SearchNama.KeyPress += SearchNama_KeyPress;
             // 
-            // masukbutton
+            // ButtonSearch
             // 
-            masukbutton.Location = new Point(442, 310);
-            masukbutton.Name = "masukbutton";
-            masukbutton.Size = new Size(94, 29);
-            masukbutton.TabIndex = 2;
-            masukbutton.Text = "button1";
-            masukbutton.UseVisualStyleBackColor = true;
-            masukbutton.Click += masukbutton_Click;
+            ButtonSearch.Location = new Point(261, 42);
+            ButtonSearch.Name = "ButtonSearch";
+            ButtonSearch.Size = new Size(94, 29);
+            ButtonSearch.TabIndex = 2;
+            ButtonSearch.Text = "Cari";
+            ButtonSearch.UseVisualStyleBackColor = true;
+            ButtonSearch.Click += ButtonSearch_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(masukbutton);
-            Controls.Add(passwordtb);
-            Controls.Add(usernametb);
+            AutoSize = true;
+            ClientSize = new Size(889, 469);
+            Controls.Add(ButtonSearch);
+            Controls.Add(SearchNama);
+            Controls.Add(tabelDataSKPIMahasiswa);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)tabelDataSKPIMahasiswa).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private TextBox usernametb;
-        private TextBox passwordtb;
-        private Button masukbutton;
+        private DataGridView tabelDataSKPIMahasiswa;
+        private TextBox SearchNama;
+        private Button ButtonSearch;
     }
 }
