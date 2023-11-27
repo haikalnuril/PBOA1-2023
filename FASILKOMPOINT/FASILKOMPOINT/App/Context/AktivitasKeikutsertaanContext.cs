@@ -18,7 +18,7 @@ namespace FASILKOMPOINT.App.Context
 
         public static DataTable showKeikutsertaan(string username, int kategori)
         {
-            string query = $"SELECT {table}.nama_kegiatan as Kegiatan, {table}.tanggal as Tanggal, {table}.file_bukti as Bukti, {table}.jenis_kepesertaan as Kepesertaan, {table}.level_tingkat as Tingkat, poin.poin as Poin FROM {table} JOIN poin ON poin.id_poin = {table}.poin_id_poin WHERE {table}.mahasiswa_username = @username and {table}.kategori_id_kategori = @kategori";
+            string query = $"SELECT {table}.nama_kegiatan as Kegiatan, {table}.tanggal as Tanggal, {table}.file_bukti as Bukti, {table}.jenis_kepesertaan as Kepesertaan, {table}.level_tingkat as Tingkat, poin.poin as Poin FROM {table} JOIN poin ON poin.id_poin = {table}.poin_id_poin WHERE {table}.mahasiswa_username = @username AND {table}.kategori_id_kategori = @kategori AND ({table}.is_acc = 'menunggu' or {table}.is_acc = 'ditolak');";
             NpgsqlParameter[] parameters =
             {
                 new NpgsqlParameter("@kategori", NpgsqlDbType.Integer){Value = kategori},
@@ -58,6 +58,17 @@ namespace FASILKOMPOINT.App.Context
                 new NpgsqlParameter("@is_acc", NpgsqlDbType.Varchar){Value = aktivitasKeikutsertaanEdit.is_acc}
             };
             commandExecutor(query, parameters);
+        }
+        public DataTable showRekapKeikutsertaan(string username, int kategori)
+        {
+            string query = $"SELECT {table}.nama_kegiatan as Kegiatan, {table}.tanggal as Tanggal, {table}.file_bukti as Bukti, {table}.jenis_kepesertaan as Kepesertaan, {table}.level_tingkat as Tingkat, poin.poin as Poin FROM {table} JOIN poin ON poin.id_poin = {table}.poin_id_poin WHERE {table}.mahasiswa_username = @username and {table}.kategori_id_kategori = @kategori and {table}.is_acc = 'disetujui';";
+            NpgsqlParameter[] parameters =
+            {
+                new NpgsqlParameter("@kategori", NpgsqlDbType.Integer){Value = kategori},
+                new NpgsqlParameter("@username", NpgsqlDbType.Varchar){Value = username},
+            };
+            DataTable dataAktivitas = queryExecutor(query, parameters);
+            return dataAktivitas;
         }
     }
 }

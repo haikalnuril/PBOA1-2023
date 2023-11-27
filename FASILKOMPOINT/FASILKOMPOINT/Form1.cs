@@ -19,6 +19,7 @@ namespace FASILKOMPOINT
         {
             InitializeComponent();
             tabelDataSKPIMahasiswa.DataSource = MahasiswaContext.showDataSKPIMahasiswa();
+            ///tabelDataSKPIMahasiswa.DataSource = AktivitasKeikutsertaanContext.showKeikutsertaan("222410101002", 601);
         }
 
         private void Form1_Load(object sender, EventArgs e)
