@@ -16,7 +16,7 @@ namespace FASILKOMPOINT.App.Models
         public string nama { get; set; }
         [ForeignKey("M_Prodi")]
         public string prodi_id_prodi { get; set; }
-        [ForeignKey("M_USER")]
-        public int user_id { get; set; }
+        [ForeignKey("M_User")]
+        public int user_id_user { get; set; }
     }
 }
