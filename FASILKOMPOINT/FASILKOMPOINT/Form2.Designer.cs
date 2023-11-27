@@ -50,6 +50,7 @@ namespace FASILKOMPOINT
             passwordtb.Name = "passwordtb";
             passwordtb.Size = new Size(248, 27);
             passwordtb.TabIndex = 1;
+            passwordtb.KeyPress += passwordtb_KeyPress;
             // 
             // masukbutton
             // 

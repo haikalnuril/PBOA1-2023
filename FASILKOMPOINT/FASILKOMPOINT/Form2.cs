@@ -46,5 +46,15 @@ namespace FASILKOMPOINT
             }
 
         }
+
+        private void passwordtb_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void passwordtb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
