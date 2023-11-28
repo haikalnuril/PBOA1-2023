@@ -22,8 +22,9 @@ namespace FASILKOMPOINT.App.Context
             static string table = "aktivitas";
 
         public static DataTable showSertifikasi(string username, int kategori)
-        { 
-            string query = $"SELECT {table}.judul_sertifikasi as Judul, {table}.tanggal as Tanggal, {table}.file_bukti as Bukti, {table}.tingkat_penyelenggara as Tingkat_Penyelenggara, {table}.nama_penyelenggara as Nama_Penyelenggara, poin.poin as Poin FROM {table} JOIN poin ON poin.id_poin = {table}.poin_id_poin WHERE {table}.mahasiswa_username = @username AND {table}.kategori_id_kategori = @kategori AND ({table}.is_acc = 'menunggu' or {table}.is_acc = 'ditolak');";
+        {
+            string query = $"SELECT ROW_NUMBER() OVER (ORDER BY {table}.tanggal) as No, {table}.judul_sertifikasi as judul_sertifikasi, CONCAT ('Tanggal: ', {table}.tanggal, '\r\n', 'Tingkat Penyelenggara: ', {table}.tingkat_penyelenggara, '\r\n', 'Nama Penyelenggara: ', {table}.nama_penyelenggara) AS Keterangan, {table}.file_bukti AS Bukti, poin.poin as Poin FROM {table} JOIN poin ON poin.id_poin = {table}.poin_id_poin WHERE {table}.mahasiswa_username = @username AND {table}.kategori_id_kategori = @kategori AND ({table}.is_acc = 'menunggu' or {table}.is_acc = 'ditolak')";
+            ///string query = $"SELECT {table}.judul_sertifikasi as Judul, {table}.tanggal as Tanggal, {table}.file_bukti as Bukti, {table}.tingkat_penyelenggara as Tingkat_Penyelenggara, {table}.nama_penyelenggara as Nama_Penyelenggara, poin.poin as Poin FROM {table} JOIN poin ON poin.id_poin = {table}.poin_id_poin WHERE {table}.mahasiswa_username = @username AND {table}.kategori_id_kategori = @kategori AND ({table}.is_acc = 'menunggu' or {table}.is_acc = 'ditolak');";
             NpgsqlParameter[] parameters =
             {
                 new NpgsqlParameter("@kategori", NpgsqlDbType.Integer){Value = kategori},

@@ -18,7 +18,7 @@ namespace FASILKOMPOINT.App.Context
 
         public static DataTable showPrestasi(string username, int kategori)
         {
-            string query = $"SELECT ROW_NUMBER() OVER (ORDER BY {table}.tanggal) as No, {table}.nama_prestasi as Nama, CONCAT ('Tanggal: ', {table}.tanggal, '\r\n', 'Juara: ', {table}.juara, '\r\n', 'Tingkat: ', {table}.level_tingkat) AS Keterangan, {table}.url_penyelenggara AS Penyelenggara, {table}.file_bukti AS Bukti, poin.poin as Poin FROM {table} JOIN poin ON poin.id_poin = {table}.poin_id_poin WHERE {table}.mahasiswa_username = @username AND {table}.kategori_id_kategori = @kategori AND ({table}.is_acc = 'menunggu' or {table}.is_acc = 'ditolak')";
+            string query = $"SELECT ROW_NUMBER() OVER (ORDER BY {table}.tanggal) as No, {table}.nama_prestasi as Nama, CONCAT ('Tanggal: ', {table}.tanggal, '\r\n', 'Juara: ', {table}.juara, '\r\n', 'Tingkat: ', {table}.level_tingkat, '\r\n', 'Nama Dosen Pembimbing: ', {table}.nama_dosbing,'\r\n', 'No. Surat Tugas: ', {table}.no_surat) AS Keterangan, {table}.url_penyelenggara AS Penyelenggara, {table}.file_bukti AS Bukti, poin.poin as Poin FROM {table} JOIN poin ON poin.id_poin = {table}.poin_id_poin WHERE {table}.mahasiswa_username = @username AND {table}.kategori_id_kategori = @kategori AND ({table}.is_acc = 'menunggu' or {table}.is_acc = 'ditolak')";
             ///string query = $"SELECT {table}.nama_prestasi as Prestasi, {table}.tanggal as Tanggal, {table}.url_penyelenggara as Penyelenggara, {table}.juara as Juara, {table}.file_bukti as Bukti, {table}.jenis_kepesertaan as Kepesertaan, {table}.level_tingkat as Tingkat, poin.poin as Poin FROM {table} JOIN poin ON poin.id_poin = {table}.poin_id_poin WHERE {table}.mahasiswa_username = @username AND {table}.kategori_id_kategori = @kategori AND ({table}.is_acc = 'menunggu' or {table}.is_acc = 'ditolak');";
             NpgsqlParameter[] parameters =
             {
@@ -30,7 +30,7 @@ namespace FASILKOMPOINT.App.Context
         }
         public static void addPrestasi(M_Aktivitas_Prestasi aktivitasPrestasiBaru)
         {
-            string query = $"INSERT INTO {table}(id_aktivitas, nama_prestasi, tanggal, url_penyelenggara, juara, file_bukti, jenis_kepesertaan, level_tingkat, poin_id_poin, mahasiswa_username, is_acc, kategori_id_kategori) SELECT COALESCE(MAX(id_aktivitas), 0) + 1, @nama_prestasi, @tanggal, @url_penyelenggara, @juara, @file_bukti, @jenis_kepesertaan, @level_tingkat, (SELECT id_poin FROM poin WHERE butir_id_butir = (SELECT id_butir FROM butir WHERE nama_butir = @level_tingkat) AND subbutir_id_subbutir = (SELECT id_subbutir from subbutir WHERE nama_butir = @juara) AND kategori_id_kategori = @kategori), @mahasiswa_username, @is_acc, @kategori FROM {table};";
+            string query = $"INSERT INTO {table}(id_aktivitas, nama_prestasi, tanggal, url_penyelenggara, juara, file_bukti, jenis_kepesertaan, level_tingkat, poin_id_poin, mahasiswa_username, is_acc, nama_dosbing, no_surat, kategori_id_kategori) SELECT COALESCE(MAX(id_aktivitas), 0) + 1, @nama_prestasi, @tanggal, @url_penyelenggara, @juara, @file_bukti, @jenis_kepesertaan, @level_tingkat, (SELECT id_poin FROM poin WHERE butir_id_butir = (SELECT id_butir FROM butir WHERE nama_butir = @level_tingkat) AND subbutir_id_subbutir = (SELECT id_subbutir from subbutir WHERE nama_butir = @juara) AND kategori_id_kategori = @kategori), @mahasiswa_username, @is_acc, @nama_dosbing, @no_surat, @kategori FROM {table};";
             NpgsqlParameter[] parameters =
             {
                 new NpgsqlParameter("@kategori", NpgsqlDbType.Integer){Value = aktivitasPrestasiBaru.kategori_id_kategori},
@@ -42,6 +42,8 @@ namespace FASILKOMPOINT.App.Context
                 new NpgsqlParameter("@jenis_kepesertaan", NpgsqlDbType.Varchar){Value = aktivitasPrestasiBaru.jenis_kepesertaan},
                 new NpgsqlParameter("@level_tingkat", NpgsqlDbType.Varchar){Value = aktivitasPrestasiBaru.level_tingkat},
                 new NpgsqlParameter("@mahasiswa_username", NpgsqlDbType.Varchar){Value = aktivitasPrestasiBaru.mahasiswa_username},
+                new NpgsqlParameter("@nama_dosbing", NpgsqlDbType.Varchar){Value = aktivitasPrestasiBaru.nama_dosbing},
+                new NpgsqlParameter("@no_surat", NpgsqlDbType.Varchar){Value = aktivitasPrestasiBaru.no_surat},
                 new NpgsqlParameter("@is_acc", NpgsqlDbType.Varchar){Value = aktivitasPrestasiBaru.is_acc}
             };
             commandExecutor(query, parameters);

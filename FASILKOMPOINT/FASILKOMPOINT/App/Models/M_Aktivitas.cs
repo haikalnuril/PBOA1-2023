@@ -16,6 +16,8 @@ namespace FASILKOMPOINT.App.Models
         public string juara { get; set; }
         public string file_bukti { get; set; }
         public string jenis_kepesertaan { get; set; }
+        public string nama_dosbing { get; set; }
+        public string no_surat { get; set; }
         public string is_acc { get; set; }
         [ForeignKey("M_Poin")]
         public int poin_id_poin { get; set; }

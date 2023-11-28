@@ -36,7 +36,7 @@
             // 
             // tabelDataSKPIMahasiswa
             // 
-            tabelDataSKPIMahasiswa.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            tabelDataSKPIMahasiswa.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             tabelDataSKPIMahasiswa.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             tabelDataSKPIMahasiswa.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             tabelDataSKPIMahasiswa.Location = new Point(12, 89);
