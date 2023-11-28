@@ -18,7 +18,7 @@ namespace FASILKOMPOINT
         public Form1()
         {
             InitializeComponent();
-            tabelDataSKPIMahasiswa.DataSource = AktivitasSertifikasiContext.showSertifikasi("222410101008", 603);
+            tabelDataSKPIMahasiswa.DataSource = AktivitasPrestasiContext.showPrestasi("222410101001", 602);
 
             tabelDataSKPIMahasiswa.Columns["Keterangan"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
         }
