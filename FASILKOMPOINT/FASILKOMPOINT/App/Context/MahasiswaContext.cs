@@ -9,7 +9,7 @@ using FASILKOMPOINT.App.Core;
 using FASILKOMPOINT.App.Models;
 using NpgsqlTypes;
 using System.Collections;
-using static System.ComponentModel.Design.ObjectSelectorEditor;
+///using static System.ComponentModel.Design.ObjectSelectorEditor;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using System.Windows.Forms;
 using System.Drawing.Text;

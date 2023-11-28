@@ -28,66 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            tabelDataSKPIMahasiswa = new DataGridView();
-            SearchNama = new TextBox();
-            ButtonSearch = new Button();
-            ((System.ComponentModel.ISupportInitialize)tabelDataSKPIMahasiswa).BeginInit();
-            SuspendLayout();
+            this.TabelData = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.TabelData)).BeginInit();
+            this.SuspendLayout();
             // 
-            // tabelDataSKPIMahasiswa
+            // TabelData
             // 
-            tabelDataSKPIMahasiswa.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            tabelDataSKPIMahasiswa.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            tabelDataSKPIMahasiswa.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            tabelDataSKPIMahasiswa.Location = new Point(12, 89);
-            tabelDataSKPIMahasiswa.Name = "tabelDataSKPIMahasiswa";
-            tabelDataSKPIMahasiswa.RowHeadersWidth = 51;
-            tabelDataSKPIMahasiswa.RowTemplate.Height = 29;
-            tabelDataSKPIMahasiswa.Size = new Size(865, 351);
-            tabelDataSKPIMahasiswa.TabIndex = 0;
-            tabelDataSKPIMahasiswa.CellContentClick += tabelDataSKPIMahasiswa_CellContentClick;
-            // 
-            // SearchNama
-            // 
-            SearchNama.Cursor = Cursors.IBeam;
-            SearchNama.Location = new Point(41, 44);
-            SearchNama.Name = "SearchNama";
-            SearchNama.Size = new Size(214, 27);
-            SearchNama.TabIndex = 1;
-            SearchNama.TextChanged += SearchNama_TextChanged;
-            SearchNama.KeyPress += SearchNama_KeyPress;
-            // 
-            // ButtonSearch
-            // 
-            ButtonSearch.Location = new Point(261, 42);
-            ButtonSearch.Name = "ButtonSearch";
-            ButtonSearch.Size = new Size(94, 29);
-            ButtonSearch.TabIndex = 2;
-            ButtonSearch.Text = "Cari";
-            ButtonSearch.UseVisualStyleBackColor = true;
-            ButtonSearch.Click += ButtonSearch_Click;
+            this.TabelData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.TabelData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.TabelData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TabelData.Location = new System.Drawing.Point(42, 30);
+            this.TabelData.Name = "TabelData";
+            this.TabelData.RowHeadersWidth = 51;
+            this.TabelData.RowTemplate.Height = 24;
+            this.TabelData.Size = new System.Drawing.Size(706, 361);
+            this.TabelData.TabIndex = 0;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            AutoSize = true;
-            ClientSize = new Size(889, 469);
-            Controls.Add(ButtonSearch);
-            Controls.Add(SearchNama);
-            Controls.Add(tabelDataSKPIMahasiswa);
-            Name = "Form1";
-            Text = "Form1";
-            Load += Form1_Load;
-            ((System.ComponentModel.ISupportInitialize)tabelDataSKPIMahasiswa).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.TabelData);
+            this.Name = "Form1";
+            this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.TabelData)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
 
-        private DataGridView tabelDataSKPIMahasiswa;
-        private TextBox SearchNama;
-        private Button ButtonSearch;
+        private System.Windows.Forms.DataGridView TabelData;
     }
 }
