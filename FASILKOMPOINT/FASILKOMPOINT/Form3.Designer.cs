@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
+            TitleAkumulasiLabel = new Label();
+            AkumulasiLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -42,20 +44,45 @@
             dataGridView1.Size = new Size(698, 309);
             dataGridView1.TabIndex = 0;
             // 
+            // TitleAkumulasiLabel
+            // 
+            TitleAkumulasiLabel.AutoSize = true;
+            TitleAkumulasiLabel.Location = new Point(581, 19);
+            TitleAkumulasiLabel.Name = "TitleAkumulasiLabel";
+            TitleAkumulasiLabel.Size = new Size(81, 20);
+            TitleAkumulasiLabel.TabIndex = 2;
+            TitleAkumulasiLabel.Text = "Total Poin: ";
+            TitleAkumulasiLabel.Click += TitleAkumulasiLabel_Click;
+            // 
+            // AkumulasiLabel
+            // 
+            AkumulasiLabel.AutoSize = true;
+            AkumulasiLabel.Location = new Point(658, 19);
+            AkumulasiLabel.Name = "AkumulasiLabel";
+            AkumulasiLabel.Size = new Size(50, 20);
+            AkumulasiLabel.TabIndex = 3;
+            AkumulasiLabel.Text = "label1";
+            AkumulasiLabel.Click += label1_Click;
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(AkumulasiLabel);
+            Controls.Add(TitleAkumulasiLabel);
             Controls.Add(dataGridView1);
             Name = "Form3";
             Text = "Form3";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private DataGridView dataGridView1;
+        private Label TitleAkumulasiLabel;
+        private Label AkumulasiLabel;
     }
 }

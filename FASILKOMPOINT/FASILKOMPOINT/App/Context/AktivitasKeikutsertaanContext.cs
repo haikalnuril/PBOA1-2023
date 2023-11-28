@@ -71,5 +71,14 @@ namespace FASILKOMPOINT.App.Context
             DataTable dataAktivitas = queryExecutor(query, parameters);
             return dataAktivitas;
         }
+        public static int AkumulasiPoin(string username)
+        {
+            string query = $"SELECT SUM(poin.poin) AS Poin FROM {table} JOIN poin ON {table}.poin_id_poin = poin.id_poin WHERE {table}.mahasiswa_username = @username AND {table}.is_acc = 'disetujui';";
+            NpgsqlParameter[] parameters =
+            {
+                new NpgsqlParameter("@username", NpgsqlDbType.Varchar){Value = username},
+            };
+            return commandExecutorLogin(query, parameters);
+        }
     }
 }

@@ -109,7 +109,30 @@ namespace FASILKOMPOINT.App.Core
             }
             return roleId;
         }
+        public static int commandExecutorAkumulasiPoin(string query, NpgsqlParameter[] parameters = null)
+        {
+            int totalpoin = 0;
+            try
+            {
+                openConnection();
+                command.CommandText = query;
+                command.Parameters.AddRange(parameters);
+                command.Prepare();
 
+                // Execute the query and retrieve the role_id_role
+                object result = command.ExecuteScalar();
+                if (result != null && result != DBNull.Value)
+                {
+                    totalpoin = Convert.ToInt32(result);
+                }
 
-	}
+                closeConnection();
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return totalpoin;
+        }
+    }
 }
