@@ -36,6 +36,8 @@
             // 
             // tabelDataSKPIMahasiswa
             // 
+            tabelDataSKPIMahasiswa.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            tabelDataSKPIMahasiswa.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             tabelDataSKPIMahasiswa.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             tabelDataSKPIMahasiswa.Location = new Point(12, 89);
             tabelDataSKPIMahasiswa.Name = "tabelDataSKPIMahasiswa";
@@ -43,6 +45,7 @@
             tabelDataSKPIMahasiswa.RowTemplate.Height = 29;
             tabelDataSKPIMahasiswa.Size = new Size(865, 351);
             tabelDataSKPIMahasiswa.TabIndex = 0;
+            tabelDataSKPIMahasiswa.CellContentClick += tabelDataSKPIMahasiswa_CellContentClick;
             // 
             // SearchNama
             // 
