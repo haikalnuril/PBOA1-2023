@@ -1,8 +1,4 @@
-﻿using static System.Net.Mime.MediaTypeNames;
-using System.Windows.Forms;
-using System.Xml.Linq;
-
-namespace FASILKOMPOINT
+﻿namespace FASILKOMPOINT
 {
     partial class Form2
     {
@@ -32,55 +28,54 @@ namespace FASILKOMPOINT
         /// </summary>
         private void InitializeComponent()
         {
-            usernametb = new TextBox();
-            passwordtb = new TextBox();
-            masukbutton = new Button();
-            SuspendLayout();
+            this.usernametb = new System.Windows.Forms.TextBox();
+            this.passwordtb = new System.Windows.Forms.TextBox();
+            this.masukbutton = new System.Windows.Forms.Button();
+            this.SuspendLayout();
             // 
             // usernametb
             // 
-            usernametb.Location = new Point(234, 173);
-            usernametb.Name = "usernametb";
-            usernametb.Size = new Size(248, 27);
-            usernametb.TabIndex = 0;
+            this.usernametb.Location = new System.Drawing.Point(210, 171);
+            this.usernametb.Name = "usernametb";
+            this.usernametb.Size = new System.Drawing.Size(283, 22);
+            this.usernametb.TabIndex = 0;
             // 
             // passwordtb
             // 
-            passwordtb.Location = new Point(234, 230);
-            passwordtb.Name = "passwordtb";
-            passwordtb.Size = new Size(248, 27);
-            passwordtb.TabIndex = 1;
-            passwordtb.KeyPress += passwordtb_KeyPress;
+            this.passwordtb.Location = new System.Drawing.Point(210, 210);
+            this.passwordtb.Name = "passwordtb";
+            this.passwordtb.Size = new System.Drawing.Size(261, 22);
+            this.passwordtb.TabIndex = 1;
             // 
             // masukbutton
             // 
-            masukbutton.Location = new Point(442, 310);
-            masukbutton.Name = "masukbutton";
-            masukbutton.Size = new Size(94, 29);
-            masukbutton.TabIndex = 2;
-            masukbutton.Text = "button1";
-            masukbutton.UseVisualStyleBackColor = true;
-            masukbutton.Click += masukbutton_Click;
+            this.masukbutton.Location = new System.Drawing.Point(210, 263);
+            this.masukbutton.Name = "masukbutton";
+            this.masukbutton.Size = new System.Drawing.Size(75, 23);
+            this.masukbutton.TabIndex = 2;
+            this.masukbutton.Text = "button1";
+            this.masukbutton.UseVisualStyleBackColor = true;
+            this.masukbutton.Click += new System.EventHandler(this.masukbutton_Click);
             // 
             // Form2
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(masukbutton);
-            Controls.Add(passwordtb);
-            Controls.Add(usernametb);
-            Name = "Form2";
-            Text = "Form2";
-            Load += Form1_Load;
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.masukbutton);
+            this.Controls.Add(this.passwordtb);
+            this.Controls.Add(this.usernametb);
+            this.Name = "Form2";
+            this.Text = "Form2";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
 
-        private TextBox usernametb;
-        private TextBox passwordtb;
-        private Button masukbutton;
+        private System.Windows.Forms.TextBox usernametb;
+        private System.Windows.Forms.TextBox passwordtb;
+        private System.Windows.Forms.Button masukbutton;
     }
 }
