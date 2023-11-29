@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FASILKOMPOINT.Halaman_Beranda_Mahasiswa;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -54,7 +55,7 @@ namespace FASILKOMPOINT
             }
             else if (password == "2")
             {
-                Form1 berandaMahasiswa = new Form1();
+                HalamanBerandaMahasiswa berandaMahasiswa = new HalamanBerandaMahasiswa();
                 berandaMahasiswa.Show();
                 this.Hide();
             }

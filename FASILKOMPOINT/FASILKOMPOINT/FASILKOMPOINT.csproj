@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Halaman Beranda Mahasiswa\HalamanBerandaMahasiswa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Halaman Beranda Mahasiswa\HalamanBerandaMahasiswa.Designer.cs">
+      <DependentUpon>HalamanBerandaMahasiswa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Halaman Beranda TU\HalamanBerandaTU.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Halaman Beranda Mahasiswa\HalamanBerandaMahasiswa.resx">
+      <DependentUpon>HalamanBerandaMahasiswa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Halaman Beranda TU\HalamanBerandaTU.resx">
       <DependentUpon>HalamanBerandaTU.cs</DependentUpon>
     </EmbeddedResource>
@@ -88,6 +97,30 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pictureBox1.Image.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
