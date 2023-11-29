@@ -53,33 +53,15 @@ namespace FASILKOMPOINT.App.Context
             };
             return commandExecutorIntValue(query, parameters);
         }
-        public static DataTable showDetailValidasiSKPI(int id_aktivitas, int kategori)
+        public static DataTable showDetailValidasiSKPI(string username)
         {
-            if (kategori == 601)
             {
-                string query = $"";
+                string query = $"SELECT {table}.nama_kegiatan as Nama, CONCAT('Tanggal: ', {table}.tanggal, '\r\n', 'Tingkat: ', {table}.level_tingkat, '\r\n', 'Jenis: ', {table}.jenis_kepesertaan,'\r\n', 'Bukti: ',{table}.file_bukti )  as Keterangan,{table}.is_acc as Status, komentar.komentar as Komentar, poin.poin as Poin FROM {table} JOIN poin ON poin.id_poin = {table}.poin_id_poin JOIN komentar ON komentar.aktivitas_id_aktivitas = {table}.id_aktivitas WHERE {table}.mahasiswa_username = @username AND {table}.kategori_id_kategori = 601 AND {table}.is_acc = 'menunggu'" +
+                    $"UNION SELECT {table}.nama_prestasi as Nama, CONCAT ('Tanggal: ', {table}.tanggal, '\r\n', 'Juara: ', {table}.juara, '\r\n', 'Tingkat: ', {table}.level_tingkat, '\r\n','Url Penyelenggara: ', {table}.url_penyelenggara, '\r\n', 'Bukti: ', {table}.file_bukti, '\r\n', 'Nama Dosen Pembimbing: ', {table}.nama_dosbing,'\r\n', 'No. Surat Tugas: ', {table}.no_surat) AS Keterangan, {table}.is_acc as Status, komentar.komentar as Komentar, poin.poin as Poin FROM {table} JOIN poin ON poin.id_poin = {table}.poin_id_poin JOIN komentar ON komentar.aktivitas_id_aktivitas = {table}.id_aktivitas WHERE {table}.mahasiswa_username = @username AND {table}.kategori_id_kategori = 602 AND {table}.is_acc = 'menunggu'" +
+                    $"UNION SELECT {table}.judul_sertifikasi as Nama,CONCAT ('Tanggal: ', {table}.tanggal, '\r\n', 'Tingkat Penyelenggara: ', {table}.tingkat_penyelenggara, '\r\n', 'Nama Penyelenggara: ', {table}.nama_penyelenggara,'\r\n', 'Bukti: ', {table}.file_bukti) as Keterangan,  {table}.is_acc as Status, komentar.komentar as Komentar, poin.poin as Poin FROM {table} JOIN poin ON poin.id_poin = {table}.poin_id_poin JOIN komentar ON komentar.aktivitas_id_aktivitas = {table}.id_aktivitas WHERE {table}.mahasiswa_username = @username AND {table}.kategori_id_kategori = 603 AND {table}.is_acc = 'menunggu';";
                 NpgsqlParameter[] parameters =
                 {
-                //new NpgsqlParameter("@nim", NpgsqlDbType.Varchar){Value = nim}
-                };
-                DataTable dataMahasiswa = queryExecutor(query, parameters);
-                return dataMahasiswa;
-            }
-            else if (kategori == 602)
-            {
-                string query = $"";
-                NpgsqlParameter[] parameters =
-                {
-                //new NpgsqlParameter("@nim", NpgsqlDbType.Varchar){Value = nim}
-                };
-                DataTable dataMahasiswa = queryExecutor(query, parameters);
-                return dataMahasiswa;
-            }
-            else
-            {
-                string query = $"SELECT ROW_NUMBER() OVER (ORDER BY {table}.mahasiswa_username) AS No, CONCAT('Tanggal: ', aktivitas.tanggal, '\r\n', 'Tingkat: ', aktivitas.level_tingkat, '\r\n', 'Jenis: ', aktivitas.jenis_kepesertaan)";
-                NpgsqlParameter[] parameters =
-                {
+                new NpgsqlParameter("@username", NpgsqlDbType.Varchar){Value = username},
                 //new NpgsqlParameter("@nim", NpgsqlDbType.Varchar){Value = nim}
                 };
                 DataTable dataMahasiswa = queryExecutor(query, parameters);
