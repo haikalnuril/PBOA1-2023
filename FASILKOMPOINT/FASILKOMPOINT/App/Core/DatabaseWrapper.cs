@@ -22,7 +22,7 @@ namespace FASILKOMPOINT.App.Core
 		private static readonly string DB_HOST = "localhost";
 		private static readonly string DB_DATABASE = "FASILKOMPOINT";
 		private static readonly string DB_USERNAME = "postgres";
-		private static readonly string DB_PASSWORD = "fatimah";
+		private static readonly string DB_PASSWORD = "admin123";
 		private static readonly string DB_PORT = "5432";
 
 		private static NpgsqlConnection connection;
@@ -65,7 +65,6 @@ namespace FASILKOMPOINT.App.Core
 				throw new Exception(e.Message);
 			}
 		}
-
 		public static void commandExecutor(string query, NpgsqlParameter[] parameters = null)
 		{
 			try
@@ -94,7 +93,6 @@ namespace FASILKOMPOINT.App.Core
 				command.Parameters.AddRange(parameters);
 				command.Prepare();
 
-				// Execute the query and retrieve the role_id_role
 				object result = command.ExecuteScalar();
 				if (result != null && result != DBNull.Value)
 				{
