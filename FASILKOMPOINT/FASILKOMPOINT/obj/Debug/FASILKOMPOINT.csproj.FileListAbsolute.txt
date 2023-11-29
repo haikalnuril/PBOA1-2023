@@ -1,0 +1,10 @@
+C:\Users\Carenina Zahra\Downloads\tu\PBOA1-2023\FASILKOMPOINT\FASILKOMPOINT\obj\Debug\FASILKOMPOINT.csproj.AssemblyReference.cache
+C:\Users\Carenina Zahra\Downloads\tu\PBOA1-2023\FASILKOMPOINT\FASILKOMPOINT\obj\Debug\FASILKOMPOINT.Login.resources
+C:\Users\Carenina Zahra\Downloads\tu\PBOA1-2023\FASILKOMPOINT\FASILKOMPOINT\obj\Debug\FASILKOMPOINT.Properties.Resources.resources
+C:\Users\Carenina Zahra\Downloads\tu\PBOA1-2023\FASILKOMPOINT\FASILKOMPOINT\obj\Debug\FASILKOMPOINT.csproj.GenerateResource.cache
+C:\Users\Carenina Zahra\Downloads\tu\PBOA1-2023\FASILKOMPOINT\FASILKOMPOINT\obj\Debug\FASILKOMPOINT.csproj.CoreCompileInputs.cache
+C:\Users\Carenina Zahra\Downloads\tu\PBOA1-2023\FASILKOMPOINT\FASILKOMPOINT\bin\Debug\FASILKOMPOINT.exe.config
+C:\Users\Carenina Zahra\Downloads\tu\PBOA1-2023\FASILKOMPOINT\FASILKOMPOINT\bin\Debug\FASILKOMPOINT.exe
+C:\Users\Carenina Zahra\Downloads\tu\PBOA1-2023\FASILKOMPOINT\FASILKOMPOINT\bin\Debug\FASILKOMPOINT.pdb
+C:\Users\Carenina Zahra\Downloads\tu\PBOA1-2023\FASILKOMPOINT\FASILKOMPOINT\obj\Debug\FASILKOMPOINT.exe
+C:\Users\Carenina Zahra\Downloads\tu\PBOA1-2023\FASILKOMPOINT\FASILKOMPOINT\obj\Debug\FASILKOMPOINT.pdb
