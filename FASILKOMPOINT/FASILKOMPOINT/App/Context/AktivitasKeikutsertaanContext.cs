@@ -60,7 +60,7 @@ namespace FASILKOMPOINT.App.Context
             };
             commandExecutor(query, parameters);
         }
-        public DataTable showRekapKeikutsertaan(string username, int kategori)
+        public static DataTable showRekapKeikutsertaan(string username, int kategori)
         {
             string query = $"SELECT ROW_NUMBER() OVER (ORDER BY {table}.tanggal) as No, {table}.nama_kegiatan as Nama, CONCAT('Tanggal: ', {table}.tanggal, '\r\n', 'Tingkat: ', {table}.level_tingkat, '\r\n', 'Jenis: ', {table}.jenis_kepesertaan) as Keterangan, {table}.file_bukti as Bukti,{table}.is_acc as Status, poin.poin as Poin FROM {table} JOIN poin ON poin.id_poin = {table}.poin_id_poin WHERE {table}.mahasiswa_username = @username AND {table}.kategori_id_kategori = @kategori AND {table}.is_acc = 'disetujui';";
             NpgsqlParameter[] parameters =

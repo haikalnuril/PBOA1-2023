@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace FASILKOMPOINT
 {
-    public partial class Form2 : Form
+    public partial class Form2 : Form /// NYOBA FITUR LOGIN MASSZEH
     {
         public Form2()
         {
@@ -53,6 +53,11 @@ namespace FASILKOMPOINT
         }
 
         private void passwordtb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
         {
 
         }

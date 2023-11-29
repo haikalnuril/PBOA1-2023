@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace FASILKOMPOINT
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form //NYOBA FITUR DATA SKPI MAHASISWA - TIM SKPI
     {
         public string username;
         public Form1()

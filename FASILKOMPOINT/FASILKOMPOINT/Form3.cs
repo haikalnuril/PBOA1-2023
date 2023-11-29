@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace FASILKOMPOINT
 {
-    public partial class Form3 : Form
+    public partial class Form3 : Form //NYOBA REKAP DATA SKPI - MAHASISWA
     {
         private int akumulasipoin = AktivitasKeikutsertaanContext.AkumulasiPoin("222410101001");
 
@@ -19,7 +19,7 @@ namespace FASILKOMPOINT
         {
             InitializeComponent();
             AkumulasiLabel.Text = akumulasipoin.ToString();
-            TabelData1.DataSource = AktivitasPrestasiContext.showPrestasi("222410101001", 602);
+            TabelData1.DataSource = AktivitasPrestasiContext.showRekapPrestasi("222410101001", 602);
             TabelData1.Columns["Keterangan"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
 
         }
@@ -51,18 +51,18 @@ namespace FASILKOMPOINT
         private void prestasibutton_Click(object sender, EventArgs e)
         {
             int kategori = 602;
-            TabelData1.DataSource = AktivitasPrestasiContext.showPrestasi("222410101001", kategori);
+            TabelData1.DataSource = AktivitasPrestasiContext.showRekapPrestasi("222410101001", kategori);
         }
 
         private void keikutsertaanbutton_Click(object sender, EventArgs e)
         {
             int kategori = 601;
-            TabelData1.DataSource = AktivitasKeikutsertaanContext.showKeikutsertaan("222410101001", kategori);
+            TabelData1.DataSource = AktivitasKeikutsertaanContext.showRekapKeikutsertaan("222410101001", kategori);
         }
         private void sertifikasibutton_Click(object sender, EventArgs e)
         {
             int kategori = 601;
-            TabelData1.DataSource = AktivitasSertifikasiContext.showSertifikasi("222410101001", kategori);
+            TabelData1.DataSource = AktivitasSertifikasiContext.showRekapSertifikasi("222410101001", kategori);
         }
     }
 }
