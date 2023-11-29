@@ -46,30 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Halaman Beranda TU\HalamanBerandaTU.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HalamanBerandaTU.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HalamanBerandaTU.Designer.cs">
+    <Compile Include="Halaman Beranda TU\HalamanBerandaTU.Designer.cs">
       <DependentUpon>HalamanBerandaTU.cs</DependentUpon>
     </Compile>
-    <Compile Include="HalamanLogin.cs">
+    <Compile Include="Halaman Login\HalamanLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HalamanLogin.Designer.cs">
+    <Compile Include="Halaman Login\HalamanLogin.Designer.cs">
       <DependentUpon>HalamanLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="HalamanBerandaTU.resx">
+    <EmbeddedResource Include="Halaman Beranda TU\HalamanBerandaTU.resx">
       <DependentUpon>HalamanBerandaTU.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HalamanLogin.resx">
+    <EmbeddedResource Include="Halaman Login\HalamanLogin.resx">
       <DependentUpon>HalamanLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -94,5 +88,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
