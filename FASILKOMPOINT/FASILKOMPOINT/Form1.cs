@@ -18,9 +18,9 @@ namespace FASILKOMPOINT
         public Form1()
         {
             InitializeComponent();
-            TabelData.DataSource = AktivitasPrestasiContext.showPrestasi("222410101001", 602);
+            TabelData.DataSource = MahasiswaContext.showDataSKPIMahasiswa();
 
-            TabelData.Columns["Keterangan"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            ///TabelData.Columns["Keterangan"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -31,33 +31,46 @@ namespace FASILKOMPOINT
         {
 
         }
-        //private void SearchNama_KeyPress(object sender, KeyPressEventArgs e)
-        //{
-        //    if (e.KeyChar == (char)Keys.Enter)
-        //    {
-        //        ExecuteSearch();
-        //        e.Handled = true;
-        //    }
-        //}
-        //        private void ExecuteSearch()
-        //        {
-        //            string nama = SearchNama.Text;
-        //            try
-        //            {
-        //                if (string.IsNullOrWhiteSpace(nama))
-        //                {
-        //                    tabelDataSKPIMahasiswa.DataSource = MahasiswaContext.showDataSKPIMahasiswa();
-        //                }
-        //                else
-        //                {
-        //                    tabelDataSKPIMahasiswa.DataSource = MahasiswaContext.showSearchDataSKPIMahasiswa(nama);
-        //                }
-        //            }
-        //            catch (Exception ex)
-        //            {
-        //                MessageBox.Show("Error: " + ex, "Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //            }
-        //        }
+
+        private void caributton_Click(object sender, EventArgs e)
+        {
+            ExecuteSearch();
+        }
+
+        private void searchtb_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(searchtb.Text))
+            {
+                TabelData.DataSource = MahasiswaContext.showDataSKPIMahasiswa();
+             }
+        }
+        private void SearchNama_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                ExecuteSearch();
+                e.Handled = true;
+            }
+        }
+        private void ExecuteSearch()
+        {
+            string nim = searchtb.Text;
+            try
+            {
+                if (string.IsNullOrWhiteSpace(nim))
+                {
+                    TabelData.DataSource = MahasiswaContext.showDataSKPIMahasiswa();
+                }
+                else
+                {
+                    TabelData.DataSource = MahasiswaContext.showSearchDataSKPIMahasiswa(nim);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex, "Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         //        private void SearchNama_TextChanged(object sender, EventArgs e)
         //        {
         //            if (string.IsNullOrWhiteSpace(SearchNama.Text))
