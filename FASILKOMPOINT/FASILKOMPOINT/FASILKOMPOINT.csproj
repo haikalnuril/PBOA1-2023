@@ -111,6 +111,7 @@
     <Compile Include="App\Core\DatabaseWrapper.cs" />
     <Compile Include="App\Models\M_Aktivitas.cs" />
     <Compile Include="App\Models\M_Butir.cs" />
+    <Compile Include="App\Models\M_Data_SKPI.cs" />
     <Compile Include="App\Models\M_Kategori.cs" />
     <Compile Include="App\Models\M_Komentar.cs" />
     <Compile Include="App\Models\M_Mahasiswa.cs" />
