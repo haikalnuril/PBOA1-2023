@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace FASILKOMPOINT
 {
-    public partial class Login : Form
+    public partial class HalamanLogin : Form
     {
-        public static Login instance;
+        public static HalamanLogin instance;
         public TextBox tb1;
         private TextBox tb2;
         private bool isButton1Hovered = false;
-        public Login()
+        public HalamanLogin()
         {
             InitializeComponent();
             instance = this;

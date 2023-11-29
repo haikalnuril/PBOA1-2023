@@ -6,7 +6,7 @@ using System.Xml.Linq;
 
 namespace FASILKOMPOINT
 {
-    partial class Login
+    partial class HalamanLogin
     {
         /// <summary>
         ///  Required designer variable.
@@ -34,7 +34,7 @@ namespace FASILKOMPOINT
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HalamanLogin));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.Username = new System.Windows.Forms.Label();

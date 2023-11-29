@@ -67,5 +67,11 @@ namespace FASILKOMPOINT
         {
 
         }
+
+        private void HalamanBerandaTU_Load(object sender, EventArgs e)
+        {
+
+        }
+        //test
     }
 }

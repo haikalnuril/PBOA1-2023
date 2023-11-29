@@ -65,10 +65,10 @@ namespace FASILKOMPOINT
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(597, 163);
+            this.textBox1.Location = new System.Drawing.Point(549, 163);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 22);
+            this.textBox1.Size = new System.Drawing.Size(173, 22);
             this.textBox1.TabIndex = 6;
             // 
             // button1
@@ -96,6 +96,7 @@ namespace FASILKOMPOINT
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "HalamanBerandaTU";
+            this.Load += new System.EventHandler(this.HalamanBerandaTU_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
