@@ -84,55 +84,30 @@ namespace FASILKOMPOINT.App.Core
 			}
 		}
 
-		public static int commandExecutorLogin(string query, NpgsqlParameter[] parameters = null)
+		public static int commandExecutorIntValue(string query, NpgsqlParameter[] parameters = null)
 		{
-            int roleId = 0;
-            try
-            {
-                openConnection();
-                command.CommandText = query;
-                command.Parameters.AddRange(parameters);
-                command.Prepare();
+			int value = 0;
+			try
+			{
+				openConnection();
+				command.CommandText = query;
+				command.Parameters.AddRange(parameters);
+				command.Prepare();
 
-                // Execute the query and retrieve the role_id_role
-                object result = command.ExecuteScalar();
-                if (result != null && result != DBNull.Value)
-                {
-                    roleId = Convert.ToInt32(result);
-                }
+				// Execute the query and retrieve the role_id_role
+				object result = command.ExecuteScalar();
+				if (result != null && result != DBNull.Value)
+				{
+					value = Convert.ToInt32(result);
+				}
 
-                closeConnection();
-            }
-            catch (Exception e)
-            {
-                throw new Exception(e.Message);
-            }
-            return roleId;
-        }
-        public static int commandExecutorAkumulasiPoin(string query, NpgsqlParameter[] parameters = null)
-        {
-            int totalpoin = 0;
-            try
-            {
-                openConnection();
-                command.CommandText = query;
-                command.Parameters.AddRange(parameters);
-                command.Prepare();
-
-                // Execute the query and retrieve the role_id_role
-                object result = command.ExecuteScalar();
-                if (result != null && result != DBNull.Value)
-                {
-                    totalpoin = Convert.ToInt32(result);
-                }
-
-                closeConnection();
-            }
-            catch (Exception e)
-            {
-                throw new Exception(e.Message);
-            }
-            return totalpoin;
-        }
+				closeConnection();
+			}
+			catch (Exception e)
+			{
+				throw new Exception(e.Message);
+			}
+			return value;
+		}
     }
 }

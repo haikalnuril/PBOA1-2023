@@ -21,7 +21,7 @@ namespace FASILKOMPOINT.App.Context
                 new NpgsqlParameter("@username", NpgsqlDbType.Varchar){Value = username},
                 new NpgsqlParameter("@password", NpgsqlDbType.Varchar){Value = password}
             };
-            return commandExecutorLogin(query, parameters);
+            return commandExecutorIntValue(query, parameters);
         }
     }
 }
