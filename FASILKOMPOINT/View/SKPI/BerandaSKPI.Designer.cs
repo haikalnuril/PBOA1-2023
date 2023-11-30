@@ -164,6 +164,7 @@ namespace FASILKOMPOINT.View.SKPI
             Name = "BerandaSKPI";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Beranda SKPI";
+            Load += BerandaSKPI_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

@@ -24,7 +24,7 @@ namespace FASILKOMPOINT.View.SKPI
             this.Hide();
         }
 
-        private void Form5_Load(object sender, EventArgs e)
+        private void DataSKPIMahasiswa_Load(object sender, EventArgs e)
         {
 
         }

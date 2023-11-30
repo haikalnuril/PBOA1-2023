@@ -104,5 +104,10 @@ namespace FASILKOMPOINT.View.SKPI
         {
 
         }
+
+        private void BerandaSKPI_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

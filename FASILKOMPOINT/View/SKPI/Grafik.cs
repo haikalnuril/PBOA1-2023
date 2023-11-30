@@ -16,5 +16,10 @@ namespace FASILKOMPOINT.View.SKPI
         {
             InitializeComponent();
         }
+
+        private void Grafik_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

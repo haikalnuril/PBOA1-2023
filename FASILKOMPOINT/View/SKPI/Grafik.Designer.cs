@@ -94,6 +94,7 @@
             Name = "Grafik";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Grafik";
+            Load += Grafik_Load;
             ((System.ComponentModel.ISupportInitialize)chart1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
