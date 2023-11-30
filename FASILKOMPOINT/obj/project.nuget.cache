@@ -1,8 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "k6H4uSDoFAnkF7qXJ0WLyhwEP3zy4Cf+CT1sBhtzilK5RPtJ547vdK0I926HMFbH91QdOyDtifYydslI212g+g==",
+  "dgSpecHash": "Hio9Qhhici6icHPyvFNVgi9tWVD+Vji79bmNn9RNOE+YHAno8gwK4bQw4fUsbAtJ987/yVAP+8KLTzEBTje9tw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\satri\\Downloads\\FASILKOMPOINT\\FASILKOMPOINT\\FASILKOMPOINT.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\Frontend1 FASILKOMPOINT\\PBOA1-2023\\FASILKOMPOINT\\FASILKOMPOINT.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\asus\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\asus\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\asus\\.nuget\\packages\\npgsql\\8.0.0\\npgsql.8.0.0.nupkg.sha512",
+    "C:\\Users\\asus\\.nuget\\packages\\system.diagnostics.diagnosticsource\\8.0.0\\system.diagnostics.diagnosticsource.8.0.0.nupkg.sha512",
+    "C:\\Users\\asus\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\asus\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
+    "C:\\Users\\asus\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512",
+    "C:\\Users\\asus\\.nuget\\packages\\winforms.datavisualization\\1.9.1\\winforms.datavisualization.1.9.1.nupkg.sha512"
+  ],
   "logs": []
 }

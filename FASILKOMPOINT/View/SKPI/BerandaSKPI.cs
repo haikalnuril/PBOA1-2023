@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FASILKOMPOINT.View.SKPI
 {
-    public partial class Beranda : Form
+    public partial class BerandaSKPI : Form
     {
-        public Beranda()
+        public BerandaSKPI()
         {
             InitializeComponent();
 
@@ -93,6 +93,16 @@ namespace FASILKOMPOINT.View.SKPI
             {
 
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -52,13 +52,13 @@ namespace FASILKOMPOINT.View
 
             if (password == "1")
             {
-                Beranda BerandaSKPI = new Beranda();
+                BerandaSKPI BerandaSKPI = new BerandaSKPI();
                 BerandaSKPI.Show();
                 this.Hide();
             }
             else if (password == "2")
             {
-                Form1 berandaMahasiswa = new Form1();
+                BerandaMahasiswa berandaMahasiswa = new BerandaMahasiswa();
                 berandaMahasiswa.Show();
                 this.Hide();
             }

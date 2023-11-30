@@ -33,30 +33,22 @@ namespace FASILKOMPOINT.View.TU
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BerandaTU));
-            button1 = new Button();
             button4 = new Button();
             dataGridView1 = new DataGridView();
+            label1 = new Label();
+            textBox1 = new TextBox();
+            Cari = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
-            // button1
-            // 
-            button1.BackColor = Color.White;
-            button1.Location = new Point(831, 130);
-            button1.Margin = new Padding(3, 2, 3, 2);
-            button1.Name = "button1";
-            button1.Size = new Size(82, 22);
-            button1.TabIndex = 0;
-            button1.Text = "Cari";
-            button1.UseVisualStyleBackColor = false;
-            // 
             // button4
             // 
-            button4.BackColor = Color.Red;
-            button4.Location = new Point(831, 156);
-            button4.Margin = new Padding(3, 2, 3, 2);
+            button4.BackColor = Color.OrangeRed;
+            button4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button4.ForeColor = Color.Transparent;
+            button4.Location = new Point(786, 38);
             button4.Name = "button4";
-            button4.Size = new Size(82, 22);
+            button4.Size = new Size(94, 29);
             button4.TabIndex = 4;
             button4.Text = "Logout";
             button4.UseVisualStyleBackColor = false;
@@ -67,37 +59,71 @@ namespace FASILKOMPOINT.View.TU
             dataGridView1.AllowUserToOrderColumns = true;
             dataGridView1.BackgroundColor = SystemColors.ButtonHighlight;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(46, 130);
-            dataGridView1.Margin = new Padding(3, 2, 3, 2);
+            dataGridView1.Location = new Point(14, 147);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 5;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(746, 278);
+            dataGridView1.Size = new Size(890, 359);
             dataGridView1.TabIndex = 5;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick_1;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Candara", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(327, 38);
+            label1.Name = "label1";
+            label1.Size = new Size(280, 41);
+            label1.TabIndex = 6;
+            label1.Text = "Daftar Mahasiswa";
+            // 
+            // textBox1
+            // 
+            textBox1.BackColor = Color.White;
+            textBox1.ForeColor = SystemColors.WindowText;
+            textBox1.Location = new Point(14, 110);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(303, 27);
+            textBox1.TabIndex = 8;
+            // 
+            // Cari
+            // 
+            Cari.BackColor = SystemColors.GradientActiveCaption;
+            Cari.Location = new Point(327, 106);
+            Cari.Name = "Cari";
+            Cari.Size = new Size(101, 35);
+            Cari.TabIndex = 9;
+            Cari.Text = "Cari";
+            Cari.UseVisualStyleBackColor = false;
+            // 
             // BerandaTU
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Highlight;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(937, 567);
+            ClientSize = new Size(919, 520);
+            Controls.Add(Cari);
+            Controls.Add(textBox1);
+            Controls.Add(label1);
             Controls.Add(dataGridView1);
             Controls.Add(button4);
-            Controls.Add(button1);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            Margin = new Padding(3, 2, 3, 2);
             Name = "BerandaTU";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Beranda TU";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
-        private Button button1;
         private Button button4;
         private DataGridView dataGridView1;
+        private Label label1;
+        private TextBox textBox1;
+        private Button Cari;
     }
 }

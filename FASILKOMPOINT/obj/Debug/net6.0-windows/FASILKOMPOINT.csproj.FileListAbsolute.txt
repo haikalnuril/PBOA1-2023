@@ -33,3 +33,39 @@ C:\Users\satri\Downloads\FASILKOMPOINT\FASILKOMPOINT\obj\Debug\net6.0-windows\re
 C:\Users\satri\Downloads\FASILKOMPOINT\FASILKOMPOINT\obj\Debug\net6.0-windows\FASILKOMPOINT.pdb
 C:\Users\satri\Downloads\FASILKOMPOINT\FASILKOMPOINT\obj\Debug\net6.0-windows\FASILKOMPOINT.genruntimeconfig.cache
 C:\Users\satri\Downloads\FASILKOMPOINT\FASILKOMPOINT\obj\Debug\net6.0-windows\ref\FASILKOMPOINT.dll
+D:\Frontend1 FASILKOMPOINT\PBOA1-2023\FASILKOMPOINT\bin\Debug\net6.0-windows\FASILKOMPOINT.exe
+D:\Frontend1 FASILKOMPOINT\PBOA1-2023\FASILKOMPOINT\bin\Debug\net6.0-windows\FASILKOMPOINT.deps.json
+D:\Frontend1 FASILKOMPOINT\PBOA1-2023\FASILKOMPOINT\bin\Debug\net6.0-windows\FASILKOMPOINT.runtimeconfig.json
+D:\Frontend1 FASILKOMPOINT\PBOA1-2023\FASILKOMPOINT\bin\Debug\net6.0-windows\FASILKOMPOINT.dll
+D:\Frontend1 FASILKOMPOINT\PBOA1-2023\FASILKOMPOINT\bin\Debug\net6.0-windows\FASILKOMPOINT.pdb
+D:\Frontend1 FASILKOMPOINT\PBOA1-2023\FASILKOMPOINT\obj\Debug\net6.0-windows\FASILKOMPOINT.Properties.Resources.resources
+D:\Frontend1 FASILKOMPOINT\PBOA1-2023\FASILKOMPOINT\obj\Debug\net6.0-windows\FASILKOMPOINT.View.Halaman.resources
+D:\Frontend1 FASILKOMPOINT\PBOA1-2023\FASILKOMPOINT\obj\Debug\net6.0-windows\FASILKOMPOINT.View.Mahasiswa.EntryDataSertifikasi.resources
+D:\Frontend1 FASILKOMPOINT\PBOA1-2023\FASILKOMPOINT\obj\Debug\net6.0-windows\FASILKOMPOINT.View.Mahasiswa.LihatSKPI.resources
+D:\Frontend1 FASILKOMPOINT\PBOA1-2023\FASILKOMPOINT\obj\Debug\net6.0-windows\FASILKOMPOINT.View.Mahasiswa.RekapDataSKPI.resources
+D:\Frontend1 FASILKOMPOINT\PBOA1-2023\FASILKOMPOINT\obj\Debug\net6.0-windows\FASILKOMPOINT.View.SKPI.DataSKPIMahasiswa.resources
+D:\Frontend1 FASILKOMPOINT\PBOA1-2023\FASILKOMPOINT\obj\Debug\net6.0-windows\FASILKOMPOINT.View.SKPI.ValidasiSKPIMahasiswa.resources
+D:\Frontend1 FASILKOMPOINT\PBOA1-2023\FASILKOMPOINT\obj\Debug\net6.0-windows\FASILKOMPOINT.View.TU.BerandaTU.resources
+D:\Frontend1 FASILKOMPOINT\PBOA1-2023\FASILKOMPOINT\obj\Debug\net6.0-windows\FASILKOMPOINT.csproj.GenerateResource.cache
+D:\Frontend1 FASILKOMPOINT\PBOA1-2023\FASILKOMPOINT\obj\Debug\net6.0-windows\FASILKOMPOINT.GeneratedMSBuildEditorConfig.editorconfig
+D:\Frontend1 FASILKOMPOINT\PBOA1-2023\FASILKOMPOINT\obj\Debug\net6.0-windows\FASILKOMPOINT.AssemblyInfoInputs.cache
+D:\Frontend1 FASILKOMPOINT\PBOA1-2023\FASILKOMPOINT\obj\Debug\net6.0-windows\FASILKOMPOINT.AssemblyInfo.cs
+D:\Frontend1 FASILKOMPOINT\PBOA1-2023\FASILKOMPOINT\obj\Debug\net6.0-windows\FASILKOMPOINT.csproj.CoreCompileInputs.cache
+D:\Frontend1 FASILKOMPOINT\PBOA1-2023\FASILKOMPOINT\obj\Debug\net6.0-windows\FASILKOMPOINT.dll
+D:\Frontend1 FASILKOMPOINT\PBOA1-2023\FASILKOMPOINT\obj\Debug\net6.0-windows\refint\FASILKOMPOINT.dll
+D:\Frontend1 FASILKOMPOINT\PBOA1-2023\FASILKOMPOINT\obj\Debug\net6.0-windows\FASILKOMPOINT.pdb
+D:\Frontend1 FASILKOMPOINT\PBOA1-2023\FASILKOMPOINT\obj\Debug\net6.0-windows\FASILKOMPOINT.genruntimeconfig.cache
+D:\Frontend1 FASILKOMPOINT\PBOA1-2023\FASILKOMPOINT\obj\Debug\net6.0-windows\ref\FASILKOMPOINT.dll
+D:\Frontend1 FASILKOMPOINT\PBOA1-2023\FASILKOMPOINT\obj\Debug\net6.0-windows\FASILKOMPOINT.View.Mahasiswa.EntryDataKegiatan.resources
+D:\Frontend1 FASILKOMPOINT\PBOA1-2023\FASILKOMPOINT\obj\Debug\net6.0-windows\FASILKOMPOINT.View.Mahasiswa.EntryDataPrestasi.resources
+D:\Frontend1 FASILKOMPOINT\PBOA1-2023\FASILKOMPOINT\obj\Debug\net6.0-windows\FASILKOMPOINT.View.SKPI.BerandaSKPI.resources
+D:\Frontend1 FASILKOMPOINT\PBOA1-2023\FASILKOMPOINT\obj\Debug\net6.0-windows\FASILKOMPOINT.View.Mahasiswa.BerandaMahasiswa.resources
+D:\Frontend1 FASILKOMPOINT\PBOA1-2023\FASILKOMPOINT\bin\Debug\net6.0-windows\WinForms.DataVisualization.Utilities.dll
+D:\Frontend1 FASILKOMPOINT\PBOA1-2023\FASILKOMPOINT\bin\Debug\net6.0-windows\WinForms.DataVisualization.dll
+D:\Frontend1 FASILKOMPOINT\PBOA1-2023\FASILKOMPOINT\obj\Debug\net6.0-windows\FASILKOMPOINT.csproj.AssemblyReference.cache
+D:\Frontend1 FASILKOMPOINT\PBOA1-2023\FASILKOMPOINT\obj\Debug\net6.0-windows\FASILKOMPOINT.View.Mahasiswa.FormEntryDataKegiatan.resources
+D:\Frontend1 FASILKOMPOINT\PBOA1-2023\FASILKOMPOINT\obj\Debug\net6.0-windows\FASILKOMPOINT.View.Mahasiswa.FormEntryDataPrestasi.resources
+D:\Frontend1 FASILKOMPOINT\PBOA1-2023\FASILKOMPOINT\obj\Debug\net6.0-windows\FASILKOMPOINT.View.Mahasiswa.FormEntryDataSertifikasi.resources
+D:\Frontend1 FASILKOMPOINT\PBOA1-2023\FASILKOMPOINT\obj\Debug\net6.0-windows\FASILKOMPOINT.View.SKPI.DetailValidasiSKPIMahasiswa.resources
+D:\Frontend1 FASILKOMPOINT\PBOA1-2023\FASILKOMPOINT\obj\Debug\net6.0-windows\FASILKOMPOINT.View.SKPI.Grafik.resources
+D:\Frontend1 FASILKOMPOINT\PBOA1-2023\FASILKOMPOINT\obj\Debug\net6.0-windows\FASILKOMPOINT.csproj.CopyComplete

@@ -28,94 +28,102 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DataSKPIMahasiswa));
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.SuspendLayout();
+            label1 = new Label();
+            pictureBox1 = new PictureBox();
+            dataGridView1 = new DataGridView();
+            button1 = new Button();
+            textBox1 = new TextBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(350, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(248, 29);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Data SKPI Mahasiswa";
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Candara", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.Black;
+            label1.Location = new Point(299, 38);
+            label1.Margin = new Padding(5, 0, 5, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(328, 41);
+            label1.TabIndex = 5;
+            label1.Text = "Data SKPI Mahasiswa";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(43, 38);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Image = Properties.Resources.icons8_back_64;
+            pictureBox1.Location = new Point(14, 14);
+            pictureBox1.Margin = new Padding(5);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(33, 32);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 6;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(41, 176);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(835, 263);
-            this.dataGridView1.TabIndex = 7;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.BackgroundColor = SystemColors.ButtonHighlight;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(14, 147);
+            dataGridView1.Margin = new Padding(5);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(890, 359);
+            dataGridView1.TabIndex = 7;
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(265, 133);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Cari";
-            this.button1.UseVisualStyleBackColor = false;
+            button1.BackColor = SystemColors.GradientActiveCaption;
+            button1.ForeColor = SystemColors.ControlText;
+            button1.Location = new Point(327, 106);
+            button1.Margin = new Padding(5);
+            button1.Name = "button1";
+            button1.Size = new Size(101, 35);
+            button1.TabIndex = 12;
+            button1.Text = "Cari";
+            button1.UseVisualStyleBackColor = false;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(41, 136);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(299, 20);
-            this.textBox1.TabIndex = 11;
+            textBox1.Location = new Point(14, 110);
+            textBox1.Margin = new Padding(5);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(303, 27);
+            textBox1.TabIndex = 11;
             // 
             // DataSKPIMahasiswa
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(921, 528);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label1);
-            this.Name = "DataSKPIMahasiswa";
-            this.Text = "Form5";
-            this.Load += new System.EventHandler(this.Form5_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.FASILKOM_POINT__1_;
+            ClientSize = new Size(919, 520);
+            Controls.Add(button1);
+            Controls.Add(textBox1);
+            Controls.Add(dataGridView1);
+            Controls.Add(pictureBox1);
+            Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Margin = new Padding(5);
+            Name = "DataSKPIMahasiswa";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Data SKPI Mahasiswa";
+            Load += Form5_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private Label label1;
+        private PictureBox pictureBox1;
+        private DataGridView dataGridView1;
+        private Button button1;
+        private TextBox textBox1;
     }
 }

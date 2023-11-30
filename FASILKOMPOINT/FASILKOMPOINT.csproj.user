@@ -4,37 +4,25 @@
     <Compile Update="View\HalamanLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="View\Mahasiswa\%28Mahasiswa%29EntriDataKegiatan.cs">
+    <Compile Update="View\Mahasiswa\EntryDataPrestasi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="View\Mahasiswa\%28Mahasiswa%29EntriDataPrestasi.cs">
+    <Compile Update="View\Mahasiswa\BerandaMahasiswa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="View\Mahasiswa\%28Mahasiswa%29EntryData.cs">
+    <Compile Update="View\Mahasiswa\FormEntryDataKegiatan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="View\Mahasiswa\%28Mahasiswa%29EntryDataSertifikasi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="View\Mahasiswa\%28Mahasiswa%29LihatSKPI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="View\Mahasiswa\%28Mahasiswa%29RekapDataSKPI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="View\Mahasiswa\EntryData_Prestasi_depan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="View\Mahasiswa\FormEntriDataKegiatan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="View\Mahasiswa\FormEntriDataPrestasi.cs">
+    <Compile Update="View\Mahasiswa\FormEntryDataPrestasi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="View\Mahasiswa\FormEntryDataSertifikasi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="View\Mahasiswa\HalamanBerandaMahasiswa.cs">
+    <Compile Update="View\Mahasiswa\LihatSKPI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\Mahasiswa\RekapDataSKPI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="View\SKPI\BerandaSKPI.cs">
@@ -43,16 +31,10 @@
     <Compile Update="View\SKPI\DataSKPIMahasiswa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="View\SKPI\DetailDataValidasiKegiatan.cs">
+    <Compile Update="View\SKPI\DetailValidasiSKPIMahasiswa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="View\SKPI\DetailDataValidasiPrestasi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="View\SKPI\DetailDataValidasiSertifikasi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="View\SKPI\HalamanBerandaTimSKPI.cs">
+    <Compile Update="View\SKPI\Grafik.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="View\SKPI\ValidasiSKPIMahasiswa.cs">

@@ -42,7 +42,7 @@ namespace FASILKOMPOINT.View
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(677, 305);
+            textBox1.Location = new Point(537, 245);
             textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(291, 27);
@@ -51,7 +51,7 @@ namespace FASILKOMPOINT.View
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(678, 404);
+            textBox2.Location = new Point(537, 335);
             textBox2.Margin = new Padding(3, 4, 3, 4);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(291, 27);
@@ -65,7 +65,7 @@ namespace FASILKOMPOINT.View
             Username.FlatStyle = FlatStyle.Popup;
             Username.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             Username.ForeColor = Color.White;
-            Username.Location = new Point(678, 275);
+            Username.Location = new Point(533, 216);
             Username.Name = "Username";
             Username.Size = new Size(102, 25);
             Username.TabIndex = 2;
@@ -77,7 +77,7 @@ namespace FASILKOMPOINT.View
             Password.BackColor = Color.Transparent;
             Password.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             Password.ForeColor = Color.White;
-            Password.Location = new Point(678, 373);
+            Password.Location = new Point(537, 306);
             Password.Name = "Password";
             Password.Size = new Size(98, 25);
             Password.TabIndex = 3;
@@ -91,10 +91,10 @@ namespace FASILKOMPOINT.View
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.ControlLightLight;
-            button1.Location = new Point(678, 480);
+            button1.Location = new Point(537, 406);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(290, 39);
+            button1.Size = new Size(291, 39);
             button1.TabIndex = 4;
             button1.Text = "Log In";
             button1.UseVisualStyleBackColor = false;
@@ -106,7 +106,7 @@ namespace FASILKOMPOINT.View
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.InactiveCaption;
             BackgroundImage = (System.Drawing.Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(990, 599);
+            ClientSize = new Size(919, 520);
             Controls.Add(button1);
             Controls.Add(Password);
             Controls.Add(Username);
@@ -115,6 +115,7 @@ namespace FASILKOMPOINT.View
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Margin = new Padding(3, 4, 3, 4);
             Name = "Halaman";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             Load += Form1_Load;
             ResumeLayout(false);

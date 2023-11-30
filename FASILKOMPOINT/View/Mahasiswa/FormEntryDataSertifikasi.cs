@@ -29,9 +29,14 @@ namespace FASILKOMPOINT.View.Mahasiswa
 
         private void button2_Click(object sender, EventArgs e)
         {
-            EntryData_Prestasi_depan entryData_Prestasi_Depan = new EntryData_Prestasi_depan();
-            entryData_Prestasi_Depan.Show();
+            //EntryData_Prestasi_depan entryData_Prestasi_Depan = new EntryData_Prestasi_depan();
+            // entryData_Prestasi_Depan.Show();
             this.Hide();
+        }
+
+        private void FormEntryDataSertifikasi_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -19,15 +19,15 @@ namespace FASILKOMPOINT.View.SKPI
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Beranda form = new Beranda();
+            BerandaSKPI form = new BerandaSKPI();
             form.Show();
             this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            DetailDataValidasiPrestasi DetailDataValidasiSertifikasi = new DetailDataValidasiPrestasi();
-            DetailDataValidasiSertifikasi.Show();
+            //DetailDataValidasiPrestasi DetailDataValidasiSertifikasi = new DetailDataValidasiPrestasi();
+            //DetailDataValidasiSertifikasi.Show();
             this.Hide();
         }
 

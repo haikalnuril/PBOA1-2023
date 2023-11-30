@@ -19,7 +19,7 @@ namespace FASILKOMPOINT.View.SKPI
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Beranda form = new Beranda();
+            BerandaSKPI form = new BerandaSKPI();
             form.Show();
             this.Hide();
         }
