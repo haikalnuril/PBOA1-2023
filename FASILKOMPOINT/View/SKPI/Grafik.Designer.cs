@@ -55,6 +55,7 @@
             chart1.Size = new Size(700, 377);
             chart1.TabIndex = 0;
             chart1.Text = "chart1";
+            chart1.Click += chart1_Click;
             // 
             // label1
             // 

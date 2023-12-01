@@ -1,4 +1,7 @@
 using FASILKOMPOINT.View;
+using FASILKOMPOINT.View.Mahasiswa;
+using FASILKOMPOINT.View.SKPI;
+using FASILKOMPOINT.View.TU;
 
 namespace FASILKOMPOINT
 {
@@ -13,7 +16,7 @@ namespace FASILKOMPOINT
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Halaman());
+            Application.Run(new BerandaSKPI());
         }
     }
 }

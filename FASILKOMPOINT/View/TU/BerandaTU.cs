@@ -18,6 +18,7 @@ namespace FASILKOMPOINT.View.TU
         public BerandaTU()
         {
             InitializeComponent();
+            dataGridView1.DataSource = MahasiswaContext.readSKPITU();
 
             DataGridViewButtonColumn PDFButton = new DataGridViewButtonColumn();
             PDFButton.HeaderText = "PDF SKPI";
