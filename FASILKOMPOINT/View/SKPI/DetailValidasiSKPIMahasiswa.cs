@@ -88,7 +88,7 @@ namespace FASILKOMPOINT.View.SKPI
         private void refreshform()
         {
             dataGridView1.DataSource = null;
-            dataGridView1.DataSource = MahasiswaContext.showDetailValidasiSKPI("222410101001");
+            dataGridView1.DataSource = MahasiswaContext.showDetailValidasiSKPI(nim);
             dataGridView1.Columns["Keterangan"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
         }
         private void Form4_Load(object sender, EventArgs e)
