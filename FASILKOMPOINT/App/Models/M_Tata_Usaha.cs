@@ -11,7 +11,7 @@ namespace FASILKOMPOINT.App.Models
     internal class M_Tata_Usaha
     {
         [Key]
-        public string username { get; set; }
+        public int username { get; set; }
         [Required]
         public string nama { get; set; }
         [ForeignKey("M_User")]

@@ -54,10 +54,12 @@ namespace FASILKOMPOINT.View.Mahasiswa
             dataGridView.Location = new Point(119, 83);
             dataGridView.Margin = new Padding(2);
             dataGridView.Name = "dataGridView";
+            dataGridView.ReadOnly = true;
             dataGridView.RowHeadersWidth = 62;
             dataGridView.RowTemplate.Height = 33;
             dataGridView.Size = new Size(794, 434);
             dataGridView.TabIndex = 0;
+            dataGridView.CellContentClick += dataGridView_CellContentClick;
             // 
             // btn_prestasi
             // 
@@ -159,6 +161,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
             Name = "EntryDataSertifikasi";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Entry Data SKPI";
+            FormClosing += Halaman_FormClosing;
             Load += EntryDataSertifikasi_Load;
             ((ISupportInitialize)dataGridView).EndInit();
             panel1.ResumeLayout(false);

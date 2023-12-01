@@ -1,4 +1,5 @@
 ﻿using FASILKOMPOINT.App.Context;
+using FASILKOMPOINT.App.Core;
 using FASILKOMPOINT.App.Models;
 using System;
 using System.Collections.Generic;
@@ -14,9 +15,11 @@ namespace FASILKOMPOINT.View.Mahasiswa
 {
     public partial class FormEntryDataKegiatan : Form
     {
-        public FormEntryDataKegiatan()
+        public string username { get; set; }
+        public FormEntryDataKegiatan(string username)
         {
             InitializeComponent();
+            this.username = username;
             dateTimePicker2.Enabled = false;
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker2.Format = DateTimePickerFormat.Custom;
@@ -31,9 +34,9 @@ namespace FASILKOMPOINT.View.Mahasiswa
 
         private void button2_Click(object sender, EventArgs e)
         {
-            EntryDataKegiatan entryDataKegiatan = new EntryDataKegiatan();
+            EntryDataKegiatan entryDataKegiatan = new EntryDataKegiatan(username);
             entryDataKegiatan.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void FormEntryDataKegiatan_Load(object sender, EventArgs e)
@@ -46,7 +49,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
             var nama_kegiatan = txt_nama.Text;
             var tanggal_dimulai = Convert.ToString(dateTimePicker1.Value);
             var tanggal_berakhir = Convert.ToString(dateTimePicker2.Value);
-            KeyValuePair<int, string>selectedCombobox1 = (KeyValuePair<int, string>)comboBox1.SelectedItem;
+            KeyValuePair<int, string> selectedCombobox1 = (KeyValuePair<int, string>)comboBox1.SelectedItem;
             var jenis_kepesertaan = selectedCombobox1.Value;
             KeyValuePair<int, string> selectedCombobox2 = (KeyValuePair<int, string>)comboBox2.SelectedItem;
             var level_tingkat = selectedCombobox2.Value;
@@ -67,7 +70,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
             };
             AktivitasKeikutsertaanContext.addKeikutsertaan(aktivitasKeikutsertaanBaru);
 
-
+            DialogResult messageBox = MessageBox.Show("Data berhasil disimpan!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void check_hari_CheckedChanged(object sender, EventArgs e)
@@ -85,6 +88,10 @@ namespace FASILKOMPOINT.View.Mahasiswa
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+        private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            CloseAllForms.CloseHiddenForms(this);
         }
     }
 }

@@ -1,5 +1,5 @@
 ﻿using FASILKOMPOINT.App.Context;
-using FASILKOMPOINT.View.SKPI;
+using FASILKOMPOINT.App.Core;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,7 +33,7 @@ namespace FASILKOMPOINT.View.SKPI
         {
             BerandaSKPI berandaSKPI = new BerandaSKPI();
             berandaSKPI.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -62,7 +62,7 @@ namespace FASILKOMPOINT.View.SKPI
                 {
                     ValidasiSKPIMahasiswa validasiSKPIMahasiswa = new ValidasiSKPIMahasiswa();
                     validasiSKPIMahasiswa.Show();
-                    this.Hide();
+                    this.Close();
                 }
                 else
                 {
@@ -95,7 +95,7 @@ namespace FASILKOMPOINT.View.SKPI
             {
                 ValidasiSKPIMahasiswa validasiSKPIMahasiswa = new ValidasiSKPIMahasiswa();
                 validasiSKPIMahasiswa.Show();
-                this.Hide();
+                this.Close();
             }
         }
 
@@ -108,13 +108,17 @@ namespace FASILKOMPOINT.View.SKPI
         {
             if (e.ColumnIndex == dataGridView1.Columns["detailButton"].Index && e.RowIndex >= 0)
             {
-                string nim = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells["NIM"].Value);
+                string nim = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells["nim"].Value);
                 this.nim = nim;
 
-                DetailValidasiSKPIMahasiswa detailValidasiSKPIMahasiswa = new DetailValidasiSKPIMahasiswa();
+                DetailValidasiSKPIMahasiswa detailValidasiSKPIMahasiswa = new DetailValidasiSKPIMahasiswa(nim);
                 detailValidasiSKPIMahasiswa.Show();
-                this.Hide();
+                this.Close();
             }
+        }
+        private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            CloseAllForms.CloseHiddenForms(this);
         }
     }
 }

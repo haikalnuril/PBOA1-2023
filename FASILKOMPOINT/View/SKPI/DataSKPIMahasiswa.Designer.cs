@@ -73,6 +73,7 @@
             dataGridView1.Location = new Point(12, 128);
             dataGridView1.Margin = new Padding(4);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(896, 387);
             dataGridView1.TabIndex = 7;
@@ -117,6 +118,7 @@
             Name = "DataSKPIMahasiswa";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Data SKPI Mahasiswa";
+            FormClosing += Halaman_FormClosing;
             Load += DataSKPIMahasiswa_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

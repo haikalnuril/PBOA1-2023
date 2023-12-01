@@ -59,7 +59,7 @@ namespace FASILKOMPOINT.View.SKPI
             // 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.BackgroundColor = SystemColors.ButtonHighlight;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -122,6 +122,7 @@ namespace FASILKOMPOINT.View.SKPI
             Name = "DetailValidasiSKPIMahasiswa";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Detail Validasi SKPI Mahasiswa";
+            FormClosing += Halaman_FormClosing;
             Load += DetailValidasiSKPIMahasiswa_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

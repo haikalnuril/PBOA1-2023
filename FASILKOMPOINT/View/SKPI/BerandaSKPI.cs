@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FASILKOMPOINT.App.Core;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,21 +31,21 @@ namespace FASILKOMPOINT.View.SKPI
         {
             Grafik grafik = new Grafik();
             grafik.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             ValidasiSKPIMahasiswa validasiSKPIMahasiswa = new ValidasiSKPIMahasiswa();
             validasiSKPIMahasiswa.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             DataSKPIMahasiswa dataSKPIMahasiswa = new DataSKPIMahasiswa();
             dataSKPIMahasiswa.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void button1_MouseEnter(object sender, EventArgs e)
@@ -86,12 +87,14 @@ namespace FASILKOMPOINT.View.SKPI
             {
                 Halaman HalamanLogin = new Halaman();
                 HalamanLogin.Show();
-                this.Hide();
+                this.Close();
 
             }
             else if (result == DialogResult.No)
             {
-
+                BerandaSKPI berandaSKPI = new BerandaSKPI();
+                berandaSKPI.Show();
+                this.Close();
             }
         }
 
@@ -99,7 +102,7 @@ namespace FASILKOMPOINT.View.SKPI
         {
             Grafik grafik = new Grafik();
             grafik.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -116,14 +119,18 @@ namespace FASILKOMPOINT.View.SKPI
         {
             ValidasiSKPIMahasiswa validasiSKPIMahasiswa = new ValidasiSKPIMahasiswa();
             validasiSKPIMahasiswa.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             DataSKPIMahasiswa dataSKPIMahasiswa = new DataSKPIMahasiswa();
             dataSKPIMahasiswa.Show();
-            this.Hide();
+            this.Close();
+        }
+        private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            CloseAllForms.CloseHiddenForms(this);
         }
     }
 }

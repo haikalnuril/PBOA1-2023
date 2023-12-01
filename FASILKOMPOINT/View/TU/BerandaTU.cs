@@ -1,5 +1,5 @@
 ﻿using FASILKOMPOINT.App.Context;
-using FASILKOMPOINT.View.SKPI;
+using FASILKOMPOINT.App.Core;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,14 +18,13 @@ namespace FASILKOMPOINT.View.TU
         public BerandaTU()
         {
             InitializeComponent();
-            tabelSKPITU.DataSource = MahasiswaContext.readSKPITU();
 
             DataGridViewButtonColumn PDFButton = new DataGridViewButtonColumn();
-            PDFButton.HeaderText = "File SKPI";
+            PDFButton.HeaderText = "PDF SKPI";
             PDFButton.Text = "Unduh";
             PDFButton.Name = "PDFButton";
             PDFButton.UseColumnTextForButtonValue = true;
-            tabelSKPITU.Columns.Insert(5, PDFButton);
+            dataGridView1.Columns.Add(PDFButton);
         }
 
         private void BerandaTU_Load(object sender, EventArgs e)
@@ -55,15 +54,15 @@ namespace FASILKOMPOINT.View.TU
                 {
                     BerandaTU berandaTU = new BerandaTU();
                     berandaTU.Show();
-                    this.Hide();
+                    this.Close();
                 }
                 else
                 {
-                    tabelSKPITU.DataSource = MahasiswaContext.showSearchDataMahasiswa(searchquery);
+                    dataGridView1.DataSource = MahasiswaContext.showSearchDataMahasiswa(searchquery);
 
-                    if (tabelSKPITU.Columns.Contains("detailButton"))
+                    if (dataGridView1.Columns.Contains("PDFButton"))
                     {
-                        tabelSKPITU.Columns.Remove("detailButton");
+                        dataGridView1.Columns.Remove("PDFButton");
                     }
 
                     DataGridViewButtonColumn PDFButton = new DataGridViewButtonColumn();
@@ -71,9 +70,9 @@ namespace FASILKOMPOINT.View.TU
                     PDFButton.Text = "Unduh";
                     PDFButton.Name = "PDFButton";
                     PDFButton.UseColumnTextForButtonValue = true;
-                    tabelSKPITU.Columns.Insert(3, PDFButton);
+                    dataGridView1.Columns.Add(PDFButton);
 
-                    tabelSKPITU.Columns["nama_mahasiswa"].DisplayIndex = 1;
+                    dataGridView1.Columns["nama_mahasiswa"].DisplayIndex = 1;
                 }
             }
             catch (Exception ex)
@@ -88,16 +87,17 @@ namespace FASILKOMPOINT.View.TU
             {
                 BerandaTU berandaTU = new BerandaTU();
                 berandaTU.Show();
-                this.Hide();
+                this.Close();
             }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == tabelSKPITU.Columns["PDFButton"].Index && e.RowIndex >= 0)
+            if (e.ColumnIndex == dataGridView1.Columns["PDFButton"].Index && e.RowIndex >= 0)
             {
-                string nim = Convert.ToString(tabelSKPITU.Rows[e.RowIndex].Cells["NIM"].Value);
+                string nim = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells["NIM"].Value);
                 this.nim = nim;
+                MessageBox.Show("Berhasil mengunduh SKPI!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -114,14 +114,20 @@ namespace FASILKOMPOINT.View.TU
                 {
                     Halaman HalamanLogin = new Halaman();
                     HalamanLogin.Show();
-                    this.Hide();
+                    this.Close();
 
                 }
                 else if (result == DialogResult.No)
                 {
-
+                    BerandaTU berandaTU = new BerandaTU();
+                    berandaTU.Show();
+                    this.Close();
                 }
             }
+        }
+        private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            CloseAllForms.CloseHiddenForms(this);
         }
     }
 }

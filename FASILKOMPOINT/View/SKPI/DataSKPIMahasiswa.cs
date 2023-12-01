@@ -1,4 +1,5 @@
 ﻿using FASILKOMPOINT.App.Context;
+using FASILKOMPOINT.App.Core;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,7 +24,7 @@ namespace FASILKOMPOINT.View.SKPI
         {
             BerandaSKPI berandaSKPI = new BerandaSKPI();
             berandaSKPI.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void DataSKPIMahasiswa_Load(object sender, EventArgs e)
@@ -76,6 +77,10 @@ namespace FASILKOMPOINT.View.SKPI
         private void button1_Click(object sender, EventArgs e)
         {
             ExecuteSearch();
+        }
+        private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            CloseAllForms.CloseHiddenForms(this);
         }
     }
 }

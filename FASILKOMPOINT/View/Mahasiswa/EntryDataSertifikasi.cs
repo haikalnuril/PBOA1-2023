@@ -1,4 +1,5 @@
 ﻿using FASILKOMPOINT.App.Context;
+using FASILKOMPOINT.App.Core;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,46 +15,40 @@ namespace FASILKOMPOINT.View.Mahasiswa
     public partial class EntryDataSertifikasi : Form
     {
         public string username { get; set; }
-        public EntryDataSertifikasi()
+        public EntryDataSertifikasi(string username)
         {
             InitializeComponent();
-            Halaman halamanLogin = Application.OpenForms["Halaman"] as Halaman;
-            if (halamanLogin != null)
-            {
-                string username = halamanLogin.username;
-                this.username = username;
-
-                dataGridView.DataSource = AktivitasSertifikasiContext.showSertifikasi(username, 603);
-                dataGridView.Columns["Keterangan"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-            }
+            this.username = username;
+            dataGridView.DataSource = AktivitasSertifikasiContext.showSertifikasi(username, 603);
+            dataGridView.Columns["Keterangan"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
         }
 
         private void btn_prestasi_Click(object sender, EventArgs e)
         {
-            EntryDataPrestasi entryDataPrestasi = new EntryDataPrestasi();
+            EntryDataPrestasi entryDataPrestasi = new EntryDataPrestasi(username);
             entryDataPrestasi.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btn_kegiatan_Click(object sender, EventArgs e)
         {
-            EntryDataKegiatan entryDataKegiatan = new EntryDataKegiatan();
+            EntryDataKegiatan entryDataKegiatan = new EntryDataKegiatan(username);
             entryDataKegiatan.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btn_sertifikasi_Click(object sender, EventArgs e)
         {
-            EntryDataSertifikasi entryDataSertifikasi = new EntryDataSertifikasi();
+            EntryDataSertifikasi entryDataSertifikasi = new EntryDataSertifikasi(username);
             entryDataSertifikasi.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btn_kembali_Click(object sender, EventArgs e)
         {
-            this.Close(); // Sembunyikan form saat ini
-            BerandaMahasiswa berandaMahasiswa = new BerandaMahasiswa();
+            BerandaMahasiswa berandaMahasiswa = new BerandaMahasiswa(username);
             berandaMahasiswa.Show();
+            this.Close();
         }
 
         private void EntryDataSertifikasi_Load(object sender, EventArgs e)
@@ -63,9 +58,26 @@ namespace FASILKOMPOINT.View.Mahasiswa
 
         private void btn_tambah_Click(object sender, EventArgs e)
         {
-            FormEntryDataSertifikasi formEntryDataSertifikasi = new FormEntryDataSertifikasi();
+            FormEntryDataSertifikasi formEntryDataSertifikasi = new FormEntryDataSertifikasi(username);
             formEntryDataSertifikasi.Show();
-            this.Hide();
+            this.Close();
+        }
+
+        private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dataGridView.Columns["Bukti"].Index && e.RowIndex >= 0)
+            {
+                string link = dataGridView.Rows[e.RowIndex].Cells["Bukti"].Value?.ToString();
+
+                if (!string.IsNullOrEmpty(link))
+                {
+                    ShellExecutor.OpenFileUsingDefaultProgram(link);
+                }
+            }
+        }
+        private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            CloseAllForms.CloseHiddenForms(this);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FASILKOMPOINT.App.Core;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace FASILKOMPOINT.View.Mahasiswa
 {
     public partial class FormEntryDataPrestasi : Form
     {
-        public FormEntryDataPrestasi()
+        public string username { get; set; }
+        public FormEntryDataPrestasi(string username)
         {
             InitializeComponent();
+            this.username = username;
             dateTimePicker2.Enabled = false;
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker2.Format = DateTimePickerFormat.Custom;
@@ -65,9 +68,18 @@ namespace FASILKOMPOINT.View.Mahasiswa
 
         private void button2_Click(object sender, EventArgs e)
         {
-            EntryDataPrestasi entryDataPrestasi = new EntryDataPrestasi();
+            EntryDataPrestasi entryDataPrestasi = new EntryDataPrestasi(username);
             entryDataPrestasi.Show();
-            this.Hide();
+            this.Close();
+        }
+
+        private void btn_simpan_Click(object sender, EventArgs e)
+        {
+            DialogResult messageBox = MessageBox.Show("Data berhasil disimpan!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            CloseAllForms.CloseHiddenForms(this);
         }
     }
 }

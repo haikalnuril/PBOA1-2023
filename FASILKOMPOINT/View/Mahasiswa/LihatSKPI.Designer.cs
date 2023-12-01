@@ -71,6 +71,8 @@
             Name = "LihatSKPI";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "LihatSKPI";
+            FormClosing += Halaman_FormClosing;
+            Load += LihatSKPI_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

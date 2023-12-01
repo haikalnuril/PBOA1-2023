@@ -245,6 +245,7 @@
             Name = "FormEntryDataKegiatan";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form Entry Data Kegiatan";
+            FormClosing += Halaman_FormClosing;
             Load += FormEntryDataKegiatan_Load;
             ResumeLayout(false);
             PerformLayout();

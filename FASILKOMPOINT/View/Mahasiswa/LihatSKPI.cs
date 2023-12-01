@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FASILKOMPOINT.App.Core;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,16 +13,27 @@ namespace FASILKOMPOINT.View.Mahasiswa
 {
     public partial class LihatSKPI : Form
     {
-        public LihatSKPI()
+        public string username { get; set; }
+        public LihatSKPI(string username)
         {
             InitializeComponent();
+            this.username = username;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.Close(); // Sembunyikan form saat ini
-            BerandaMahasiswa berandaMahasiswa = new BerandaMahasiswa();
+            this.Close();
+            BerandaMahasiswa berandaMahasiswa = new BerandaMahasiswa(username);
             berandaMahasiswa.Show();
+        }
+
+        private void LihatSKPI_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            CloseAllForms.CloseHiddenForms(this);
         }
     }
 }

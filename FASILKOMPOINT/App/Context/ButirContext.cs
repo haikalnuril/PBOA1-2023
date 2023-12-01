@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FASILKOMPOINT.App.Context
 {
-    internal class ButiCpntext
+    internal class ButirContext
     {
     }
 }

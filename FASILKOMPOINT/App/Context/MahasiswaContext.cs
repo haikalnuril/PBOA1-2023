@@ -31,7 +31,7 @@ namespace FASILKOMPOINT.App.Context
         }
         public static DataTable showSearchDataMahasiswa(string inputsearch)
         {
-            string query = $"SELECT ROW_NUMBER() OVER (ORDER BY {table}.mahasiswa_username) AS No, mahasiswa.nama AS Nama_Mahasiswa, {table}.mahasiswa_username AS NIM, prodi.nama_prodi AS Prodi, SUM(poin.poin) AS Poin FROM {table} JOIN mahasiswa ON mahasiswa.username = {table}.mahasiswa_username JOIN prodi ON mahasiswa.prodi_id_prodi = prodi.id_prodi JOIN poin ON {table}.poin_id_poin = poin.id_poin WHERE mahasiswa.username ILIKE '%'||@inputsearch||'%' OR mahasiswa.nama ILIKE '%'||@inputsearch||'%' GROUP BY {table}.mahasiswa_username, mahasiswa.nama, prodi.nama_prodi;";
+            string query = $"SELECT ROW_NUMBER() OVER (ORDER BY {table}.mahasiswa_username) AS No, mahasiswa.nama AS Nama_Mahasiswa, {table}.mahasiswa_username AS NIM, prodi.nama_prodi AS Prodi, SUM(poin.poin) AS Poin FROM {table} JOIN mahasiswa ON mahasiswa.username = {table}.mahasiswa_username JOIN prodi ON mahasiswa.prodi_id_prodi = prodi.id_prodi JOIN poin ON {table}.poin_id_poin = poin.id_poin WHERE {table}.mahasiswa_username ILIKE '%'||@inputsearch||'%' OR mahasiswa.nama ILIKE '%'||@inputsearch||'%' GROUP BY {table}.mahasiswa_username, mahasiswa.nama, prodi.nama_prodi;";
             NpgsqlParameter[] parameters = 
             {
                 new NpgsqlParameter("@inputsearch", NpgsqlDbType.Varchar){Value = inputsearch},
@@ -41,13 +41,13 @@ namespace FASILKOMPOINT.App.Context
         }
         public static DataTable showValidasiSKPI()
         {
-            string query = $"SELECT ROW_NUMBER() OVER (ORDER BY {table}.mahasiswa_username) AS No, mahasiswa.nama AS Nama_Mahasiswa, {table}.mahasiswa_username AS NIM, prodi.nama_prodi AS Prodi FROM {table} JOIN mahasiswa ON mahasiswa.username = {table}.mahasiswa_username JOIN prodi ON mahasiswa.prodi_id_prodi = prodi.id_prodi WHERE is_acc = 'menunggu';";
+            string query = $"SELECT ROW_NUMBER() OVER (ORDER BY {table}.mahasiswa_username) AS No, mahasiswa.nama AS Nama_Mahasiswa, {table}.mahasiswa_username AS NIM, prodi.nama_prodi AS Prodi FROM {table} JOIN mahasiswa ON mahasiswa.username = {table}.mahasiswa_username JOIN prodi ON mahasiswa.prodi_id_prodi = prodi.id_prodi WHERE is_acc = 'menunggu' GROUP BY {table}.mahasiswa_username, mahasiswa.nama, prodi.nama_prodi;;";
             DataTable dataMahasiswa = queryExecutor(query);
             return dataMahasiswa;
         }
         public static DataTable showSearchValidasiSKPI(string inputsearch)
         {
-            string query = $"SELECT ROW_NUMBER() OVER (ORDER BY {table}.mahasiswa_username) AS No, mahasiswa.nama AS Nama_Mahasiswa, {table}.mahasiswa_username AS NIM, prodi.nama_prodi AS Prodi FROM {table} JOIN mahasiswa ON mahasiswa.username = {table}.mahasiswa_username JOIN prodi ON mahasiswa.prodi_id_prodi = prodi.id_prodi WHERE mahasiswa.username ILIKE '%'||@inputsearch||'%' OR mahasiswa.nama ILIKE '%'||@inputsearch||'%' GROUP BY {table}.mahasiswa_username, mahasiswa.nama, prodi.nama_prodi;";
+            string query = $"SELECT ROW_NUMBER() OVER (ORDER BY {table}.mahasiswa_username) AS No, mahasiswa.nama AS Nama_Mahasiswa, {table}.mahasiswa_username AS NIM, prodi.nama_prodi AS Prodi FROM {table} JOIN mahasiswa ON mahasiswa.username = {table}.mahasiswa_username JOIN prodi ON mahasiswa.prodi_id_prodi = prodi.id_prodi WHERE {table}.mahasiswa_username ILIKE '%'||@inputsearch||'%' AND (SELECT {table}.id_aktivitas WHERE is_acc = 'menunggu') IS NOT NULL OR mahasiswa.nama ILIKE '%'||@inputsearch||'%' AND (SELECT {table}.id_aktivitas WHERE is_acc = 'menunggu') IS NOT NULL GROUP BY {table}.mahasiswa_username, mahasiswa.nama, prodi.nama_prodi;";
             NpgsqlParameter[] parameters =
             {
                 new NpgsqlParameter("@inputsearch", NpgsqlDbType.Varchar){Value = inputsearch},
@@ -100,18 +100,6 @@ namespace FASILKOMPOINT.App.Context
             ///MessageBox.Show($"Parameter 1: {id_aktivitas}");
             ///MessageBox.Show($"Parameter 2: {komentar}");
             commandExecutor(query, parameters);
-        }
-        public static DataTable readSKPITU()
-        {
-            string query = $"SELECT ROW_NUMBER() OVER () AS \"No\", mahasiswa.nama AS \"Nama\", mahasiswa.username AS \"NIM\", prodi.nama_prodi AS \"Prodi\", SUM(poin.poin) AS \"Poin\" FROM {table} JOIN mahasiswa ON {table}.mahasiswa_username = mahasiswa.username JOIN prodi ON mahasiswa.prodi_id_prodi = prodi.id_prodi JOIN poin ON {table}.poin_id_poin = poin.id_poin WHERE {table}.is_acc = 'disetujui' GROUP BY mahasiswa.nama, mahasiswa.username, prodi.nama_prodi HAVING SUM(poin.poin) > (SELECT poin_minimal FROM data_skpi WHERE EXTRACT(YEAR FROM tahun) = EXTRACT(YEAR FROM CURRENT_DATE));";
-            DataTable dataMahasiswa = queryExecutor(query);
-            return dataMahasiswa;
-        }
-        public static DataTable grafikPrestasi()
-        {
-            string query = $"SELECT EXTRACT(YEAR FROM tanggal_berakhir) AS tahun, COUNT(*) FILTER(WHERE kategori_id_kategori = 602) AS jumlah_prestasi FROM aktivitas GROUP BY tahun;";
-            DataTable dataMahasiswa = queryExecutor(query);
-            return dataMahasiswa;
         }
     }
 }

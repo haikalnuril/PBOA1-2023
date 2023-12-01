@@ -1,4 +1,5 @@
 ﻿using FASILKOMPOINT.App.Context;
+using FASILKOMPOINT.App.Core;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,25 +16,13 @@ namespace FASILKOMPOINT.View.Mahasiswa
     public partial class RekapDataSKPI : Form
     {
         public string username { get; set; }
-        public RekapDataSKPI()
+        public RekapDataSKPI(string username)
         {
             InitializeComponent();
-
-            // Check if "Halaman" form is open and not null
-            Halaman halamanLogin = Application.OpenForms["Halaman"] as Halaman;
-            if (halamanLogin != null)
-            {
-                // Access the username property from "Halaman" form
-                string username = halamanLogin.username;
-                this.username = username;
-
-                // Assuming showRekapPrestasi returns a DataTable (adjust accordingly)
-                DataTable rekapData = AktivitasPrestasiContext.showRekapPrestasi(username, 602);
-
-                // Assign the DataTable to the DataGridView DataSource
-                dataGridView1.DataSource = rekapData;
-                dataGridView1.Columns["Keterangan"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-            }
+            this.username = username;
+            DataTable rekapData = AktivitasPrestasiContext.showRekapPrestasi(username, 602);
+            dataGridView1.DataSource = rekapData;
+            dataGridView1.Columns["Keterangan"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
         }
 
 
@@ -57,7 +46,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
         private void btn_kembali_Click(object sender, EventArgs e)
         {
             this.Close(); // Sembunyikan form saat ini
-            BerandaMahasiswa berandaMahasiswa = new BerandaMahasiswa();
+            BerandaMahasiswa berandaMahasiswa = new BerandaMahasiswa(username);
             berandaMahasiswa.Show();
         }
 
@@ -73,6 +62,10 @@ namespace FASILKOMPOINT.View.Mahasiswa
             DataTable rekapData = AktivitasSertifikasiContext.showRekapSertifikasi(username, 603);
             dataGridView1.DataSource = rekapData;
             dataGridView1.Columns["Keterangan"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+        }
+        private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            CloseAllForms.CloseHiddenForms(this);
         }
     }
 }

@@ -295,6 +295,7 @@
             btn_simpan.TabIndex = 82;
             btn_simpan.Text = "Simpan";
             btn_simpan.UseVisualStyleBackColor = false;
+            btn_simpan.Click += btn_simpan_Click;
             // 
             // FormEntryDataPrestasi
             // 
@@ -330,6 +331,7 @@
             Name = "FormEntryDataPrestasi";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form Entry Data Prestasi";
+            FormClosing += Halaman_FormClosing;
             Load += EntriDataSKPI_Load;
             ResumeLayout(false);
             PerformLayout();

@@ -1,6 +1,4 @@
 using FASILKOMPOINT.View;
-using FASILKOMPOINT.View.Mahasiswa;
-using FASILKOMPOINT.View.TU;
 
 namespace FASILKOMPOINT
 {
@@ -16,8 +14,6 @@ namespace FASILKOMPOINT
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Halaman());
-
-
         }
     }
 }

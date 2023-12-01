@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FASILKOMPOINT.App.Core;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,9 +11,9 @@ using System.Windows.Forms;
 
 namespace FASILKOMPOINT.View.SKPI
 {
-    public partial class GrafikPrestasi : Form
+    public partial class Grafik : Form
     {
-        public GrafikPrestasi()
+        public Grafik()
         {
             InitializeComponent();
         }
@@ -20,6 +21,10 @@ namespace FASILKOMPOINT.View.SKPI
         private void Grafik_Load(object sender, EventArgs e)
         {
 
+        }
+        private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            CloseAllForms.CloseHiddenForms(this);
         }
     }
 }

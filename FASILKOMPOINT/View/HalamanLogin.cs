@@ -1,4 +1,5 @@
 ﻿using FASILKOMPOINT.App.Context;
+using FASILKOMPOINT.App.Core;
 using FASILKOMPOINT.View.Mahasiswa;
 using FASILKOMPOINT.View.SKPI;
 using FASILKOMPOINT.View.TU;
@@ -22,6 +23,7 @@ namespace FASILKOMPOINT.View
         private TextBox tb2;
         private bool isButton1Hovered = false;
         public string username { get; private set; }
+
         public Halaman()
         {
             InitializeComponent();
@@ -67,7 +69,7 @@ namespace FASILKOMPOINT.View
             }
             else if (id_role == 3)
             {
-                BerandaMahasiswa berandaMahasiswa = new BerandaMahasiswa();
+                BerandaMahasiswa berandaMahasiswa = new BerandaMahasiswa(username);
                 berandaMahasiswa.Show();
                 this.Hide();
             }
@@ -95,6 +97,11 @@ namespace FASILKOMPOINT.View
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            CloseAllForms.CloseHiddenForms(this);
         }
     }
 }

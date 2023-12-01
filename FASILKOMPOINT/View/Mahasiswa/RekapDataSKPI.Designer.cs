@@ -144,6 +144,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
             Name = "RekapDataSKPI";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Rekap Data SKPI";
+            FormClosing += Halaman_FormClosing;
             Load += RekapDataSKPI_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
