@@ -18,13 +18,14 @@ namespace FASILKOMPOINT.View.TU
         public BerandaTU()
         {
             InitializeComponent();
+            tabelSKPITU.DataSource = MahasiswaContext.readSKPITU();
 
             DataGridViewButtonColumn PDFButton = new DataGridViewButtonColumn();
-            PDFButton.HeaderText = "PDF SKPI";
+            PDFButton.HeaderText = "File SKPI";
             PDFButton.Text = "Unduh";
             PDFButton.Name = "PDFButton";
             PDFButton.UseColumnTextForButtonValue = true;
-            dataGridView1.Columns.Insert(4, PDFButton);
+            tabelSKPITU.Columns.Insert(5, PDFButton);
         }
 
         private void BerandaTU_Load(object sender, EventArgs e)
@@ -58,11 +59,11 @@ namespace FASILKOMPOINT.View.TU
                 }
                 else
                 {
-                    dataGridView1.DataSource = MahasiswaContext.showSearchDataMahasiswa(searchquery);
+                    tabelSKPITU.DataSource = MahasiswaContext.showSearchDataMahasiswa(searchquery);
 
-                    if (dataGridView1.Columns.Contains("detailButton"))
+                    if (tabelSKPITU.Columns.Contains("detailButton"))
                     {
-                        dataGridView1.Columns.Remove("detailButton");
+                        tabelSKPITU.Columns.Remove("detailButton");
                     }
 
                     DataGridViewButtonColumn PDFButton = new DataGridViewButtonColumn();
@@ -70,9 +71,9 @@ namespace FASILKOMPOINT.View.TU
                     PDFButton.Text = "Unduh";
                     PDFButton.Name = "PDFButton";
                     PDFButton.UseColumnTextForButtonValue = true;
-                    dataGridView1.Columns.Insert(3, PDFButton);
+                    tabelSKPITU.Columns.Insert(3, PDFButton);
 
-                    dataGridView1.Columns["nama_mahasiswa"].DisplayIndex = 1;
+                    tabelSKPITU.Columns["nama_mahasiswa"].DisplayIndex = 1;
                 }
             }
             catch (Exception ex)
@@ -93,9 +94,9 @@ namespace FASILKOMPOINT.View.TU
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == dataGridView1.Columns["PDFButton"].Index && e.RowIndex >= 0)
+            if (e.ColumnIndex == tabelSKPITU.Columns["PDFButton"].Index && e.RowIndex >= 0)
             {
-                string nim = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells["NIM"].Value);
+                string nim = Convert.ToString(tabelSKPITU.Rows[e.RowIndex].Cells["NIM"].Value);
                 this.nim = nim;
             }
         }

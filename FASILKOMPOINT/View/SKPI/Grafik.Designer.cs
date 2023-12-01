@@ -1,6 +1,6 @@
 ﻿namespace FASILKOMPOINT.View.SKPI
 {
-    partial class Grafik
+    partial class GrafikPrestasi
     {
         /// <summary>
         /// Required designer variable.

@@ -101,5 +101,17 @@ namespace FASILKOMPOINT.App.Context
             ///MessageBox.Show($"Parameter 2: {komentar}");
             commandExecutor(query, parameters);
         }
+        public static DataTable readSKPITU()
+        {
+            string query = $"SELECT ROW_NUMBER() OVER () AS \"No\", mahasiswa.nama AS \"Nama\", mahasiswa.username AS \"NIM\", prodi.nama_prodi AS \"Prodi\", SUM(poin.poin) AS \"Poin\" FROM {table} JOIN mahasiswa ON {table}.mahasiswa_username = mahasiswa.username JOIN prodi ON mahasiswa.prodi_id_prodi = prodi.id_prodi JOIN poin ON {table}.poin_id_poin = poin.id_poin WHERE {table}.is_acc = 'disetujui' GROUP BY mahasiswa.nama, mahasiswa.username, prodi.nama_prodi HAVING SUM(poin.poin) > (SELECT poin_minimal FROM data_skpi WHERE EXTRACT(YEAR FROM tahun) = EXTRACT(YEAR FROM CURRENT_DATE));";
+            DataTable dataMahasiswa = queryExecutor(query);
+            return dataMahasiswa;
+        }
+        public static DataTable grafikPrestasi()
+        {
+            string query = $"SELECT EXTRACT(YEAR FROM tanggal_berakhir) AS tahun, COUNT(*) FILTER(WHERE kategori_id_kategori = 602) AS jumlah_prestasi FROM aktivitas GROUP BY tahun;";
+            DataTable dataMahasiswa = queryExecutor(query);
+            return dataMahasiswa;
+        }
     }
 }

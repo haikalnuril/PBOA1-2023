@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FE FIX BY LENT BACKUP\\PBOA1-2023\\FASILKOMPOINT\\FASILKOMPOINT.csproj": {}
+    "D:\\KULIAH SISTEM INFORMASI\\SEMESTER 3\\PBO\\Projek\\DEVELOP\\PBOA1-2023\\FASILKOMPOINT\\FASILKOMPOINT.csproj": {}
   },
   "projects": {
-    "D:\\FE FIX BY LENT BACKUP\\PBOA1-2023\\FASILKOMPOINT\\FASILKOMPOINT.csproj": {
+    "D:\\KULIAH SISTEM INFORMASI\\SEMESTER 3\\PBO\\Projek\\DEVELOP\\PBOA1-2023\\FASILKOMPOINT\\FASILKOMPOINT.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FE FIX BY LENT BACKUP\\PBOA1-2023\\FASILKOMPOINT\\FASILKOMPOINT.csproj",
+        "projectUniqueName": "D:\\KULIAH SISTEM INFORMASI\\SEMESTER 3\\PBO\\Projek\\DEVELOP\\PBOA1-2023\\FASILKOMPOINT\\FASILKOMPOINT.csproj",
         "projectName": "FASILKOMPOINT",
-        "projectPath": "D:\\FE FIX BY LENT BACKUP\\PBOA1-2023\\FASILKOMPOINT\\FASILKOMPOINT.csproj",
-        "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
-        "outputPath": "D:\\FE FIX BY LENT BACKUP\\PBOA1-2023\\FASILKOMPOINT\\obj\\",
+        "projectPath": "D:\\KULIAH SISTEM INFORMASI\\SEMESTER 3\\PBO\\Projek\\DEVELOP\\PBOA1-2023\\FASILKOMPOINT\\FASILKOMPOINT.csproj",
+        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+        "outputPath": "D:\\KULIAH SISTEM INFORMASI\\SEMESTER 3\\PBO\\Projek\\DEVELOP\\PBOA1-2023\\FASILKOMPOINT\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -48,6 +48,10 @@
               "target": "Package",
               "version": "[8.0.0, )"
             },
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2023.10.2, )"
+            },
             "WinForms.DataVisualization": {
               "target": "Package",
               "version": "[1.9.1, )"
@@ -72,7 +76,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.416\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

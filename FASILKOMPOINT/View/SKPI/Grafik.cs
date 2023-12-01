@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FASILKOMPOINT.View.SKPI
 {
-    public partial class Grafik : Form
+    public partial class GrafikPrestasi : Form
     {
-        public Grafik()
+        public GrafikPrestasi()
         {
             InitializeComponent();
         }

@@ -35,7 +35,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BerandaMahasiswa));
             button1 = new Button();
-            button2 = new Button();
+            btnLihatSKPI = new Button();
             button3 = new Button();
             button4 = new Button();
             pictureBox1 = new PictureBox();
@@ -61,20 +61,20 @@ namespace FASILKOMPOINT.View.Mahasiswa
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // button2
+            // btnLihatSKPI
             // 
-            button2.BackColor = SystemColors.Control;
-            button2.Font = new Font("Poppins SemiBold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ImageAlign = ContentAlignment.TopCenter;
-            button2.Location = new Point(116, 328);
-            button2.Margin = new Padding(5, 3, 5, 3);
-            button2.Name = "button2";
-            button2.Size = new Size(204, 34);
-            button2.TabIndex = 3;
-            button2.Text = "Lihat SKPI";
-            button2.TextAlign = ContentAlignment.BottomCenter;
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+            btnLihatSKPI.BackColor = SystemColors.Control;
+            btnLihatSKPI.Font = new Font("Poppins SemiBold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btnLihatSKPI.ImageAlign = ContentAlignment.TopCenter;
+            btnLihatSKPI.Location = new Point(116, 328);
+            btnLihatSKPI.Margin = new Padding(5, 3, 5, 3);
+            btnLihatSKPI.Name = "btnLihatSKPI";
+            btnLihatSKPI.Size = new Size(204, 34);
+            btnLihatSKPI.TabIndex = 3;
+            btnLihatSKPI.Text = "Lihat SKPI";
+            btnLihatSKPI.TextAlign = ContentAlignment.BottomCenter;
+            btnLihatSKPI.UseVisualStyleBackColor = false;
+            btnLihatSKPI.Click += btnLihatSKPI_Click;
             // 
             // button3
             // 
@@ -151,7 +151,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
             Controls.Add(pictureBox1);
             Controls.Add(button4);
             Controls.Add(button3);
-            Controls.Add(button2);
+            Controls.Add(btnLihatSKPI);
             Controls.Add(button1);
             Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
@@ -168,7 +168,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
 
         #endregion
         private Button button1;
-        private Button button2;
+        private Button btnLihatSKPI;
         private Button button3;
         private Button button4;
         private PictureBox pictureBox1;

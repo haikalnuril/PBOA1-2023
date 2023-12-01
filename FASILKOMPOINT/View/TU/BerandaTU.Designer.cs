@@ -33,27 +33,29 @@ namespace FASILKOMPOINT.View.TU
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BerandaTU));
-            dataGridView1 = new DataGridView();
+            tabelSKPITU = new DataGridView();
             label1 = new Label();
             textBox1 = new TextBox();
             btn_cari = new Button();
             logoutbutton = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)tabelSKPITU).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // tabelSKPITU
             // 
-            dataGridView1.AllowUserToOrderColumns = true;
-            dataGridView1.BackgroundColor = SystemColors.ButtonHighlight;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 128);
-            dataGridView1.Margin = new Padding(3, 2, 3, 2);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 5;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(896, 387);
-            dataGridView1.TabIndex = 5;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick_1;
+            tabelSKPITU.AllowUserToOrderColumns = true;
+            tabelSKPITU.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            tabelSKPITU.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            tabelSKPITU.BackgroundColor = SystemColors.ButtonHighlight;
+            tabelSKPITU.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            tabelSKPITU.Location = new Point(12, 128);
+            tabelSKPITU.Margin = new Padding(3, 2, 3, 2);
+            tabelSKPITU.Name = "tabelSKPITU";
+            tabelSKPITU.RowHeadersWidth = 5;
+            tabelSKPITU.RowTemplate.Height = 29;
+            tabelSKPITU.Size = new Size(896, 387);
+            tabelSKPITU.TabIndex = 5;
+            tabelSKPITU.CellContentClick += dataGridView1_CellContentClick_1;
             // 
             // label1
             // 
@@ -114,20 +116,20 @@ namespace FASILKOMPOINT.View.TU
             Controls.Add(btn_cari);
             Controls.Add(textBox1);
             Controls.Add(label1);
-            Controls.Add(dataGridView1);
+            Controls.Add(tabelSKPITU);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Margin = new Padding(3, 2, 3, 2);
             Name = "BerandaTU";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Beranda TU";
             Load += BerandaTU_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)tabelSKPITU).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private DataGridView dataGridView1;
+        private DataGridView tabelSKPITU;
         private Label label1;
         private TextBox textBox1;
         private Button btn_cari;
