@@ -13,6 +13,7 @@ using QuestPDF.Fluent;
 using QuestPDF.Helpers;
 using QuestPDF.Previewer;
 using System.Reflection.Metadata;
+using FASILKOMPOINT.App.Context;
 
 namespace FASILKOMPOINT.View.Mahasiswa
 {
@@ -104,6 +105,14 @@ namespace FASILKOMPOINT.View.Mahasiswa
 
         private void button2_Click(object sender, EventArgs e)
         {
+            GeneratePDF();
+        }
+
+        public void GeneratePDF()
+        {
+            //DataTable userData = SKPIContext.namaSKPI(username);
+            //string namaMahasiswa = userData.Rows.Count > 0 ? userData.Rows[0]["nama_mahasiswa"].ToString() : "Unknown";
+
             QuestPDF.Settings.License = LicenseType.Community;
 
             DateTime now = DateTime.Now;
@@ -135,7 +144,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
                             {
                                 Inlined.Spacing(27, Unit.Millimetre);
                                 Inlined.Item().Text("1.1     Nama Lengkap").FontSize(10);
-                                Inlined.Item().Text(":    NUR KHOLIS MAJID").FontSize(10); //nama
+                                Inlined.Item().Text($":    ABC").FontSize(10); //nama
                             });
                             x.Item().PaddingLeft(33, Unit.Millimetre).PaddingTop(2, Unit.Millimetre).Inlined(Inlined =>
                             {
