@@ -6,9 +6,17 @@
 
 # QUERY DATABASE TERBARU BY BACKEND 01/12/2023 BISA DI CEK DI: https://drive.google.com/drive/u/0/folders/1sXiOMf-O0j903xEesEWvIgACgIOrUBiP
 
+# LANGKAH-LANGKAH YANG WAJIB DILAKUKAN SETELAH MENGECLONE REPO
+# 1. MENGUBAH PASSWORD PADA Folder Core lalu pilih DatabaseWrapper.cs
+# 2. MENGUBAH PATH FILE FOLDER PADA BerandaMahasiswa.cs pada line 149-151 dengan nama LinkHeader, LinkFooter, dan LinkKKNI
+# 3. Ubah Path tersebut dengan melihat langsung pada filenya di bagian FASILKOMPOINT/Resources
+# 4. Copy secara utuh contoh "D:\\FASILKOMPOINT\\FASILKOMPOINT\\Resources\\header1.PNG" jangan dipotong menjadi "Resources\\header1.PNG"
+
+# 5. Ulangi Langkah diatas pada BerandaTU.cs pada line 136-138
+
 FITUR YANG BELUM SELESAI / BELUM DIJADIKAN SATU:
 1. GRAFIK - TIM SKPI
-2. LIHAT SKPI (PDF) - MAHASISWA
+2. LIHAT SKPI (PDF) - MAHASISWA (DONE)
 3. BERANDA TU - TATA USAHA
 4. FORM ENTRY DATA PRESTASI, KEGIATAN, DAN SERTFIKASI - MAHASISWA (MENUNGGU COMBOBOX SELESAI)
 5. SEGALA MACAM LOGIC COMBOBOX UNTUK BUTIR, SUBBUTIR, DAN SUBKATEGORI
