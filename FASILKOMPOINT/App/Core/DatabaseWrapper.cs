@@ -22,11 +22,7 @@ namespace FASILKOMPOINT.App.Core
 		private static readonly string DB_HOST = "localhost";
 		private static readonly string DB_DATABASE = "FASILKOMPOINT";
 		private static readonly string DB_USERNAME = "postgres";
-<<<<<<< HEAD
 		private static readonly string DB_PASSWORD = "admin123";
-=======
-		private static readonly string DB_PASSWORD = "haikalteng12";
->>>>>>> b67706f70a1fb1dda3683d2c5aeb968b78e9cf58
 		private static readonly string DB_PORT = "5432";
 
 		private static NpgsqlConnection connection;

@@ -1,39 +1,24 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "D:\\FASILKOMPOINT 011223\\PBOA1-2023\\FASILKOMPOINT\\FASILKOMPOINT.csproj": {}
+    "D:\\KULIAH SISTEM INFORMASI\\SEMESTER 3\\PBO\\Projek\\DEVELOP BGT 2\\PBOA1-2023\\FASILKOMPOINT\\FASILKOMPOINT.csproj": {}
   },
   "projects": {
-    "D:\\FASILKOMPOINT 011223\\PBOA1-2023\\FASILKOMPOINT\\FASILKOMPOINT.csproj": {
+    "D:\\KULIAH SISTEM INFORMASI\\SEMESTER 3\\PBO\\Projek\\DEVELOP BGT 2\\PBOA1-2023\\FASILKOMPOINT\\FASILKOMPOINT.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FASILKOMPOINT 011223\\PBOA1-2023\\FASILKOMPOINT\\FASILKOMPOINT.csproj",
+        "projectUniqueName": "D:\\KULIAH SISTEM INFORMASI\\SEMESTER 3\\PBO\\Projek\\DEVELOP BGT 2\\PBOA1-2023\\FASILKOMPOINT\\FASILKOMPOINT.csproj",
         "projectName": "FASILKOMPOINT",
-        "projectPath": "D:\\FASILKOMPOINT 011223\\PBOA1-2023\\FASILKOMPOINT\\FASILKOMPOINT.csproj",
-        "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
-        "outputPath": "D:\\FASILKOMPOINT 011223\\PBOA1-2023\\FASILKOMPOINT\\obj\\",
-=======
-    "D:\\PBOA1-2023\\FASILKOMPOINT\\FASILKOMPOINT.csproj": {}
-  },
-  "projects": {
-    "D:\\PBOA1-2023\\FASILKOMPOINT\\FASILKOMPOINT.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\PBOA1-2023\\FASILKOMPOINT\\FASILKOMPOINT.csproj",
-        "projectName": "FASILKOMPOINT",
-        "projectPath": "D:\\PBOA1-2023\\FASILKOMPOINT\\FASILKOMPOINT.csproj",
-        "packagesPath": "C:\\Users\\HAIKAL\\.nuget\\packages\\",
-        "outputPath": "D:\\PBOA1-2023\\FASILKOMPOINT\\obj\\",
->>>>>>> b67706f70a1fb1dda3683d2c5aeb968b78e9cf58
+        "projectPath": "D:\\KULIAH SISTEM INFORMASI\\SEMESTER 3\\PBO\\Projek\\DEVELOP BGT 2\\PBOA1-2023\\FASILKOMPOINT\\FASILKOMPOINT.csproj",
+        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+        "outputPath": "D:\\KULIAH SISTEM INFORMASI\\SEMESTER 3\\PBO\\Projek\\DEVELOP BGT 2\\PBOA1-2023\\FASILKOMPOINT\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-<<<<<<< HEAD
-          "C:\\Users\\asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-=======
-          "C:\\Users\\HAIKAL\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> b67706f70a1fb1dda3683d2c5aeb968b78e9cf58
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -91,11 +76,7 @@
               "privateAssets": "none"
             }
           },
-<<<<<<< HEAD
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.416\\RuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
->>>>>>> b67706f70a1fb1dda3683d2c5aeb968b78e9cf58
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
