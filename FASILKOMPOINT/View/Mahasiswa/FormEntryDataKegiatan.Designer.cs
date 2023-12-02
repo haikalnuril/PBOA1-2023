@@ -42,14 +42,16 @@
             label1 = new Label();
             dateTimePicker2 = new DateTimePicker();
             check_hari = new CheckBox();
-            comboBox2 = new ComboBox();
+            cbSubButirSerta = new ComboBox();
             label2 = new Label();
-            comboBox1 = new ComboBox();
+            cbButirSerta = new ComboBox();
+            cbSubKategoriKegiatan = new ComboBox();
+            label3 = new Label();
             SuspendLayout();
             // 
             // txt_bukti
             // 
-            txt_bukti.Location = new Point(297, 357);
+            txt_bukti.Location = new Point(297, 381);
             txt_bukti.Margin = new Padding(2);
             txt_bukti.Name = "txt_bukti";
             txt_bukti.Size = new Size(490, 23);
@@ -59,7 +61,7 @@
             // 
             lbl_bukti.AutoSize = true;
             lbl_bukti.BackColor = Color.Transparent;
-            lbl_bukti.Location = new Point(112, 360);
+            lbl_bukti.Location = new Point(112, 384);
             lbl_bukti.Margin = new Padding(2, 0, 2, 0);
             lbl_bukti.Name = "lbl_bukti";
             lbl_bukti.Size = new Size(55, 15);
@@ -70,7 +72,7 @@
             // 
             lbl_tingkat.AutoSize = true;
             lbl_tingkat.BackColor = Color.Transparent;
-            lbl_tingkat.Location = new Point(112, 310);
+            lbl_tingkat.Location = new Point(112, 295);
             lbl_tingkat.Margin = new Padding(2, 0, 2, 0);
             lbl_tingkat.Name = "lbl_tingkat";
             lbl_tingkat.Size = new Size(78, 15);
@@ -133,7 +135,7 @@
             button2.BackColor = Color.OrangeRed;
             button2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = Color.Transparent;
-            button2.Location = new Point(624, 428);
+            button2.Location = new Point(623, 443);
             button2.Margin = new Padding(2);
             button2.Name = "button2";
             button2.Size = new Size(79, 24);
@@ -147,7 +149,7 @@
             btn_simpan.BackColor = Color.LimeGreen;
             btn_simpan.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btn_simpan.ForeColor = Color.Transparent;
-            btn_simpan.Location = new Point(707, 428);
+            btn_simpan.Location = new Point(706, 443);
             btn_simpan.Margin = new Padding(2);
             btn_simpan.Name = "btn_simpan";
             btn_simpan.Size = new Size(79, 24);
@@ -190,33 +192,54 @@
             check_hari.UseVisualStyleBackColor = false;
             check_hari.CheckedChanged += check_hari_CheckedChanged;
             // 
-            // comboBox2
+            // cbSubButirSerta
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Pilih Level", "Fakultas", "Universitas", "Jurusan", "Nasional", "Internasional", "Propinsi", "Kab/Kota", "Wilayah/Regional" });
-            comboBox2.Location = new Point(297, 308);
-            comboBox2.Margin = new Padding(2);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(226, 23);
-            comboBox2.TabIndex = 78;
+            cbSubButirSerta.FormattingEnabled = true;
+            cbSubButirSerta.Items.AddRange(new object[] { "Pilih Level", "Fakultas", "Universitas", "Jurusan", "Nasional", "Internasional", "Propinsi", "Kab/Kota", "Wilayah/Regional" });
+            cbSubButirSerta.Location = new Point(297, 332);
+            cbSubButirSerta.Margin = new Padding(2);
+            cbSubButirSerta.Name = "cbSubButirSerta";
+            cbSubButirSerta.Size = new Size(226, 23);
+            cbSubButirSerta.TabIndex = 78;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Location = new Point(112, 267);
+            label2.Location = new Point(113, 335);
             label2.Name = "label2";
             label2.Size = new Size(99, 15);
             label2.TabIndex = 79;
             label2.Text = "Jenis Kepesertaan";
             // 
-            // comboBox1
+            // cbButirSerta
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(297, 264);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(226, 23);
-            comboBox1.TabIndex = 80;
+            cbButirSerta.FormattingEnabled = true;
+            cbButirSerta.Location = new Point(297, 292);
+            cbButirSerta.Name = "cbButirSerta";
+            cbButirSerta.Size = new Size(226, 23);
+            cbButirSerta.TabIndex = 80;
+            cbButirSerta.SelectedIndexChanged += cbButirSerta_SelectedIndexChanged;
+            // 
+            // cbSubKategoriKegiatan
+            // 
+            cbSubKategoriKegiatan.FormattingEnabled = true;
+            cbSubKategoriKegiatan.Location = new Point(298, 253);
+            cbSubKategoriKegiatan.Name = "cbSubKategoriKegiatan";
+            cbSubKategoriKegiatan.Size = new Size(434, 23);
+            cbSubKategoriKegiatan.TabIndex = 87;
+            cbSubKategoriKegiatan.SelectedIndexChanged += cbSubKategoriKegiatan_SelectedIndexChanged;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Location = new Point(112, 259);
+            label3.Name = "label3";
+            label3.Size = new Size(100, 15);
+            label3.TabIndex = 86;
+            label3.Text = "Kategori Kegiatan";
+            label3.Click += label3_Click;
             // 
             // FormEntryDataKegiatan
             // 
@@ -224,9 +247,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(921, 528);
-            Controls.Add(comboBox1);
+            Controls.Add(cbSubKategoriKegiatan);
+            Controls.Add(label3);
+            Controls.Add(cbButirSerta);
             Controls.Add(label2);
-            Controls.Add(comboBox2);
+            Controls.Add(cbSubButirSerta);
             Controls.Add(check_hari);
             Controls.Add(dateTimePicker2);
             Controls.Add(label1);
@@ -266,8 +291,10 @@
         private Label label1;
         private DateTimePicker dateTimePicker2;
         private CheckBox check_hari;
-        private ComboBox comboBox2;
+        private ComboBox cbSubButirSerta;
         private Label label2;
-        private ComboBox comboBox1;
+        private ComboBox cbButirSerta;
+        private ComboBox cbSubKategoriKegiatan;
+        private Label label3;
     }
 }

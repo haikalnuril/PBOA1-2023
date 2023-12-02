@@ -10,6 +10,15 @@
     <Compile Update="View\Mahasiswa\BerandaMahasiswa.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="View\Mahasiswa\FormEditEntryDataKegiatan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\Mahasiswa\FormEditEntryDataPrestasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\Mahasiswa\FormEditEntrySertifikasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="View\Mahasiswa\FormEntryDataKegiatan.cs">
       <SubType>Form</SubType>
     </Compile>

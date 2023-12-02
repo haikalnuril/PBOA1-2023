@@ -22,6 +22,13 @@ namespace FASILKOMPOINT.View.Mahasiswa
             dataGridView.DataSource = AktivitasSertifikasiContext.showSertifikasi(username, 603);
             dataGridView.Columns["Keterangan"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
 
+            DataGridViewButtonColumn editButton = new DataGridViewButtonColumn();
+            editButton.HeaderText = "";
+            editButton.Text = "Edit";
+            editButton.Name = "editButton";
+            editButton.UseColumnTextForButtonValue = true;
+            dataGridView.Columns.Insert(8, editButton);
+
             this.FormClosing += Halaman_FormClosing;
         }
 
@@ -75,6 +82,19 @@ namespace FASILKOMPOINT.View.Mahasiswa
                 {
                     ShellExecutor.OpenFileUsingDefaultProgram(link);
                 }
+            }
+            else if (e.ColumnIndex == dataGridView.Columns["editButton"].Index && e.RowIndex >= 0)
+            {
+                int id_aktivitas = Convert.ToInt32(dataGridView.Rows[e.RowIndex].Cells["id_aktivitas"].Value);
+
+                using (FormEditEntrySertifikasi formEditEntrySertifikasi = new FormEditEntrySertifikasi(username, id_aktivitas))
+                {
+                    FormEditEntrySertifikasi halamaneditSertifikasi = new FormEditEntrySertifikasi(username, id_aktivitas);
+                    halamaneditSertifikasi.Show();
+                }
+
+                dataGridView.DataSource = null;
+                dataGridView.DataSource = AktivitasSertifikasiContext.showSertifikasi;
             }
         }
         private void Halaman_FormClosing(object sender, FormClosingEventArgs e)

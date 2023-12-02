@@ -42,7 +42,7 @@
             dateTimePicker2 = new DateTimePicker();
             label1 = new Label();
             dateTimePicker1 = new DateTimePicker();
-            comboBox3 = new ComboBox();
+            cbButirSertifikasi = new ComboBox();
             button2 = new Button();
             btn_simpan = new Button();
             SuspendLayout();
@@ -180,15 +180,15 @@
             dateTimePicker1.Size = new Size(226, 23);
             dateTimePicker1.TabIndex = 61;
             // 
-            // comboBox3
+            // cbButirSertifikasi
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Items.AddRange(new object[] { "Pilih Tingkat Penyeleggara", "Internasional", "Nasional" });
-            comboBox3.Location = new Point(295, 242);
-            comboBox3.Margin = new Padding(2);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(226, 23);
-            comboBox3.TabIndex = 79;
+            cbButirSertifikasi.FormattingEnabled = true;
+            cbButirSertifikasi.Items.AddRange(new object[] { "Pilih Tingkat Penyeleggara", "Internasional", "Nasional" });
+            cbButirSertifikasi.Location = new Point(295, 242);
+            cbButirSertifikasi.Margin = new Padding(2);
+            cbButirSertifikasi.Name = "cbButirSertifikasi";
+            cbButirSertifikasi.Size = new Size(226, 23);
+            cbButirSertifikasi.TabIndex = 79;
             // 
             // button2
             // 
@@ -226,7 +226,7 @@
             ClientSize = new Size(921, 528);
             Controls.Add(button2);
             Controls.Add(btn_simpan);
-            Controls.Add(comboBox3);
+            Controls.Add(cbButirSertifikasi);
             Controls.Add(check_hari);
             Controls.Add(dateTimePicker2);
             Controls.Add(label1);
@@ -266,7 +266,7 @@
         private DateTimePicker dateTimePicker2;
         private Label label1;
         private DateTimePicker dateTimePicker1;
-        private ComboBox comboBox3;
+        private ComboBox cbButirSertifikasi;
         private Button button2;
         private Button btn_simpan;
     }

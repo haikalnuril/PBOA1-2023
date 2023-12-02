@@ -16,12 +16,20 @@ namespace FASILKOMPOINT.View.Mahasiswa
     public partial class EntryDataPrestasi : Form
     {
         public string username { get; set; }
+        
         public EntryDataPrestasi(string username)
         {
             InitializeComponent();
             this.username = username;
             dataGridView.DataSource = AktivitasPrestasiContext.showPrestasi(username, 602);
             dataGridView.Columns["Keterangan"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
+            DataGridViewButtonColumn editButton = new DataGridViewButtonColumn();
+            editButton.HeaderText = "";
+            editButton.Text = "Edit";
+            editButton.Name = "editButton";
+            editButton.UseColumnTextForButtonValue = true;
+            dataGridView.Columns.Insert(9, editButton);
 
             this.FormClosing += Halaman_FormClosing;
         }
@@ -86,7 +94,19 @@ namespace FASILKOMPOINT.View.Mahasiswa
                     ShellExecutor.OpenFileUsingDefaultProgram(link);
                 }
             }
+
+            else if (e.ColumnIndex == dataGridView.Columns["editButton"].Index && e.RowIndex >= 0)
+            {
+                int id_aktivitas = Convert.ToInt32(dataGridView.Rows[e.RowIndex].Cells["id_aktivitas"].Value);
+
+                using (FormEditEntryDataPrestasi formEditEntryPrestasi = new FormEditEntryDataPrestasi(username,id_aktivitas))
+                {
+                    FormEditEntryDataPrestasi halamaneditPrestasi = new FormEditEntryDataPrestasi(username, id_aktivitas);
+                    halamaneditPrestasi.Show();
+                }
+            }
         }
+
         private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
         {
             try

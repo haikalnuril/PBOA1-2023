@@ -1,5 +1,4 @@
 ﻿using FASILKOMPOINT.App.Context;
-using FASILKOMPOINT.App.Core;
 using FASILKOMPOINT.App.Models;
 using System;
 using System.Collections.Generic;
@@ -10,16 +9,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace FASILKOMPOINT.View.Mahasiswa
 {
-    public partial class FormEntryDataPrestasi : Form
+    public partial class FormEditEntryDataPrestasi : Form
     {
         public string username { get; set; }
-        public FormEntryDataPrestasi(string username)
+        public int id_aktivitas { get; set; }
+
+        public FormEditEntryDataPrestasi(string username, int id_aktivitas)
         {
             InitializeComponent();
             this.username = username;
+            this.id_aktivitas = id_aktivitas;
+
             dateTimePicker2.Enabled = false;
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker2.Format = DateTimePickerFormat.Custom;
@@ -29,51 +33,11 @@ namespace FASILKOMPOINT.View.Mahasiswa
             cbSubKategoriPrestasi.DataSource = subKategoriContext.showSubKategoriPrestasi();
             cbSubKategoriPrestasi.DisplayMember = "nama_subkategori";
             cbSubKategoriPrestasi.ValueMember = "id_subkategori";
-
-
-
-            this.FormClosing += Halaman_FormClosing;
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void FormEditEntryDataPrestasi_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void EntriDataSKPI_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl_nama_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void check_hari_CheckedChanged(object sender, EventArgs e)
-        {
-            if (check_hari.Checked)
-            {
-                dateTimePicker2.Enabled = true;
-            }
-            else
-            {
-                dateTimePicker2.Enabled = false;
-            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -109,9 +73,11 @@ namespace FASILKOMPOINT.View.Mahasiswa
                 no_surat = no_surat,
                 nama_dosbing = nama_dosbing,
                 file_bukti = file_bukti,
-                mahasiswa_username = username
+                mahasiswa_username = username,
+                is_acc = "menunggu",
+                id_aktivitas = id_aktivitas
             };
-            AktivitasPrestasiContext.AddPrestasi(aktivitasPrestasiBaru);
+            AktivitasPrestasiContext.UpdatePrestasi(aktivitasPrestasiBaru);
 
             DialogResult message = MessageBox.Show("Data berhasil disimpan!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
             if (message == DialogResult.OK)
@@ -119,19 +85,6 @@ namespace FASILKOMPOINT.View.Mahasiswa
                 this.Hide();
                 EntryDataPrestasi entryDataPrestasi = new EntryDataPrestasi(username);
                 entryDataPrestasi.Show();
-
-            }
-        }
-        private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            try
-            {
-                CloseAllForms.CloseHiddenForms();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
         }
 
@@ -194,5 +147,9 @@ namespace FASILKOMPOINT.View.Mahasiswa
             }
         }
 
+        private void cbSubButirPrestasi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

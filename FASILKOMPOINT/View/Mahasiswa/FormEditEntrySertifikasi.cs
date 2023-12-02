@@ -1,5 +1,4 @@
 ﻿using FASILKOMPOINT.App.Context;
-using FASILKOMPOINT.App.Core;
 using FASILKOMPOINT.App.Models;
 using System;
 using System.Collections.Generic;
@@ -10,13 +9,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace FASILKOMPOINT.View.Mahasiswa
 {
-    public partial class FormEntryDataSertifikasi : Form
+    public partial class FormEditEntrySertifikasi : Form
     {
         public string username { get; set; }
-        public FormEntryDataSertifikasi(string username)
+        public int id_aktivitas { get; set; }
+        public FormEditEntrySertifikasi(string username, int id_aktivitas)
         {
             InitializeComponent();
             this.username = username;
@@ -29,38 +30,11 @@ namespace FASILKOMPOINT.View.Mahasiswa
             cbButirSertifikasi.DataSource = ButirContext.showTingkatSertifikasi();
             cbButirSertifikasi.DisplayMember = "nama_butir";
             cbButirSertifikasi.ValueMember = "nama_butir";
-
-            this.FormClosing += Halaman_FormClosing;
+            this.username = username;
+            this.id_aktivitas = id_aktivitas;
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl_judul_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FormEntryDataSertifikasi_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void check_hari_CheckedChanged(object sender, EventArgs e)
-        {
-            if (check_hari.Checked)
-            {
-                dateTimePicker2.Enabled = true;
-            }
-            else
-            {
-                dateTimePicker2.Enabled = false;
-            }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void FormEditEntrySertifikasi_Load(object sender, EventArgs e)
         {
 
         }
@@ -74,8 +48,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
             var tingkat_penyelenggara = Convert.ToString(cbButirSertifikasi.SelectedValue);
             var nama_penyelenggara = txt_tingkat.Text;
 
-
-            M_Aktivitas_Sertifikasi aktivitasSertifikasiBaru = new M_Aktivitas_Sertifikasi
+            M_Aktivitas_Sertifikasi aktivitasSertifikasiEdit = new M_Aktivitas_Sertifikasi
             {
                 judul_sertifikasi = judul_sertifikasi,
                 tanggal_dimulai = tanggal_dimulai,
@@ -83,9 +56,10 @@ namespace FASILKOMPOINT.View.Mahasiswa
                 file_bukti = file_bukti,
                 tingkat_penyelenggara = tingkat_penyelenggara,
                 nama_penyelenggara = nama_penyelenggara,
-                mahasiswa_username = username
+                mahasiswa_username = username,
+                id_aktivitas = id_aktivitas
             };
-            AktivitasSertifikasiContext.AddSertifikasi(aktivitasSertifikasiBaru);
+            AktivitasSertifikasiContext.updateSertifikasi(aktivitasSertifikasiEdit);
 
             DialogResult message = MessageBox.Show("Data berhasil disimpan!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
             if (message == DialogResult.OK)
@@ -93,18 +67,6 @@ namespace FASILKOMPOINT.View.Mahasiswa
                 this.Hide();
                 EntryDataSertifikasi entryDataSertifikasi = new EntryDataSertifikasi(username);
                 entryDataSertifikasi.Show();
-            }
-        }
-        private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            try
-            {
-                CloseAllForms.CloseHiddenForms();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
         }
     }

@@ -1,5 +1,6 @@
 ﻿using FASILKOMPOINT.App.Context;
 using FASILKOMPOINT.App.Core;
+using FASILKOMPOINT.View.SKPI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,6 +25,14 @@ namespace FASILKOMPOINT.View.Mahasiswa
             dataGridView.DataSource = AktivitasKeikutsertaanContext.showKeikutsertaan(username, 601);
             dataGridView.Columns["Keterangan"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
 
+            DataGridViewButtonColumn editButton = new DataGridViewButtonColumn();
+            editButton.HeaderText = "";
+            editButton.Text = "Edit";
+            editButton.Name = "editButton";
+            editButton.UseColumnTextForButtonValue = true;
+            dataGridView.Columns.Insert(8, editButton);
+
+            dataGridView.Columns["id_aktivitas"].Visible = false;
             this.FormClosing += Halaman_FormClosing;
         }
 
@@ -77,6 +86,19 @@ namespace FASILKOMPOINT.View.Mahasiswa
                 {
                     ShellExecutor.OpenFileUsingDefaultProgram(link);
                 }
+            }
+            else if (e.ColumnIndex == dataGridView.Columns["editButton"].Index && e.RowIndex >= 0)
+            {
+                int id_aktivitas = Convert.ToInt32(dataGridView.Rows[e.RowIndex].Cells["id_aktivitas"].Value);
+                
+                using (FormEditEntryDataKegiatan formEditEntryKegiatan = new FormEditEntryDataKegiatan(id_aktivitas, username))
+                {
+                    FormEditEntryDataKegiatan halamaneditKegiatan = new FormEditEntryDataKegiatan(id_aktivitas, username);
+                    halamaneditKegiatan.Show();
+                }
+
+                dataGridView.DataSource = null;
+                dataGridView.DataSource = AktivitasKeikutsertaanContext.showKeikutsertaan;
             }
 
         }

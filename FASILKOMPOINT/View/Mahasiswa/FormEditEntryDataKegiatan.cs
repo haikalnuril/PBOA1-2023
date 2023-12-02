@@ -10,16 +10,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace FASILKOMPOINT.View.Mahasiswa
 {
-    public partial class FormEntryDataKegiatan : Form
+    public partial class FormEditEntryDataKegiatan : Form
     {
         public string username { get; set; }
-        public FormEntryDataKegiatan(string username)
+        public int id_aktivitas { get; set; }
+        public FormEditEntryDataKegiatan(int id_aktivitas, string username)
         {
             InitializeComponent();
             this.username = username;
+            this.id_aktivitas = id_aktivitas;
 
             dateTimePicker2.Enabled = false;
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
@@ -46,7 +49,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
             this.Hide();
         }
 
-        private void FormEntryDataKegiatan_Load(object sender, EventArgs e)
+        private void FormEditEntryDataKegiatan_Load(object sender, EventArgs e)
         {
 
         }
@@ -61,6 +64,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
             var level_tingkat = Convert.ToString(cbButirSerta.SelectedValue);
             var sub_kategori_id_subkategori = Convert.ToInt32(cbSubKategoriKegiatan.SelectedValue);
             var file_bukti = txt_bukti.Text;
+            var is_acc = "menunggu";
 
             M_Aktivitas_Keikutsertaan aktivitasKeikutsertaanBaru = new M_Aktivitas_Keikutsertaan
             {
@@ -72,9 +76,10 @@ namespace FASILKOMPOINT.View.Mahasiswa
                 level_tingkat = level_tingkat,
                 mahasiswa_username = username,
                 sub_kategori_id_subkategori = sub_kategori_id_subkategori,
-                is_acc = "menunggu"
+                is_acc = is_acc,
+                id_aktivitas = id_aktivitas
             };
-            AktivitasKeikutsertaanContext.AddKeikutsertaan(aktivitasKeikutsertaanBaru);
+            AktivitasKeikutsertaanContext.updateKeikutsertaan(aktivitasKeikutsertaanBaru);
 
             DialogResult message = MessageBox.Show("Data berhasil disimpan!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
             if (message == DialogResult.OK)
@@ -82,6 +87,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
                 this.Hide();
                 EntryDataKegiatan entryDataKegiatan = new EntryDataKegiatan(username);
                 entryDataKegiatan.Show();
+
             }
         }
 
@@ -109,7 +115,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
         }
@@ -226,5 +232,15 @@ namespace FASILKOMPOINT.View.Mahasiswa
             cbSubButirSerta.DisplayMember = "nama_butir";
             cbSubButirSerta.ValueMember = "nama_butir";
         }
+        private void lbl_tgl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_nama_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

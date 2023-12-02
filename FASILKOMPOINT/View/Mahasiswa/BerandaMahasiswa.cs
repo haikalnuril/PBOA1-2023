@@ -111,15 +111,17 @@ namespace FASILKOMPOINT.View.Mahasiswa
 
         public void GeneratePDF()
         {
-
             QuestPDF.Settings.License = LicenseType.Community;
 
             List<string> namaPrestasiList = new List<string>();
             DataTable dataPrestasi = DataDiriContext.CekPrestasi(username);
+            // Mengambil nama prestasi dari setiap baris DataTable
             foreach (DataRow row in dataPrestasi.Rows)
             {
+                // Menggunakan kolom "nama_kegiatan", sesuaikan dengan nama kolom yang benar
                 string namaPrestasi = row["nama_prestasi"].ToString();
 
+                // Tambahkan nama prestasi ke dalam list
                 namaPrestasiList.Add(namaPrestasi);
             }
 
@@ -141,9 +143,9 @@ namespace FASILKOMPOINT.View.Mahasiswa
                 namaSertifikasiList.Add(namaSertifikasi);
             }
 
-            string linkHeader = @"D:\KULIAH SISTEM INFORMASI\SEMESTER 3\PBO\Projek\DEVELOP BGT 3\PBOA1-2023\FASILKOMPOINT\Resources\header1.png";
-            string linkFooter = @"D:\KULIAH SISTEM INFORMASI\SEMESTER 3\PBO\Projek\DEVELOP BGT 3\PBOA1-2023\FASILKOMPOINT\Resources\footer.png";
-            string linkKKNI = @"D:\KULIAH SISTEM INFORMASI\SEMESTER 3\PBO\Projek\DEVELOP BGT 3\PBOA1-2023\FASILKOMPOINT\Resources\KKNI.png";
+            string linkHeader = "D:\\PBOA1-2023\\FASILKOMPOINT\\Resources\\header1.png";
+            string linkFooter = "D:\\PBOA1-2023\\FASILKOMPOINT\\Resources\\footer.png";
+            string linkKKNI = "D:\\PBOA1-2023\\FASILKOMPOINT\\Resources\\KKNI.png";
 
             DateTime now = DateTime.Now;
             string formatdate = now.ToString("dd MMMMM yyyy");

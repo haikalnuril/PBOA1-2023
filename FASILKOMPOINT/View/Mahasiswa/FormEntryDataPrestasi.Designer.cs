@@ -48,10 +48,12 @@
             txt_notugas = new TextBox();
             lbl_pembimbing = new Label();
             lbl_nosurat = new Label();
-            comboBox2 = new ComboBox();
-            comboBox3 = new ComboBox();
+            cbButirPrestasi = new ComboBox();
+            cbSubButirPrestasi = new ComboBox();
             button2 = new Button();
             btn_simpan = new Button();
+            label3 = new Label();
+            cbSubKategoriPrestasi = new ComboBox();
             SuspendLayout();
             // 
             // label1
@@ -123,7 +125,7 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Location = new Point(117, 286);
+            label2.Location = new Point(117, 315);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
             label2.Size = new Size(34, 15);
@@ -143,7 +145,7 @@
             // 
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
-            label5.Location = new Point(117, 246);
+            label5.Location = new Point(117, 276);
             label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
             label5.Size = new Size(78, 15);
@@ -154,7 +156,7 @@
             // 
             label6.AutoSize = true;
             label6.BackColor = Color.Transparent;
-            label6.Location = new Point(117, 324);
+            label6.Location = new Point(117, 350);
             label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
             label6.Size = new Size(55, 15);
@@ -163,7 +165,7 @@
             // 
             // txt_bukti
             // 
-            txt_bukti.Location = new Point(303, 318);
+            txt_bukti.Location = new Point(303, 344);
             txt_bukti.Margin = new Padding(2);
             txt_bukti.Name = "txt_bukti";
             txt_bukti.Size = new Size(489, 23);
@@ -212,7 +214,7 @@
             // 
             // txt_nampem
             // 
-            txt_nampem.Location = new Point(303, 395);
+            txt_nampem.Location = new Point(303, 421);
             txt_nampem.Margin = new Padding(2);
             txt_nampem.Name = "txt_nampem";
             txt_nampem.Size = new Size(489, 23);
@@ -220,7 +222,7 @@
             // 
             // txt_notugas
             // 
-            txt_notugas.Location = new Point(303, 355);
+            txt_notugas.Location = new Point(303, 381);
             txt_notugas.Margin = new Padding(2);
             txt_notugas.Name = "txt_notugas";
             txt_notugas.Size = new Size(489, 23);
@@ -230,7 +232,7 @@
             // 
             lbl_pembimbing.AutoSize = true;
             lbl_pembimbing.BackColor = Color.Transparent;
-            lbl_pembimbing.Location = new Point(117, 398);
+            lbl_pembimbing.Location = new Point(117, 424);
             lbl_pembimbing.Margin = new Padding(2, 0, 2, 0);
             lbl_pembimbing.Name = "lbl_pembimbing";
             lbl_pembimbing.Size = new Size(111, 15);
@@ -241,7 +243,7 @@
             // 
             lbl_nosurat.AutoSize = true;
             lbl_nosurat.BackColor = Color.Transparent;
-            lbl_nosurat.Location = new Point(117, 361);
+            lbl_nosurat.Location = new Point(117, 387);
             lbl_nosurat.Margin = new Padding(2, 0, 2, 0);
             lbl_nosurat.Name = "lbl_nosurat";
             lbl_nosurat.Size = new Size(162, 15);
@@ -249,25 +251,26 @@
             lbl_nosurat.Text = "No. Surat Tugas Pembimbing";
             lbl_nosurat.Click += label11_Click;
             // 
-            // comboBox2
+            // cbButirPrestasi
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Pilih Level", "Fakultas", "Universitas", "Jurusan", "Nasional", "Internasional", "Propinsi", "Kab/Kota", "Wilayah/Regional" });
-            comboBox2.Location = new Point(303, 242);
-            comboBox2.Margin = new Padding(2);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(226, 23);
-            comboBox2.TabIndex = 75;
+            cbButirPrestasi.FormattingEnabled = true;
+            cbButirPrestasi.Items.AddRange(new object[] { "Pilih Level", "Fakultas", "Universitas", "Jurusan", "Nasional", "Internasional", "Propinsi", "Kab/Kota", "Wilayah/Regional" });
+            cbButirPrestasi.Location = new Point(303, 272);
+            cbButirPrestasi.Margin = new Padding(2);
+            cbButirPrestasi.Name = "cbButirPrestasi";
+            cbButirPrestasi.Size = new Size(226, 23);
+            cbButirPrestasi.TabIndex = 75;
+            cbButirPrestasi.SelectedIndexChanged += cbButirPrestasi_SelectedIndexChanged;
             // 
-            // comboBox3
+            // cbSubButirPrestasi
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Items.AddRange(new object[] { "Pilih Juara", "Juara Lain", "Juara I", "Juara II", "Juara III" });
-            comboBox3.Location = new Point(303, 279);
-            comboBox3.Margin = new Padding(2);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(226, 23);
-            comboBox3.TabIndex = 76;
+            cbSubButirPrestasi.FormattingEnabled = true;
+            cbSubButirPrestasi.Items.AddRange(new object[] { "Pilih Juara", "Juara Lain", "Juara I", "Juara II", "Juara III" });
+            cbSubButirPrestasi.Location = new Point(303, 308);
+            cbSubButirPrestasi.Margin = new Padding(2);
+            cbSubButirPrestasi.Name = "cbSubButirPrestasi";
+            cbSubButirPrestasi.Size = new Size(226, 23);
+            cbSubButirPrestasi.TabIndex = 76;
             // 
             // button2
             // 
@@ -297,16 +300,37 @@
             btn_simpan.UseVisualStyleBackColor = false;
             btn_simpan.Click += btn_simpan_Click;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Location = new Point(117, 242);
+            label3.Name = "label3";
+            label3.Size = new Size(94, 15);
+            label3.TabIndex = 84;
+            label3.Text = "Kategori Prestasi";
+            // 
+            // cbSubKategoriPrestasi
+            // 
+            cbSubKategoriPrestasi.FormattingEnabled = true;
+            cbSubKategoriPrestasi.Location = new Point(303, 236);
+            cbSubKategoriPrestasi.Name = "cbSubKategoriPrestasi";
+            cbSubKategoriPrestasi.Size = new Size(226, 23);
+            cbSubKategoriPrestasi.TabIndex = 85;
+            cbSubKategoriPrestasi.SelectedIndexChanged += cbSubKategoriPrestasi_SelectedIndexChanged;
+            // 
             // FormEntryDataPrestasi
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(921, 528);
+            Controls.Add(cbSubKategoriPrestasi);
+            Controls.Add(label3);
             Controls.Add(button2);
             Controls.Add(btn_simpan);
-            Controls.Add(comboBox3);
-            Controls.Add(comboBox2);
+            Controls.Add(cbSubButirPrestasi);
+            Controls.Add(cbButirPrestasi);
             Controls.Add(txt_nampem);
             Controls.Add(txt_notugas);
             Controls.Add(lbl_pembimbing);
@@ -358,9 +382,11 @@
         private TextBox txt_notugas;
         private Label lbl_pembimbing;
         private Label lbl_nosurat;
-        private ComboBox comboBox2;
-        private ComboBox comboBox3;
+        private ComboBox cbButirPrestasi;
+        private ComboBox cbSubButirPrestasi;
         private Button button2;
         private Button btn_simpan;
+        private Label label3;
+        private ComboBox cbSubKategoriPrestasi;
     }
 }
