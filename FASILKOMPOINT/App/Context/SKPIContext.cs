@@ -14,52 +14,33 @@ namespace FASILKOMPOINT.App.Context
     {
         private static string table = "aktivitas";
 
-        public static DataTable namaSKPI(string username)
+        
+        public static DataTable namaKegiatan(string nim)
         {
-            string query = $"SELECT mahasiswa.nama AS nama_mahasiswa FROM aktivitas JOIN mahasiswa ON aktivitas.mahasiswa_username = @username;";
+            string query = $"SELECT nama_kegiatan FROM {table} WHERE kategori_id_kategori = 601 AND mahasiswa_username = @nim AND is_acc = 'disetujui';";
             NpgsqlParameter[] parameters =
             {
-                new NpgsqlParameter("@username", NpgsqlDbType.Varchar){Value = username},
+                new NpgsqlParameter("@nim", NpgsqlDbType.Varchar){Value = nim},
             };
             DataTable dataSKPI = queryExecutor(query, parameters);
             return dataSKPI;
         }
-        public static DataTable NIMSKPI(string username)
+        public static DataTable namaPrestasi(string nim)
         {
-            string query = $"SELECT DISTINCT mahasiswa_username AS username FROM aktivitas WHERE mahasiswa_username = @username;";
+            string query = $"SELECT nama_prestasi FROM {table} WHERE kategori_id_kategori = 602 AND mahasiswa_username = @nim AND is_acc = 'disetujui';";
             NpgsqlParameter[] parameters =
             {
-                new NpgsqlParameter("@username", NpgsqlDbType.Varchar){Value = username},
+                new NpgsqlParameter("@nim", NpgsqlDbType.Varchar){Value = nim},
             };
             DataTable dataSKPI = queryExecutor(query, parameters);
             return dataSKPI;
         }
-        public static DataTable namaKegiatan(string username)
+        public static DataTable namaSertifikasi(string nim)
         {
-            string query = $"SELECT nama_kegiatan FROM aktivitas WHERE kategori_id_kategori = 601 AND mahasiswa_username = @username;";
+            string query = $"SELECT judul_sertifikasi FROM {table} WHERE kategori_id_kategori = 603 AND mahasiswa_username = @nim AND is_acc = 'disetujui';";
             NpgsqlParameter[] parameters =
             {
-                new NpgsqlParameter("@username", NpgsqlDbType.Varchar){Value = username},
-            };
-            DataTable dataSKPI = queryExecutor(query, parameters);
-            return dataSKPI;
-        }
-        public static DataTable namaPrestasi(string username)
-        {
-            string query = $"SELECT nama_kegiatan FROM aktivitas WHERE kategori_id_kategori = 602 AND mahasiswa_username = @username;";
-            NpgsqlParameter[] parameters =
-            {
-                new NpgsqlParameter("@username", NpgsqlDbType.Varchar){Value = username},
-            };
-            DataTable dataSKPI = queryExecutor(query, parameters);
-            return dataSKPI;
-        }
-        public static DataTable namaSertifikasi(string username)
-        {
-            string query = $"SELECT nama_kegiatan FROM aktivitas WHERE kategori_id_kategori = 603 AND mahasiswa_username = @username;";
-            NpgsqlParameter[] parameters =
-            {
-                new NpgsqlParameter("@username", NpgsqlDbType.Varchar){Value = username},
+                new NpgsqlParameter("@nim", NpgsqlDbType.Varchar){Value = nim},
             };
             DataTable dataSKPI = queryExecutor(query, parameters);
             return dataSKPI;
