@@ -14,6 +14,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace FASILKOMPOINT.View.TU
 {
@@ -132,6 +133,10 @@ namespace FASILKOMPOINT.View.TU
 
                 QuestPDF.Settings.License = LicenseType.Community;
 
+                string linkHeader = @"D:\KULIAH SISTEM INFORMASI\SEMESTER 3\PBO\Projek\DEVELOP BGT 3\PBOA1-2023\FASILKOMPOINT\Resources\header1.png";
+                string linkFooter = @"D:\KULIAH SISTEM INFORMASI\SEMESTER 3\PBO\Projek\DEVELOP BGT 3\PBOA1-2023\FASILKOMPOINT\Resources\footer.png";
+                string linkKKNI = @"D:\KULIAH SISTEM INFORMASI\SEMESTER 3\PBO\Projek\DEVELOP BGT 3\PBOA1-2023\FASILKOMPOINT\Resources\KKNI.png";
+
                 DateTime now = DateTime.Now;
                 string formatdate = now.ToString("dd MMMMM yyyy");
                 QuestPDF.Fluent.Document.Create(container =>
@@ -142,7 +147,7 @@ namespace FASILKOMPOINT.View.TU
                         page.MarginBottom(5, Unit.Millimetre);
                         page.DefaultTextStyle(x => x.FontFamily(Fonts.Arial).FontSize(12));
                         page.Header()
-                            .Image(@"D:\KULIAH SISTEM INFORMASI\SEMESTER 3\PBO\Projek\DEVELOP BGT 2\PBOA1-2023\FASILKOMPOINT\Resources\header1.png");
+                            .Image(linkHeader);
                         page.Content()
                             .PaddingTop(3, Unit.Millimetre)
                             .Column(x =>
@@ -403,7 +408,7 @@ namespace FASILKOMPOINT.View.TU
                                     Inlined.Spacing(42, Unit.Millimetre);
                                     Inlined.Item().Text("    3.2.1    Prestasi/Penghargaan").Bold().FontSize(9);
                                 });
-                                for( int i = 0; i < namaPrestasiList.Count; i++)
+                                for ( int i = 0; i < namaPrestasiList.Count; i++)
                                 {
                                     x.Item().PaddingLeft(40, Unit.Millimetre).Text($"{i + 1}.   {namaPrestasiList[i]}").FontSize(9);
                                 }
@@ -557,12 +562,6 @@ namespace FASILKOMPOINT.View.TU
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-        }
-        public void GeneratePDF(string nimMahasiswa)
-        {
-            
-
-            
         }
     }
 }

@@ -10,19 +10,11 @@ namespace FASILKOMPOINT.App.Core
 {
 	internal class DatabaseWrapper
 	{
-		/*
-        - File ini berisi konfigurasi koneksi ke database yang didefine sekali tetapi bisa digunakan berkali-kali oleh banyak Context yang membutuhkan.
-        - File ini akan berisikan:
-            1. Properti credential database dan koneksinya
-            2. Method open dan close koneksi
-            3. Method Command & Query Wrapper {Command => [C, U, D], Query = [R]}
-        */
-
 		// Properti credential database dan koneksinya
 		private static readonly string DB_HOST = "localhost";
 		private static readonly string DB_DATABASE = "FASILKOMPOINT";
 		private static readonly string DB_USERNAME = "postgres";
-		private static readonly string DB_PASSWORD = "haikalteng12";
+		private static readonly string DB_PASSWORD = "fatimah";
 		private static readonly string DB_PORT = "5432";
 
 		private static NpgsqlConnection connection;
