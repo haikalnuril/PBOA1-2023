@@ -519,8 +519,6 @@ namespace FASILKOMPOINT.View.TU
                 })
 
                    .GeneratePdfAndShow();
-
-                MessageBox.Show("Berhasil mengunduh SKPI!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
