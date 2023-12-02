@@ -115,6 +115,10 @@ namespace FASILKOMPOINT.View.Mahasiswa
 
             QuestPDF.Settings.License = LicenseType.Community;
 
+            string linkHeader = "D:\\PBOA1-2023\\FASILKOMPOINT\\Resources\\header1.png";
+            string linkFooter = "D:\\PBOA1-2023\\FASILKOMPOINT\\Resources\\footer.png";
+            string linkKKNI = "D:\\PBOA1-2023\\FASILKOMPOINT\\Resources\\KKNI.png";
+
             DateTime now = DateTime.Now;
             string formatdate = now.ToString("dd MMMMM yyyy");
             QuestPDF.Fluent.Document.Create(container =>
@@ -125,7 +129,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
                     page.MarginBottom(5, Unit.Millimetre);
                     page.DefaultTextStyle(x => x.FontFamily(Fonts.Arial).FontSize(12));
                     page.Header()
-                        .Image(@"D:\KULIAH SISTEM INFORMASI\SEMESTER 3\PBO\Projek\pdfview FIX\pdfview\pdfview\header1.png");
+                        .Image(linkHeader);
                     page.Content()
                         .PaddingTop(3, Unit.Millimetre)
                         .Column(x =>
@@ -452,8 +456,68 @@ namespace FASILKOMPOINT.View.Mahasiswa
                             x.Item().PaddingLeft(42, Unit.Millimetre).Inlined(Inlined =>
                             {
                                 Inlined.Spacing(4, Unit.Millimetre);
-                                Inlined.Item().Text("Pendidikan tinggi di Indonesia mencakup Program\npendidikan diploma,  sarjana,  magister,  spesialis,\ndan  dokter   yang   diselenggarakan   oleh   suatu\nperguruan tinggi.  Umumnya,  perguruan  tinggi di\nIndonesia berbentuk  universitas,  institut, sekolah\ntinggi,     politeknik,     akademi,    atau     akademi\nkomunitas. Universitas, institut, dan sekolah tinggi\ndapat   menyelenggarakan   program   pendidikan\nakademik    dan    vokasi,   sedangkan   politeknik,\nakademik,  dan  akademi  komunitas  hanya dapat\nmenyelenggarakan program pendidikan vokasi.").FontSize(9);
-                                Inlined.Item().Text("Higher  education  in  Indonesia includes diploma,\nbachelor, master, specialist, and doctor education\nprograms,    which   is   organized   by   a   higher\neducation institution. Generally,  higher  education\ninstitutions in Indonesia are universities, institutes,\ncolleges,  polytechnics, academies, or community\ncolleges. Universities, institutes, and colleges can\n carry  out   academic  and   vocational  education\nprograms,   while  polytechnics,  academies,  and\ncommunity  academies  can  only hold vocational\neducation programs.").Italic().FontSize(9);
+                                Inlined.Item().Text("Pendidikan tinggi di Indonesia mencakup Program").FontSize(9);
+                                Inlined.Item().Text("Higher  education  in  Indonesia includes diploma,").Italic().FontSize(9);
+                            });
+                            x.Item().PaddingLeft(42, Unit.Millimetre).Inlined(Inlined =>
+                            {
+                                Inlined.Spacing(4, Unit.Millimetre);
+                                Inlined.Item().Text("pendidikan diploma,  sarjana,  magister,  spesialis,").FontSize(9);
+                                Inlined.Item().Text("bachelor, master, specialist, and doctor education").Italic().FontSize(9);
+                            });
+                            x.Item().PaddingLeft(42, Unit.Millimetre).Inlined(Inlined =>
+                            {
+                                Inlined.Spacing(4, Unit.Millimetre);
+                                Inlined.Item().Text("dan  dokter   yang   diselenggarakan   oleh   suatu").FontSize(9);
+                                Inlined.Item().Text("programs,    which   is   organized   by   a   higher").Italic().FontSize(9);
+                            });
+                            x.Item().PaddingLeft(42, Unit.Millimetre).Inlined(Inlined =>
+                            {
+                                Inlined.Spacing(4, Unit.Millimetre);
+                                Inlined.Item().Text("perguruan tinggi.  Umumnya,  perguruan  tinggi di").FontSize(9);
+                                Inlined.Item().Text("ducation institution. Generally,  higher  education").Italic().FontSize(9);
+                            });
+                            x.Item().PaddingLeft(42, Unit.Millimetre).Inlined(Inlined =>
+                            {
+                                Inlined.Spacing(4, Unit.Millimetre);
+                                Inlined.Item().Text("Indonesia berbentuk  universitas,  institut, sekolah").FontSize(9);
+                                Inlined.Item().Text("institutions in Indonesia are universities, institutes,").Italic().FontSize(9);
+                            });
+                            x.Item().PaddingLeft(42, Unit.Millimetre).Inlined(Inlined =>
+                            {
+                                Inlined.Spacing(4, Unit.Millimetre);
+                                Inlined.Item().Text("tinggi,     politeknik,     akademi,    atau     akademi").FontSize(9);
+                                Inlined.Item().Text("colleges,  polytechnics, academies, or community").Italic().FontSize(9);
+                            });
+                            x.Item().PaddingLeft(42, Unit.Millimetre).Inlined(Inlined =>
+                            {
+                                Inlined.Spacing(4, Unit.Millimetre);
+                                Inlined.Item().Text("komunitas. Universitas, institut, dan sekolah tinggi").FontSize(9);
+                                Inlined.Item().Text("colleges. Universities, institutes, and colleges can").Italic().FontSize(9);
+                            });
+                            x.Item().PaddingLeft(42, Unit.Millimetre).Inlined(Inlined =>
+                            {
+                                Inlined.Spacing(4, Unit.Millimetre);
+                                Inlined.Item().Text("dapat   menyelenggarakan   program   pendidikan").FontSize(9);
+                                Inlined.Item().Text("carry  out   academic  and   vocational  education").Italic().FontSize(9);
+                            });
+                            x.Item().PaddingLeft(42, Unit.Millimetre).Inlined(Inlined =>
+                            {
+                                Inlined.Spacing(4, Unit.Millimetre);
+                                Inlined.Item().Text("akademik    dan    vokasi,   sedangkan   politeknik,").FontSize(9);
+                                Inlined.Item().Text("programs,   while  polytechnics,  academies,  and").Italic().FontSize(9);
+                            });
+                            x.Item().PaddingLeft(42, Unit.Millimetre).Inlined(Inlined =>
+                            {
+                                Inlined.Spacing(4, Unit.Millimetre);
+                                Inlined.Item().Text("akademik,  dan  akademi  komunitas  hanya dapat").FontSize(9);
+                                Inlined.Item().Text("community  academies  can  only hold vocational").Italic().FontSize(9);
+                            });
+                            x.Item().PaddingLeft(42, Unit.Millimetre).Inlined(Inlined =>
+                            {
+                                Inlined.Spacing(4, Unit.Millimetre);
+                                Inlined.Item().Text("menyelenggarakan program pendidikan vokasi.").FontSize(9);
+                                Inlined.Item().Text("education programs.").Italic().FontSize(9);
                             });
                             x.Item().PaddingLeft(33, Unit.Millimetre).Inlined(Inlined =>
                             {
@@ -464,10 +528,94 @@ namespace FASILKOMPOINT.View.Mahasiswa
                             x.Item().PaddingLeft(42, Unit.Millimetre).Inlined(Inlined =>
                             {
                                 Inlined.Spacing(4, Unit.Millimetre);
-                                Inlined.Item().Text("Berdasarkan    Kerangka     Kualifikasi     Nasional\nIndonesia  (KKNI) terdapat 9 level  kualifikasi  dari\nkualifikasi  level  1  hingga  level  9.   Setiap   level\nkualifikasi    dapat   dicapai   melalui     pendidikan\nformal,     baik    pendidikan    akademik   ataupun\n vokasi/profesi, dan  pelatihan-pelatihan (Gambar\nKKNI). Pendidikan Sarjana (S1)  harus  mencapai\nkualifikasi  level-6,   setara    dengan    pendidikan\nvokasi Diploma-4.  Lulusan  pendidikan  akademik\nSarjana dapat  meningkatkan  level  kualifikasinya\nmelalui   pendidikan    akademik    Magister    (S2)\nsampai Doktor (S3),  ataupun  melalui  pendidikan\nprofesi     sampai    subspesialis   (level  9)    serta\nmelalui pelatihan-pelatihan dan uji-uji kompetensi").FontSize(9);
-                                Inlined.Item().Text("Indonesian  Qualification  Framework  (IQF) has 9\nlevels   of   qualifications,   from  1  up  to  Level  9.\nEvery   level   of   qualifications  can  be  achieved\nthrough    formal    educations,    either   academic\neducations or  vocational/professional  educations,\nand also through competency  trainings  (Figure of\nIQF). Bachelor of  science  degree  program  (BSc\nprogram) must fulfill  qualification of Level 6, which\nis equivalent with vocational education of Diploma-\n4.  Graduates  of  BSc  program  can  reach higher\nlevels through academic educations of Master and\nDoctoral   Programs,    or    through    professional\neducations   up   to   subspecialist   (Level 9)   and\nthrough trainings and competency tests").Italic().FontSize(9);
+                                Inlined.Item().Text("Berdasarkan    Kerangka     Kualifikasi     Nasional").FontSize(9);
+                                Inlined.Item().Text("Indonesian  Qualification  Framework  (IQF) has 9").Italic().FontSize(9);
                             });
-                            x.Item().AlignCenter().PaddingLeft(2, Unit.Centimetre).PaddingTop(5, Unit.Millimetre).Width(10, Unit.Centimetre).Image(@"D:\KULIAH SISTEM INFORMASI\SEMESTER 3\PBO\Projek\pdfview FIX\pdfview\pdfview\KKNI.png").WithRasterDpi(144);
+                            x.Item().PaddingLeft(42, Unit.Millimetre).Inlined(Inlined =>
+                            {
+                                Inlined.Spacing(4, Unit.Millimetre);
+                                Inlined.Item().Text("Indonesia  (KKNI) terdapat 9 level  kualifikasi  dari").FontSize(9);
+                                Inlined.Item().Text("levels   of   qualifications,   from  1  up  to  Level  9.").Italic().FontSize(9);
+                            });
+                            x.Item().PaddingLeft(42, Unit.Millimetre).Inlined(Inlined =>
+                            {
+                                Inlined.Spacing(4, Unit.Millimetre);
+                                Inlined.Item().Text("kualifikasi  level  1  hingga  level  9.   Setiap   level").FontSize(9);
+                                Inlined.Item().Text("Every   level   of   qualifications  can  be  achieved").Italic().FontSize(9);
+                            });
+                            x.Item().PaddingLeft(42, Unit.Millimetre).Inlined(Inlined =>
+                            {
+                                Inlined.Spacing(4, Unit.Millimetre);
+                                Inlined.Item().Text("kualifikasi    dapat   dicapai   melalui     pendidikan").FontSize(9);
+                                Inlined.Item().Text("through    formal    educations,    either   academic").Italic().FontSize(9);
+                            });
+                            x.Item().PaddingLeft(42, Unit.Millimetre).Inlined(Inlined =>
+                            {
+                                Inlined.Spacing(4, Unit.Millimetre);
+                                Inlined.Item().Text("formal,     baik    pendidikan    akademik   ataupun").FontSize(9);
+                                Inlined.Item().Text("educations or  vocational/professional  educations,").Italic().FontSize(9);
+                            });
+                            x.Item().PaddingLeft(42, Unit.Millimetre).Inlined(Inlined =>
+                            {
+                                Inlined.Spacing(4, Unit.Millimetre);
+                                Inlined.Item().Text("vokasi/profesi, dan  pelatihan-pelatihan (Gambar").FontSize(9);
+                                Inlined.Item().Text("and also through competency  trainings  (Figure of").Italic().FontSize(9);
+                            });
+                            x.Item().PaddingLeft(42, Unit.Millimetre).Inlined(Inlined =>
+                            {
+                                Inlined.Spacing(4, Unit.Millimetre);
+                                Inlined.Item().Text("KKNI). Pendidikan Sarjana (S1)  harus  mencapai").FontSize(9);
+                                Inlined.Item().Text("IQF). Bachelor of  science  degree  program  (BSc").Italic().FontSize(9);
+                            });
+                            x.Item().PaddingLeft(42, Unit.Millimetre).Inlined(Inlined =>
+                            {
+                                Inlined.Spacing(4, Unit.Millimetre);
+                                Inlined.Item().Text("kualifikasi  level-6,   setara    dengan    pendidikan").FontSize(9);
+                                Inlined.Item().Text("program) must fulfill  qualification of Level 6, which").Italic().FontSize(9);
+                            });
+                            x.Item().PaddingLeft(42, Unit.Millimetre).Inlined(Inlined =>
+                            {
+                                Inlined.Spacing(4, Unit.Millimetre);
+                                Inlined.Item().Text("vokasi Diploma-4.  Lulusan  pendidikan  akademik").FontSize(9);
+                                Inlined.Item().Text("is equivalent with vocational education of Diploma-").Italic().FontSize(9);
+                            });
+                            x.Item().PaddingLeft(42, Unit.Millimetre).Inlined(Inlined =>
+                            {
+                                Inlined.Spacing(4, Unit.Millimetre);
+                                Inlined.Item().Text("Sarjana dapat  meningkatkan  level  kualifikasinya").FontSize(9);
+                                Inlined.Item().Text("4.  Graduates  of  BSc  program  can  reach higher").Italic().FontSize(9);
+                            });
+                            x.Item().PaddingLeft(42, Unit.Millimetre).Inlined(Inlined =>
+                            {
+                                Inlined.Spacing(4, Unit.Millimetre);
+                                Inlined.Item().Text("melalui   pendidikan    akademik    Magister    (S2)").FontSize(9);
+                                Inlined.Item().Text("levels through academic educations of Master and").Italic().FontSize(9);
+                            });
+                            x.Item().PaddingLeft(42, Unit.Millimetre).Inlined(Inlined =>
+                            {
+                                Inlined.Spacing(4, Unit.Millimetre);
+                                Inlined.Item().Text("sampai Doktor (S3),  ataupun  melalui  pendidikan").FontSize(9);
+                                Inlined.Item().Text("Doctoral   Programs,    or    through    professional").Italic().FontSize(9);
+                            });
+                            x.Item().PaddingLeft(42, Unit.Millimetre).Inlined(Inlined =>
+                            {
+                                Inlined.Spacing(4, Unit.Millimetre);
+                                Inlined.Item().Text("profesi     sampai    subspesialis   (level  9)    serta").FontSize(9);
+                                Inlined.Item().Text("educations   up   to   subspecialist   (Level 9)   and").Italic().FontSize(9);
+                            });
+                            x.Item().PaddingLeft(42, Unit.Millimetre).Inlined(Inlined =>
+                            {
+                                Inlined.Spacing(4, Unit.Millimetre);
+                                Inlined.Item().Text("melalui pelatihan-pelatihan dan uji-uji kompetensi").FontSize(9);
+                                Inlined.Item().Text("through trainings and competency tests").Italic().FontSize(9);
+                            });
+                            x.Item().PaddingLeft(42, Unit.Millimetre).Inlined(Inlined =>
+                            {
+                                Inlined.Spacing(4, Unit.Millimetre);
+                                Inlined.Item().Text("Berdasarkan    Kerangka     Kualifikasi     Nasional").FontSize(9);
+                                Inlined.Item().Text("Indonesian  Qualification  Framework  (IQF) has 9").Italic().FontSize(9);
+                            });
+                            x.Item().AlignCenter().PaddingLeft(2, Unit.Centimetre).PaddingTop(5, Unit.Millimetre).Width(10, Unit.Centimetre).Image(linkKKNI).WithRasterDpi(144);
                             x.Item().AlignCenter().PaddingLeft(2, Unit.Centimetre).Text("Gambar Kerangka Kualifikasi Nasional Indonesia (KKNI)").FontSize(9);
                             x.Item().AlignCenter().PaddingLeft(2, Unit.Centimetre).Text("Figure of National Qualification Framework").FontSize(9);
                             x.Item().PaddingLeft(25, Unit.Millimetre).PaddingTop(4, Unit.Millimetre).Text("6.     Pengesahan Dokumen").Bold().FontSize(10);
@@ -485,7 +633,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
 
                         });
                     page.Footer()
-                    .Image(@"D:\KULIAH SISTEM INFORMASI\SEMESTER 3\PBO\Projek\pdfview FIX\pdfview\pdfview\footer.png");
+                    .Image(linkFooter);
                 });
             })
             
