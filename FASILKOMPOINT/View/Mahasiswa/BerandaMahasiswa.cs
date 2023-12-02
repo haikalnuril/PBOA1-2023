@@ -116,6 +116,36 @@ namespace FASILKOMPOINT.View.Mahasiswa
 
             QuestPDF.Settings.License = LicenseType.Community;
 
+            List<string> namaPrestasiList = new List<string>();
+            DataTable dataPrestasi = DataDiriContext.CekPrestasi(username);
+            // Mengambil nama prestasi dari setiap baris DataTable
+            foreach (DataRow row in dataPrestasi.Rows)
+            {
+                // Menggunakan kolom "nama_kegiatan", sesuaikan dengan nama kolom yang benar
+                string namaPrestasi = row["nama_prestasi"].ToString();
+
+                // Tambahkan nama prestasi ke dalam list
+                namaPrestasiList.Add(namaPrestasi);
+            }
+
+            List<string> namaKegiatanList = new List<string>();
+            DataTable dataKegiatan = DataDiriContext.CekKegiatan(username);
+            foreach (DataRow row in dataKegiatan.Rows)
+            {
+                string namaKegiatan = row["nama_kegiatan"].ToString();
+
+                namaKegiatanList.Add(namaKegiatan);
+            }
+
+            List<string> namaSertifikasiList = new List<string>();
+            DataTable dataSertifikasi = DataDiriContext.CekSertifikasi(username);
+            foreach (DataRow row in dataSertifikasi.Rows)
+            {
+                string namaSertifikasi = row["judul_sertifikasi"].ToString();
+
+                namaSertifikasiList.Add(namaSertifikasi);
+            }
+
             string linkHeader = "D:\\PBOA1-2023\\FASILKOMPOINT\\Resources\\header1.png";
             string linkFooter = "D:\\PBOA1-2023\\FASILKOMPOINT\\Resources\\footer.png";
             string linkKKNI = "D:\\PBOA1-2023\\FASILKOMPOINT\\Resources\\KKNI.png";
@@ -149,7 +179,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
                             {
                                 Inlined.Spacing(27, Unit.Millimetre);
                                 Inlined.Item().Text("1.1     Nama Lengkap").FontSize(10);
-                                Inlined.Item().Text($":    ABC").FontSize(10); //nama
+                                Inlined.Item().Text($":    {DataDiriContext.CekNama(username)}").FontSize(10); //nama
                             });
                             x.Item().PaddingLeft(33, Unit.Millimetre).PaddingTop(2, Unit.Millimetre).Inlined(Inlined =>
                             {
@@ -161,7 +191,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
                             {
                                 Inlined.Spacing(12, Unit.Millimetre);
                                 Inlined.Item().Text("1.3     Nomor Induk Mahasiswa").FontSize(10);
-                                Inlined.Item().Text(":    222410101001").FontSize(10); //nim
+                                Inlined.Item().Text($":    {username}").FontSize(10); //nim
                             });
                             x.Item().PaddingLeft(33, Unit.Millimetre).PaddingTop(2, Unit.Millimetre).Inlined(Inlined =>
                             {
@@ -391,18 +421,30 @@ namespace FASILKOMPOINT.View.Mahasiswa
                                 Inlined.Spacing(42, Unit.Millimetre);
                                 Inlined.Item().Text("    3.2.1    Prestasi/Penghargaan").Bold().FontSize(9);
                             });
+                            for (int i = 0; i < namaPrestasiList.Count; i++)
+                            {
+                                x.Item().PaddingLeft(40, Unit.Millimetre).Text($"{i + 1}.    {namaPrestasiList[i]}").FontSize(9);
+                            }
                             //3.2.2
                             x.Item().PaddingLeft(25, Unit.Millimetre).Inlined(Inlined =>
                             {
                                 Inlined.Spacing(42, Unit.Millimetre);
                                 Inlined.Item().Text("    3.2.2    Keikutsertaan dalam Kegiatan dan Organisasi").Bold().FontSize(9);
                             });
+                            for (int i = 0; i < namaKegiatanList.Count; i++)
+                            {
+                                x.Item().PaddingLeft(40, Unit.Millimetre).Text($"{i + 1}.    {namaKegiatanList[i]}").FontSize(9);
+                            }
                             //3.2.3
                             x.Item().PaddingLeft(25, Unit.Millimetre).Inlined(Inlined =>
                             {
                                 Inlined.Spacing(42, Unit.Millimetre);
                                 Inlined.Item().Text("    3.2.3    Sertifikat Keahlian").Bold().FontSize(9);
                             });
+                            for (int i = 0; i < namaSertifikasiList.Count; i++)
+                            {
+                                x.Item().PaddingLeft(40, Unit.Millimetre).Text($"{i + 1}.    {namaSertifikasiList[i]}").FontSize(9);
+                            }
                             x.Item().PaddingLeft(25, Unit.Millimetre).Inlined(Inlined =>
                             {
                                 Inlined.Spacing(7, Unit.Millimetre);
@@ -516,7 +558,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
                             });
                             x.Item().PaddingLeft(42, Unit.Millimetre).Inlined(Inlined =>
                             {
-                                Inlined.Spacing(4, Unit.Millimetre);
+                                Inlined.Spacing(7, Unit.Millimetre);
                                 Inlined.Item().Text("menyelenggarakan program pendidikan vokasi.").FontSize(9);
                                 Inlined.Item().Text("education programs.").Italic().FontSize(9);
                             });
@@ -559,7 +601,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
                             x.Item().PaddingLeft(42, Unit.Millimetre).Inlined(Inlined =>
                             {
                                 Inlined.Spacing(4, Unit.Millimetre);
-                                Inlined.Item().Text("vokasi/profesi, dan  pelatihan-pelatihan (Gambar").FontSize(9);
+                                Inlined.Item().Text("vokasi/profesi,  dan  pelatihan-pelatihan  (Gambar").FontSize(9);
                                 Inlined.Item().Text("and also through competency  trainings  (Figure of").Italic().FontSize(9);
                             });
                             x.Item().PaddingLeft(42, Unit.Millimetre).Inlined(Inlined =>
@@ -606,16 +648,11 @@ namespace FASILKOMPOINT.View.Mahasiswa
                             });
                             x.Item().PaddingLeft(42, Unit.Millimetre).Inlined(Inlined =>
                             {
-                                Inlined.Spacing(4, Unit.Millimetre);
+                                Inlined.Spacing(5, Unit.Millimetre);
                                 Inlined.Item().Text("melalui pelatihan-pelatihan dan uji-uji kompetensi").FontSize(9);
                                 Inlined.Item().Text("through trainings and competency tests").Italic().FontSize(9);
                             });
-                            x.Item().PaddingLeft(42, Unit.Millimetre).Inlined(Inlined =>
-                            {
-                                Inlined.Spacing(4, Unit.Millimetre);
-                                Inlined.Item().Text("Berdasarkan    Kerangka     Kualifikasi     Nasional").FontSize(9);
-                                Inlined.Item().Text("Indonesian  Qualification  Framework  (IQF) has 9").Italic().FontSize(9);
-                            });
+
                             x.Item().AlignCenter().PaddingLeft(2, Unit.Centimetre).PaddingTop(5, Unit.Millimetre).Width(10, Unit.Centimetre).Image(linkKKNI).WithRasterDpi(144);
                             x.Item().AlignCenter().PaddingLeft(2, Unit.Centimetre).Text("Gambar Kerangka Kualifikasi Nasional Indonesia (KKNI)").FontSize(9);
                             x.Item().AlignCenter().PaddingLeft(2, Unit.Centimetre).Text("Figure of National Qualification Framework").FontSize(9);
@@ -637,7 +674,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
                     .Image(linkFooter);
                 });
             })
-            
+
                .GeneratePdfAndShow();
 
 

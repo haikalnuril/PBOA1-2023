@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FASILKOMPOINT")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+da88d7f56ce68fd894b6ad2915dabc9c48ff55fd")]
 [assembly: System.Reflection.AssemblyProductAttribute("FASILKOMPOINT")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FASILKOMPOINT")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

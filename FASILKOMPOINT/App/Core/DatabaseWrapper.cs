@@ -22,7 +22,7 @@ namespace FASILKOMPOINT.App.Core
 		private static readonly string DB_HOST = "localhost";
 		private static readonly string DB_DATABASE = "FASILKOMPOINT";
 		private static readonly string DB_USERNAME = "postgres";
-		private static readonly string DB_PASSWORD = "fatimah";
+		private static readonly string DB_PASSWORD = "haikalteng12";
 		private static readonly string DB_PORT = "5432";
 
 		private static NpgsqlConnection connection;
@@ -107,6 +107,30 @@ namespace FASILKOMPOINT.App.Core
 			}
 			return value;
 		}
+        public static string commandExecutorStringValue(string query, NpgsqlParameter[] parameters = null)
+        {
+            string value = "";
+            try
+            {
+                openConnection();
+                command.CommandText = query;
+                command.Parameters.AddRange(parameters);
+                command.Prepare();
+
+                object result = command.ExecuteScalar();
+                if (result != null && result != DBNull.Value)
+                {
+                    value = Convert.ToString(result);
+                }
+
+                closeConnection();
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return value;
+        }
 
     }
 }
