@@ -23,6 +23,8 @@ namespace FASILKOMPOINT.View.Mahasiswa
             dateTimePicker2.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.CustomFormat = "yyyy-MM-dd";
             dateTimePicker2.CustomFormat = "yyyy-MM-dd";
+
+            this.FormClosing += Halaman_FormClosing;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -56,7 +58,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
         {
             EntryDataSertifikasi entryDataSertifikasi = new EntryDataSertifikasi(username);
             entryDataSertifikasi.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void btn_simpan_Click(object sender, EventArgs e)
@@ -65,7 +67,15 @@ namespace FASILKOMPOINT.View.Mahasiswa
         }
         private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
         {
-            CloseAllForms.CloseHiddenForms(this);
+            try
+            {
+                CloseAllForms.CloseHiddenForms();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
     }
 }

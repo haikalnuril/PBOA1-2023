@@ -29,6 +29,8 @@ namespace FASILKOMPOINT.View.TU
             PDFButton.Name = "PDFButton";
             PDFButton.UseColumnTextForButtonValue = true;
             dataGridView1.Columns.Add(PDFButton);
+
+            this.FormClosing += Halaman_FormClosing;
         }
 
         private void BerandaTU_Load(object sender, EventArgs e)
@@ -66,7 +68,7 @@ namespace FASILKOMPOINT.View.TU
                 {
                     BerandaTU berandaTU = new BerandaTU();
                     berandaTU.Show();
-                    this.Close();
+                    this.Hide();
                 }
                 else
                 {
@@ -99,7 +101,7 @@ namespace FASILKOMPOINT.View.TU
             {
                 BerandaTU berandaTU = new BerandaTU();
                 berandaTU.Show();
-                this.Close();
+                this.Hide();
             }
         }
 
@@ -129,20 +131,28 @@ namespace FASILKOMPOINT.View.TU
                 {
                     Halaman HalamanLogin = new Halaman();
                     HalamanLogin.Show();
-                    this.Close();
+                    this.Hide();
 
                 }
                 else if (result == DialogResult.No)
                 {
                     BerandaTU berandaTU = new BerandaTU();
                     berandaTU.Show();
-                    this.Close();
+                    this.Hide();
                 }
             }
         }
         private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
         {
-            CloseAllForms.CloseHiddenForms(this);
+            try
+            {
+                CloseAllForms.CloseHiddenForms();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
         public void GeneratePDF()
         {

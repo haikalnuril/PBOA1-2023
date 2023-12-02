@@ -1,27 +1,20 @@
-﻿using System;
+﻿using FASILKOMPOINT.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace FASILKOMPOINT.App.Core
 {
     internal class CloseAllForms
     {
-        public static void CloseHiddenForms(Form currentForm)
+        public static void CloseHiddenForms()
         {
-            List<Form> formsToClose = new List<Form>();
+            Halaman halamanInstance = new Halaman();
 
-            foreach (Form form in Application.OpenForms)
+            if (halamanInstance != null)
             {
-                if (form != currentForm && !form.Visible)
-                {
-                    formsToClose.Add(form);
-                }
-            }
-            foreach (Form formToClose in formsToClose)
-            {
-                formToClose.Close();
+                halamanInstance.Close();
             }
         }
     }

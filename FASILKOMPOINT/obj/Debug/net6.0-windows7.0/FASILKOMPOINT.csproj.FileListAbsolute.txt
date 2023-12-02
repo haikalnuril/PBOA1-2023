@@ -225,3 +225,17 @@ D:\KULIAH SISTEM INFORMASI\SEMESTER 3\PBO\Projek\DEVELOP BGT\PBOA1-2023\FASILKOM
 D:\KULIAH SISTEM INFORMASI\SEMESTER 3\PBO\Projek\DEVELOP BGT\PBOA1-2023\FASILKOMPOINT\bin\Debug\net6.0-windows7.0\runtimes\win-arm64\native\libSkiaSharp.dll
 D:\KULIAH SISTEM INFORMASI\SEMESTER 3\PBO\Projek\DEVELOP BGT\PBOA1-2023\FASILKOMPOINT\bin\Debug\net6.0-windows7.0\runtimes\win-x64\native\libSkiaSharp.dll
 D:\KULIAH SISTEM INFORMASI\SEMESTER 3\PBO\Projek\DEVELOP BGT\PBOA1-2023\FASILKOMPOINT\bin\Debug\net6.0-windows7.0\runtimes\win-x86\native\libSkiaSharp.dll
+D:\FASILKOMPOINT 011223\PBOA1-2023\FASILKOMPOINT\bin\Debug\net6.0-windows7.0\HarfBuzzSharp.dll
+D:\FASILKOMPOINT 011223\PBOA1-2023\FASILKOMPOINT\bin\Debug\net6.0-windows7.0\QuestPDF.dll
+D:\FASILKOMPOINT 011223\PBOA1-2023\FASILKOMPOINT\bin\Debug\net6.0-windows7.0\SkiaSharp.dll
+D:\FASILKOMPOINT 011223\PBOA1-2023\FASILKOMPOINT\bin\Debug\net6.0-windows7.0\SkiaSharp.HarfBuzz.dll
+D:\FASILKOMPOINT 011223\PBOA1-2023\FASILKOMPOINT\bin\Debug\net6.0-windows7.0\runtimes\osx\native\libHarfBuzzSharp.dylib
+D:\FASILKOMPOINT 011223\PBOA1-2023\FASILKOMPOINT\bin\Debug\net6.0-windows7.0\runtimes\win-arm64\native\libHarfBuzzSharp.dll
+D:\FASILKOMPOINT 011223\PBOA1-2023\FASILKOMPOINT\bin\Debug\net6.0-windows7.0\runtimes\win-x64\native\libHarfBuzzSharp.dll
+D:\FASILKOMPOINT 011223\PBOA1-2023\FASILKOMPOINT\bin\Debug\net6.0-windows7.0\runtimes\win-x86\native\libHarfBuzzSharp.dll
+D:\FASILKOMPOINT 011223\PBOA1-2023\FASILKOMPOINT\bin\Debug\net6.0-windows7.0\runtimes\osx\native\libSkiaSharp.dylib
+D:\FASILKOMPOINT 011223\PBOA1-2023\FASILKOMPOINT\bin\Debug\net6.0-windows7.0\runtimes\win-arm64\native\libSkiaSharp.dll
+D:\FASILKOMPOINT 011223\PBOA1-2023\FASILKOMPOINT\bin\Debug\net6.0-windows7.0\runtimes\win-x64\native\libSkiaSharp.dll
+D:\FASILKOMPOINT 011223\PBOA1-2023\FASILKOMPOINT\bin\Debug\net6.0-windows7.0\runtimes\win-x86\native\libSkiaSharp.dll
+D:\FASILKOMPOINT 011223\PBOA1-2023\FASILKOMPOINT\obj\Debug\net6.0-windows7.0\FASILKOMPOINT.View.SKPI.GrafikKegiatan.resources
+D:\FASILKOMPOINT 011223\PBOA1-2023\FASILKOMPOINT\obj\Debug\net6.0-windows7.0\FASILKOMPOINT.View.SKPI.GrafikSertifikasi.resources

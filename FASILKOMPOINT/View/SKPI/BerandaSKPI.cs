@@ -25,27 +25,29 @@ namespace FASILKOMPOINT.View.SKPI
 
             button3.MouseEnter += button3_MouseEnter;
             button3.MouseLeave += button3_MouseLeave;
+
+            this.FormClosing += Halaman_FormClosing;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Grafik grafik = new Grafik();
             grafik.Show();
-            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            this.Hide();
             ValidasiSKPIMahasiswa validasiSKPIMahasiswa = new ValidasiSKPIMahasiswa();
             validasiSKPIMahasiswa.Show();
-            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            this.Hide();
             DataSKPIMahasiswa dataSKPIMahasiswa = new DataSKPIMahasiswa();
             dataSKPIMahasiswa.Show();
-            this.Close();
         }
 
         private void button1_MouseEnter(object sender, EventArgs e)
@@ -85,24 +87,24 @@ namespace FASILKOMPOINT.View.SKPI
             DialogResult result = MessageBox.Show("Apakah Anda yakin ingin logout?", "Konfirmasi Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
+                this.Hide();
                 Halaman HalamanLogin = new Halaman();
                 HalamanLogin.Show();
-                this.Close();
 
             }
             else if (result == DialogResult.No)
             {
+                this.Hide();
                 BerandaSKPI berandaSKPI = new BerandaSKPI();
                 berandaSKPI.Show();
-                this.Close();
             }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Grafik grafik = new Grafik();
             grafik.Show();
-            this.Close();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -117,20 +119,28 @@ namespace FASILKOMPOINT.View.SKPI
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            this.Hide();
             ValidasiSKPIMahasiswa validasiSKPIMahasiswa = new ValidasiSKPIMahasiswa();
             validasiSKPIMahasiswa.Show();
-            this.Close();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+            this.Hide();
             DataSKPIMahasiswa dataSKPIMahasiswa = new DataSKPIMahasiswa();
             dataSKPIMahasiswa.Show();
-            this.Close();
         }
         private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
         {
-            CloseAllForms.CloseHiddenForms(this);
+            try
+            {
+                CloseAllForms.CloseHiddenForms();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
     }
 }

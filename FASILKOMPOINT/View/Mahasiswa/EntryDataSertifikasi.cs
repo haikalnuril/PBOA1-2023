@@ -21,34 +21,36 @@ namespace FASILKOMPOINT.View.Mahasiswa
             this.username = username;
             dataGridView.DataSource = AktivitasSertifikasiContext.showSertifikasi(username, 603);
             dataGridView.Columns["Keterangan"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
+            this.FormClosing += Halaman_FormClosing;
         }
 
         private void btn_prestasi_Click(object sender, EventArgs e)
         {
             EntryDataPrestasi entryDataPrestasi = new EntryDataPrestasi(username);
             entryDataPrestasi.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void btn_kegiatan_Click(object sender, EventArgs e)
         {
             EntryDataKegiatan entryDataKegiatan = new EntryDataKegiatan(username);
             entryDataKegiatan.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void btn_sertifikasi_Click(object sender, EventArgs e)
         {
             EntryDataSertifikasi entryDataSertifikasi = new EntryDataSertifikasi(username);
             entryDataSertifikasi.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void btn_kembali_Click(object sender, EventArgs e)
         {
             BerandaMahasiswa berandaMahasiswa = new BerandaMahasiswa(username);
             berandaMahasiswa.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void EntryDataSertifikasi_Load(object sender, EventArgs e)
@@ -60,7 +62,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
         {
             FormEntryDataSertifikasi formEntryDataSertifikasi = new FormEntryDataSertifikasi(username);
             formEntryDataSertifikasi.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -77,7 +79,15 @@ namespace FASILKOMPOINT.View.Mahasiswa
         }
         private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
         {
-            CloseAllForms.CloseHiddenForms(this);
+            try
+            {
+                CloseAllForms.CloseHiddenForms();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
     }
 }

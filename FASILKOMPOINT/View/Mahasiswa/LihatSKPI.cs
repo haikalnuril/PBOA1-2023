@@ -18,11 +18,13 @@ namespace FASILKOMPOINT.View.Mahasiswa
         {
             InitializeComponent();
             this.username = username;
+
+            this.FormClosing += Halaman_FormClosing;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             BerandaMahasiswa berandaMahasiswa = new BerandaMahasiswa(username);
             berandaMahasiswa.Show();
         }
@@ -33,7 +35,15 @@ namespace FASILKOMPOINT.View.Mahasiswa
         }
         private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
         {
-            CloseAllForms.CloseHiddenForms(this);
+            try
+            {
+                CloseAllForms.CloseHiddenForms();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
     }
 }

@@ -25,6 +25,8 @@ namespace FASILKOMPOINT.View.Mahasiswa
             dateTimePicker2.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.CustomFormat = "yyyy-MM-dd";
             dateTimePicker2.CustomFormat = "yyyy-MM-dd";
+
+            this.FormClosing += Halaman_FormClosing;
         }
 
         private void lbl_judul_Click(object sender, EventArgs e)
@@ -36,7 +38,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
         {
             EntryDataKegiatan entryDataKegiatan = new EntryDataKegiatan(username);
             entryDataKegiatan.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void FormEntryDataKegiatan_Load(object sender, EventArgs e)
@@ -65,7 +67,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
                 file_bukti = file_bukti,
                 poin_id_poin = 0,
                 is_acc = "menunggu",
-                mahasiswa_username = Halaman.instance.username
+                mahasiswa_username = username
 
             };
             AktivitasKeikutsertaanContext.addKeikutsertaan(aktivitasKeikutsertaanBaru);
@@ -91,7 +93,15 @@ namespace FASILKOMPOINT.View.Mahasiswa
         }
         private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
         {
-            CloseAllForms.CloseHiddenForms(this);
+            try
+            {
+                CloseAllForms.CloseHiddenForms();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
     }
 }

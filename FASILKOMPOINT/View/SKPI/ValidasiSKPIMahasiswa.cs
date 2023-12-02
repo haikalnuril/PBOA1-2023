@@ -27,13 +27,15 @@ namespace FASILKOMPOINT.View.SKPI
             detailButton.Name = "detailButton";
             detailButton.UseColumnTextForButtonValue = true;
             dataGridView1.Columns.Insert(4, detailButton);
+
+            this.FormClosing += Halaman_FormClosing;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             BerandaSKPI berandaSKPI = new BerandaSKPI();
             berandaSKPI.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -62,7 +64,7 @@ namespace FASILKOMPOINT.View.SKPI
                 {
                     ValidasiSKPIMahasiswa validasiSKPIMahasiswa = new ValidasiSKPIMahasiswa();
                     validasiSKPIMahasiswa.Show();
-                    this.Close();
+                    this.Hide();
                 }
                 else
                 {
@@ -95,7 +97,7 @@ namespace FASILKOMPOINT.View.SKPI
             {
                 ValidasiSKPIMahasiswa validasiSKPIMahasiswa = new ValidasiSKPIMahasiswa();
                 validasiSKPIMahasiswa.Show();
-                this.Close();
+                this.Hide();
             }
         }
 
@@ -113,12 +115,20 @@ namespace FASILKOMPOINT.View.SKPI
 
                 DetailValidasiSKPIMahasiswa detailValidasiSKPIMahasiswa = new DetailValidasiSKPIMahasiswa(nim);
                 detailValidasiSKPIMahasiswa.Show();
-                this.Close();
+                this.Hide();
             }
         }
         private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
         {
-            CloseAllForms.CloseHiddenForms(this);
+            try
+            {
+                CloseAllForms.CloseHiddenForms();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
     }
 }

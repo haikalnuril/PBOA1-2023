@@ -45,13 +45,15 @@ namespace FASILKOMPOINT.View.SKPI
             dataGridView1.Columns["keterangan"].ReadOnly = true;
             dataGridView1.Columns["status"].ReadOnly = true;
             dataGridView1.Columns["poin"].ReadOnly = true;
+
+            this.FormClosing += Halaman_FormClosing;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             ValidasiSKPIMahasiswa validasiSKPIMahasiswa = new ValidasiSKPIMahasiswa();
             validasiSKPIMahasiswa.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void DetailValidasiSKPIMahasiswa_Load(object sender, EventArgs e)
@@ -73,18 +75,12 @@ namespace FASILKOMPOINT.View.SKPI
                     foreach (Match match in matches)
                     {
                         string link = match.Value;
-
-                        // Determine the context and open the link accordingly
                         if (keteranganValue.Contains($"Bukti: {link}"))
                         {
-                            // Open the link related to "Bukti:"
-                            // You can customize this part based on your requirements
                             ShellExecutor.OpenFileUsingDefaultProgram(link);
                         }
                         else if (keteranganValue.Contains($"Url Penyelenggara: {link}"))
                         {
-                            // Open the link related to "Url Penyelenggara:"
-                            // You can customize this part based on your requirements
                             ShellExecutor.OpenFileUsingDefaultProgram(link);
                         }
                     }
@@ -99,8 +95,13 @@ namespace FASILKOMPOINT.View.SKPI
                 {
                     MahasiswaContext.updateStatustoDitolak(idAktivitas);
                     DialogResult messageTolak = MessageBox.Show("Data berhasil ditolak, silahkan mengisi kolom komentar", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dataGridView1.Columns["komentar"].ReadOnly = false;
                 }
-                dataGridView1.Columns["komentar"].ReadOnly = false;
+                else
+                {
+                    dataGridView1.Columns["komentar"].ReadOnly = true;
+                }
+
             }
             else if (e.ColumnIndex == dataGridView1.Columns["terimaButton"].Index && e.RowIndex >= 0)
             {
@@ -119,7 +120,7 @@ namespace FASILKOMPOINT.View.SKPI
         {
             DetailValidasiSKPIMahasiswa detailValidasiSKPIMahasiswa = new DetailValidasiSKPIMahasiswa(nim);
             detailValidasiSKPIMahasiswa.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void SimpanValidasibutton_Click(object sender, EventArgs e)
@@ -139,7 +140,15 @@ namespace FASILKOMPOINT.View.SKPI
         }
         private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
         {
-            CloseAllForms.CloseHiddenForms(this);
+            try
+            {
+                CloseAllForms.CloseHiddenForms();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
     }
 }

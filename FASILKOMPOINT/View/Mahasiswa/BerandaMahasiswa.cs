@@ -34,6 +34,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
             button4.MouseLeave += button4_MouseLeave;
 
             this.username = username;
+            this.FormClosing += Halaman_FormClosing;
         }
 
         private void BerandaMahasiswa_Load(object sender, EventArgs e)
@@ -78,14 +79,14 @@ namespace FASILKOMPOINT.View.Mahasiswa
             {
                 Halaman HalamanLogin = new Halaman();
                 HalamanLogin.Show();
-                this.Close();
+                this.Hide();
 
             }
             else if (result == DialogResult.No)
             {
                 BerandaMahasiswa berandaMahasiswa = new BerandaMahasiswa(username);
                 berandaMahasiswa.Show();
-                this.Close();
+                this.Hide();
             }
         }
 
@@ -93,14 +94,14 @@ namespace FASILKOMPOINT.View.Mahasiswa
         {
             RekapDataSKPI rekapDataSKPI = new RekapDataSKPI(username);
             rekapDataSKPI.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             EntryDataPrestasi entryDataPrestasi = new EntryDataPrestasi(username);
             entryDataPrestasi.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -504,7 +505,15 @@ namespace FASILKOMPOINT.View.Mahasiswa
 
         private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
         {
-            CloseAllForms.CloseHiddenForms(this);
+            try
+            {
+                CloseAllForms.CloseHiddenForms();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
     }
 }

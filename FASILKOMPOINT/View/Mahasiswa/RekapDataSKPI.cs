@@ -23,6 +23,8 @@ namespace FASILKOMPOINT.View.Mahasiswa
             DataTable rekapData = AktivitasPrestasiContext.showRekapPrestasi(username, 602);
             dataGridView1.DataSource = rekapData;
             dataGridView1.Columns["Keterangan"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
+            this.FormClosing += Halaman_FormClosing;
         }
 
 
@@ -45,7 +47,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
 
         private void btn_kembali_Click(object sender, EventArgs e)
         {
-            this.Close(); // Sembunyikan form saat ini
+            this.Hide();
             BerandaMahasiswa berandaMahasiswa = new BerandaMahasiswa(username);
             berandaMahasiswa.Show();
         }
@@ -65,7 +67,15 @@ namespace FASILKOMPOINT.View.Mahasiswa
         }
         private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
         {
-            CloseAllForms.CloseHiddenForms(this);
+            try
+            {
+                CloseAllForms.CloseHiddenForms();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
     }
 }

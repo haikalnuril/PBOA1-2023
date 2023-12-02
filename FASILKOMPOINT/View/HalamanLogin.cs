@@ -18,7 +18,7 @@ namespace FASILKOMPOINT.View
 {
     public partial class Halaman : Form
     {
-        public static Halaman instance;
+        public Halaman instance;
         public TextBox tb1;
         private TextBox tb2;
         private bool isButton1Hovered = false;
@@ -32,6 +32,8 @@ namespace FASILKOMPOINT.View
             passwordtb.PasswordChar = '*';
             loginbutton.MouseEnter += button1_MouseEnter;
             loginbutton.MouseLeave += button1_MouseLeave;
+
+            this.FormClosing += Halaman_FormClosing;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -101,7 +103,15 @@ namespace FASILKOMPOINT.View
 
         private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
         {
-            CloseAllForms.CloseHiddenForms(this);
+            try
+            {
+                CloseAllForms.CloseHiddenForms();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
     }
 }

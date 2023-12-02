@@ -118,6 +118,7 @@ namespace FASILKOMPOINT.View.SKPI
             Controls.Add(button4);
             Controls.Add(dataGridView1);
             Controls.Add(pictureBox1);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Margin = new Padding(4, 3, 4, 3);
             Name = "DetailValidasiSKPIMahasiswa";
             StartPosition = FormStartPosition.CenterScreen;

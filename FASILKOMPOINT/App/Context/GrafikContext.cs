@@ -19,13 +19,13 @@ namespace FASILKOMPOINT.App.Context
 
         public static DataTable grafikKegiatan()
         {
-            string query = $"SELECT EXTRACT(YEAR FROM tanggal_berakhir) AS tahun, COUNT(*) FILTER(WHERE kategori_id_kategori = 601) AS jumlah_prestasi FROM aktivitas GROUP BY tahun;";
+            string query = $"SELECT EXTRACT(YEAR FROM tanggal_berakhir) AS tahun, COUNT(*) FILTER(WHERE kategori_id_kategori = 601) AS jumlah_kegiatan FROM aktivitas GROUP BY tahun;";
             DataTable dataGrafik = queryExecutor(query);
             return dataGrafik;
         }
         public static DataTable grafikSertifikasi()
         {
-            string query = $"SELECT EXTRACT(YEAR FROM tanggal_berakhir) AS tahun, COUNT(*) FILTER(WHERE kategori_id_kategori = 603) AS jumlah_prestasi FROM aktivitas GROUP BY tahun;";
+            string query = $"SELECT EXTRACT(YEAR FROM tanggal_berakhir) AS tahun, COUNT(*) FILTER(WHERE kategori_id_kategori = 603) AS jumlah_sertifikasi FROM aktivitas GROUP BY tahun;";
             DataTable dataGrafik = queryExecutor(query);
             return dataGrafik;
         }
