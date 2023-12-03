@@ -14,11 +14,11 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace FASILKOMPOINT.View.Mahasiswa
 {
-    public partial class FormEditEntryDataKegiatan : Form
+    public partial class FormUbahDataKegiatan : Form
     {
         public string username { get; set; }
         public int id_aktivitas { get; set; }
-        public FormEditEntryDataKegiatan(int id_aktivitas, string username)
+        public FormUbahDataKegiatan(int id_aktivitas, string username)
         {
             InitializeComponent();
             this.username = username;
@@ -34,7 +34,8 @@ namespace FASILKOMPOINT.View.Mahasiswa
             cbSubKategoriKegiatan.DisplayMember = "nama_subkategori";
             cbSubKategoriKegiatan.ValueMember = "id_subkategori";
 
-            this.FormClosing += Halaman_FormClosing;
+            cbSubButirSerta.Enabled = false;
+            cbButirSerta.Enabled = false;
         }
 
         private void lbl_judul_Click(object sender, EventArgs e)
@@ -42,14 +43,14 @@ namespace FASILKOMPOINT.View.Mahasiswa
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btn_kembali_Click(object sender, EventArgs e)
         {
             EntryDataKegiatan entryDataKegiatan = new EntryDataKegiatan(username);
             entryDataKegiatan.Show();
             this.Hide();
         }
 
-        private void FormEditEntryDataKegiatan_Load(object sender, EventArgs e)
+        private void FormUbahDataKegiatan_Load(object sender, EventArgs e)
         {
 
         }
@@ -107,18 +108,6 @@ namespace FASILKOMPOINT.View.Mahasiswa
         {
 
         }
-        private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            try
-            {
-                CloseAllForms.CloseHiddenForms();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-        }
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -160,14 +149,15 @@ namespace FASILKOMPOINT.View.Mahasiswa
 
             cbButirSerta.DisplayMember = "nama_butir";
             cbButirSerta.ValueMember = "nama_butir";
+            cbButirSerta.Enabled = true;
         }
 
         private void cbButirSerta_SelectedIndexChanged(object sender, EventArgs e)
         {
             int selectedIdx4 = cbButirSerta.SelectedIndex;
-            int selectedIdx5 = cbSubKategoriKegiatan.SelectedIndex;
+            int selectedIdx3 = cbSubKategoriKegiatan.SelectedIndex;
 
-            if (selectedIdx5 == 0)
+            if (selectedIdx3 == 0)
             {
                 if (selectedIdx4 == 0)
                 {
@@ -187,7 +177,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
                 }
             }
 
-            else if (selectedIdx5 == 1)
+            else if (selectedIdx3 == 1)
             {
                 if (selectedIdx4 <= 0)
                 {
@@ -195,7 +185,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
                 }
             }
 
-            else if (selectedIdx5 == 2)
+            else if (selectedIdx3 == 2)
             {
                 if (selectedIdx4 <= 0)
                 {
@@ -203,7 +193,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
                 }
             }
 
-            else if (selectedIdx5 == 3)
+            else if (selectedIdx3 == 3)
             {
                 if (selectedIdx4 <= 0)
                 {
@@ -211,7 +201,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
                 }
             }
 
-            else if (selectedIdx5 == 4)
+            else if (selectedIdx3 == 4)
             {
                 if (selectedIdx4 == 0)
                 {
@@ -224,13 +214,19 @@ namespace FASILKOMPOINT.View.Mahasiswa
                 }
             }
 
-            else if (selectedIdx5 <= 5)
+            else if (selectedIdx3 <= 5)
+            {
+                cbSubButirSerta.DataSource = null;
+            }
+
+            else if (selectedIdx3 <= 6)
             {
                 cbSubButirSerta.DataSource = null;
             }
 
             cbSubButirSerta.DisplayMember = "nama_butir";
             cbSubButirSerta.ValueMember = "nama_butir";
+            cbSubButirSerta.Enabled = true;
         }
         private void lbl_tgl_Click(object sender, EventArgs e)
         {
@@ -241,6 +237,5 @@ namespace FASILKOMPOINT.View.Mahasiswa
         {
 
         }
-
     }
 }

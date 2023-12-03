@@ -31,7 +31,8 @@ namespace FASILKOMPOINT.View.Mahasiswa
             cbSubKategoriKegiatan.DisplayMember = "nama_subkategori";
             cbSubKategoriKegiatan.ValueMember = "id_subkategori";
 
-            this.FormClosing += Halaman_FormClosing;
+            cbButirSerta.Enabled = false;
+            cbSubButirSerta.Enabled = false;
         }
 
         private void lbl_judul_Click(object sender, EventArgs e)
@@ -39,7 +40,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btn_kembali_Click(object sender, EventArgs e)
         {
             EntryDataKegiatan entryDataKegiatan = new EntryDataKegiatan(username);
             entryDataKegiatan.Show();
@@ -101,18 +102,6 @@ namespace FASILKOMPOINT.View.Mahasiswa
         {
 
         }
-        private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            try
-            {
-                CloseAllForms.CloseHiddenForms();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
-
-            }
-        }
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -121,110 +110,116 @@ namespace FASILKOMPOINT.View.Mahasiswa
 
         private void cbSubKategoriKegiatan_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int selectedIdx3 = cbSubKategoriKegiatan.SelectedIndex;
+            int selectedIdx1 = cbSubKategoriKegiatan.SelectedIndex;
 
-            if (selectedIdx3 == 0)
+            if (selectedIdx1 == 0)
             {
                 cbButirSerta.DataSource = ButirContext.showTingkatKegiatanMenduduki();
             }
-            else if (selectedIdx3 == 1)
+            else if (selectedIdx1 == 1)
             {
                 cbButirSerta.DataSource = ButirContext.showTingkatKegiatanJabatan();
             }
-            else if (selectedIdx3 == 2)
+            else if (selectedIdx1 == 2)
             {
                 cbButirSerta.DataSource = ButirContext.showTingkatKegiatanKepanitiaan();
             }
-            else if (selectedIdx3 == 3)
+            else if (selectedIdx1 == 3)
             {
                 cbButirSerta.DataSource = ButirContext.showTingkatKegiatanPK2MABA();
             }
-            else if (selectedIdx3 == 4)
+            else if (selectedIdx1 == 4)
             {
                 cbButirSerta.DataSource = ButirContext.showTingkatKegiatanKepesertaan();
             }
-            else if (selectedIdx3 == 5)
+            else if (selectedIdx1 == 5)
             {
                 cbButirSerta.DataSource = ButirContext.showTingkatKegiatanPenelitian();
             }
-            else if (selectedIdx3 == 6)
+            else if (selectedIdx1 == 6)
             {
                 cbButirSerta.DataSource = ButirContext.showTingkatKegiatanPenugasan();
             }
 
             cbButirSerta.DisplayMember = "nama_butir";
             cbButirSerta.ValueMember = "nama_butir";
+            cbButirSerta.Enabled = true;
         }
 
         private void cbButirSerta_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int selectedIdx4 = cbButirSerta.SelectedIndex;
-            int selectedIdx5 = cbSubKategoriKegiatan.SelectedIndex;
+            int selectedIdx2 = cbButirSerta.SelectedIndex;
+            int selectedIdx1 = cbSubKategoriKegiatan.SelectedIndex;
 
-            if (selectedIdx5 == 0)
+            if (selectedIdx1 == 0)
             {
-                if (selectedIdx4 == 0)
+                if (selectedIdx2 == 0)
                 {
                     cbSubButirSerta.DataSource = SubbutirContext.showKegiatanJabatanUniv();
                 }
-                else if (selectedIdx4 == 1)
+                else if (selectedIdx2 == 1)
                 {
                     cbSubButirSerta.DataSource = SubbutirContext.showKegiatanJabatanFakultas();
                 }
-                else if (selectedIdx4 == 2)
+                else if (selectedIdx2 == 2)
                 {
                     cbSubButirSerta.DataSource = SubbutirContext.showKegiatanJabatanFakultas();
                 }
-                else if (selectedIdx4 <= 3)
+                else if (selectedIdx2 <= 3)
                 {
                     cbSubButirSerta.DataSource = null;
                 }
             }
 
-            else if (selectedIdx5 == 1)
+            else if (selectedIdx1 == 1)
             {
-                if (selectedIdx4 <= 0)
+                if (selectedIdx2 <= 0)
                 {
                     cbSubButirSerta.DataSource = SubbutirContext.showKegiatanJabatanLuarKampus();
                 }
             }
 
-            else if (selectedIdx5 == 2)
+            else if (selectedIdx1 == 2)
             {
-                if (selectedIdx4 <= 0)
+                if (selectedIdx2 <= 0)
                 {
                     cbSubButirSerta.DataSource = SubbutirContext.showKegiatanKarya();
                 }
             }
 
-            else if (selectedIdx5 == 3)
+            else if (selectedIdx1 == 3)
             {
-                if (selectedIdx4 <= 0)
+                if (selectedIdx2 <= 0)
                 {
                     cbSubButirSerta.DataSource = SubbutirContext.showKegiatanJabatanFakultas();
                 }
             }
 
-            else if (selectedIdx5 == 4)
+            else if (selectedIdx1 == 4)
             {
-                if (selectedIdx4 == 0)
+                if (selectedIdx2 == 0)
                 {
                     cbSubButirSerta.DataSource = SubbutirContext.showKegiatanKepesertaanWorkshop();
                 }
 
-                else if (selectedIdx4 <= 1)
+                else if (selectedIdx2 <= 1)
                 {
                     cbSubButirSerta.DataSource = SubbutirContext.showKegiatanKepesertaan();
                 }
             }
 
-            else if (selectedIdx5 <= 5)
+            else if (selectedIdx1 <= 5)
             {
                 cbSubButirSerta.DataSource = null;
             }
 
+            else if (selectedIdx1 <= 6)
+            {
+                cbSubButirSerta.DataSource = null;
+            }
             cbSubButirSerta.DisplayMember = "nama_butir";
             cbSubButirSerta.ValueMember = "nama_butir";
+            cbSubButirSerta.Enabled = true;
         }
     }
 }

@@ -18,8 +18,6 @@ namespace FASILKOMPOINT.View.Mahasiswa
         {
             InitializeComponent();
             this.username = username;
-
-            this.FormClosing += Halaman_FormClosing;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -32,18 +30,6 @@ namespace FASILKOMPOINT.View.Mahasiswa
         private void LihatSKPI_Load(object sender, EventArgs e)
         {
 
-        }
-        private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            try
-            {
-                CloseAllForms.CloseHiddenForms();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
         }
     }
 }

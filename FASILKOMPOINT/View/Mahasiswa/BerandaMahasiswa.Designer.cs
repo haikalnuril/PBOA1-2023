@@ -155,11 +155,11 @@ namespace FASILKOMPOINT.View.Mahasiswa
             Controls.Add(button1);
             Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(5, 3, 5, 3);
             Name = "BerandaMahasiswa";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Beranda Mahasiswa";
-            FormClosing += Halaman_FormClosing;
             Load += BerandaMahasiswa_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

@@ -29,13 +29,6 @@ namespace FASILKOMPOINT.View.Mahasiswa
             cbButirSertifikasi.DataSource = ButirContext.showTingkatSertifikasi();
             cbButirSertifikasi.DisplayMember = "nama_butir";
             cbButirSertifikasi.ValueMember = "nama_butir";
-
-            this.FormClosing += Halaman_FormClosing;
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void lbl_judul_Click(object sender, EventArgs e)
@@ -60,9 +53,11 @@ namespace FASILKOMPOINT.View.Mahasiswa
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btn_kembali_Click(object sender, EventArgs e)
         {
-
+            EntryDataSertifikasi entryDataSertifikasi = new EntryDataSertifikasi(username);
+            entryDataSertifikasi.Show();
+            this.Hide();
         }
 
         private void btn_simpan_Click(object sender, EventArgs e)
@@ -93,18 +88,6 @@ namespace FASILKOMPOINT.View.Mahasiswa
                 this.Hide();
                 EntryDataSertifikasi entryDataSertifikasi = new EntryDataSertifikasi(username);
                 entryDataSertifikasi.Show();
-            }
-        }
-        private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            try
-            {
-                CloseAllForms.CloseHiddenForms();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
         }
     }

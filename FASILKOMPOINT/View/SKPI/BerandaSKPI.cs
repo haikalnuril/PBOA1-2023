@@ -25,8 +25,6 @@ namespace FASILKOMPOINT.View.SKPI
 
             button3.MouseEnter += button3_MouseEnter;
             button3.MouseLeave += button3_MouseLeave;
-
-            this.FormClosing += Halaman_FormClosing;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -129,18 +127,6 @@ namespace FASILKOMPOINT.View.SKPI
             this.Hide();
             DataSKPIMahasiswa dataSKPIMahasiswa = new DataSKPIMahasiswa();
             dataSKPIMahasiswa.Show();
-        }
-        private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            try
-            {
-                CloseAllForms.CloseHiddenForms();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
         }
     }
 }

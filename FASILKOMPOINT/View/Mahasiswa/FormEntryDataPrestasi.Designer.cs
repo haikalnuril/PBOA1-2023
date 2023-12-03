@@ -50,7 +50,7 @@
             lbl_nosurat = new Label();
             cbButirPrestasi = new ComboBox();
             cbSubButirPrestasi = new ComboBox();
-            button2 = new Button();
+            btn_kembali = new Button();
             btn_simpan = new Button();
             label3 = new Label();
             cbSubKategoriPrestasi = new ComboBox();
@@ -253,6 +253,7 @@
             // 
             // cbButirPrestasi
             // 
+            cbButirPrestasi.Enabled = false;
             cbButirPrestasi.FormattingEnabled = true;
             cbButirPrestasi.Items.AddRange(new object[] { "Pilih Level", "Fakultas", "Universitas", "Jurusan", "Nasional", "Internasional", "Propinsi", "Kab/Kota", "Wilayah/Regional" });
             cbButirPrestasi.Location = new Point(303, 272);
@@ -264,6 +265,7 @@
             // 
             // cbSubButirPrestasi
             // 
+            cbSubButirPrestasi.Enabled = false;
             cbSubButirPrestasi.FormattingEnabled = true;
             cbSubButirPrestasi.Items.AddRange(new object[] { "Pilih Juara", "Juara Lain", "Juara I", "Juara II", "Juara III" });
             cbSubButirPrestasi.Location = new Point(303, 308);
@@ -272,19 +274,19 @@
             cbSubButirPrestasi.Size = new Size(226, 23);
             cbSubButirPrestasi.TabIndex = 76;
             // 
-            // button2
+            // btn_kembali
             // 
-            button2.BackColor = Color.OrangeRed;
-            button2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = Color.Transparent;
-            button2.Location = new Point(620, 465);
-            button2.Margin = new Padding(2);
-            button2.Name = "button2";
-            button2.Size = new Size(79, 24);
-            button2.TabIndex = 83;
-            button2.Text = "Kembali";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+            btn_kembali.BackColor = Color.OrangeRed;
+            btn_kembali.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_kembali.ForeColor = Color.Transparent;
+            btn_kembali.Location = new Point(620, 465);
+            btn_kembali.Margin = new Padding(2);
+            btn_kembali.Name = "btn_kembali";
+            btn_kembali.Size = new Size(79, 24);
+            btn_kembali.TabIndex = 83;
+            btn_kembali.Text = "Kembali";
+            btn_kembali.UseVisualStyleBackColor = false;
+            btn_kembali.Click += btn_kembali_Click;
             // 
             // btn_simpan
             // 
@@ -327,7 +329,7 @@
             ClientSize = new Size(921, 528);
             Controls.Add(cbSubKategoriPrestasi);
             Controls.Add(label3);
-            Controls.Add(button2);
+            Controls.Add(btn_kembali);
             Controls.Add(btn_simpan);
             Controls.Add(cbSubButirPrestasi);
             Controls.Add(cbButirPrestasi);
@@ -351,12 +353,12 @@
             Controls.Add(lbl_nama);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(2);
             Name = "FormEntryDataPrestasi";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form Entry Data Prestasi";
-            FormClosing += Halaman_FormClosing;
-            Load += EntriDataSKPI_Load;
+            Load += EntryDataPrestasi_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -384,7 +386,7 @@
         private Label lbl_nosurat;
         private ComboBox cbButirPrestasi;
         private ComboBox cbSubButirPrestasi;
-        private Button button2;
+        private Button btn_kembali;
         private Button btn_simpan;
         private Label label3;
         private ComboBox cbSubKategoriPrestasi;

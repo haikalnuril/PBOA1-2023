@@ -110,10 +110,10 @@ namespace FASILKOMPOINT.View
             Controls.Add(passwordtb);
             Controls.Add(usernametb);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Halaman";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
-            FormClosing += Halaman_FormClosing;
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();

@@ -18,8 +18,6 @@ namespace FASILKOMPOINT.View.SKPI
         {
             InitializeComponent();
             dataGridView1.DataSource = MahasiswaContext.showDataSKPIMahasiswa();
-
-            this.FormClosing += Halaman_FormClosing;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -79,18 +77,6 @@ namespace FASILKOMPOINT.View.SKPI
         private void button1_Click(object sender, EventArgs e)
         {
             ExecuteSearch();
-        }
-        private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            try
-            {
-                CloseAllForms.CloseHiddenForms();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
         }
     }
 }

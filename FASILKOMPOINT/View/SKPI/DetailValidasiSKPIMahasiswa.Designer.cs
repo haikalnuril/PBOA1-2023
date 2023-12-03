@@ -33,6 +33,7 @@ namespace FASILKOMPOINT.View.SKPI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetailValidasiSKPIMahasiswa));
             pictureBox1 = new PictureBox();
             dataGridView1 = new DataGridView();
             button4 = new Button();
@@ -59,8 +60,8 @@ namespace FASILKOMPOINT.View.SKPI
             // 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             dataGridView1.BackgroundColor = SystemColors.ButtonHighlight;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(12, 112);
@@ -119,11 +120,11 @@ namespace FASILKOMPOINT.View.SKPI
             Controls.Add(dataGridView1);
             Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 3, 4, 3);
             Name = "DetailValidasiSKPIMahasiswa";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Detail Validasi SKPI Mahasiswa";
-            FormClosing += Halaman_FormClosing;
             Load += DetailValidasiSKPIMahasiswa_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

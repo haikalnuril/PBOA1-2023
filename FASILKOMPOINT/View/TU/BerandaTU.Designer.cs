@@ -122,11 +122,11 @@ namespace FASILKOMPOINT.View.TU
             Controls.Add(label1);
             Controls.Add(dataGridView1);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
             Name = "BerandaTU";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Beranda TU";
-            FormClosing += Halaman_FormClosing;
             Load += BerandaTU_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

@@ -33,7 +33,6 @@ namespace FASILKOMPOINT.View.Mahasiswa
             dataGridView.Columns.Insert(8, editButton);
 
             dataGridView.Columns["id_aktivitas"].Visible = false;
-            this.FormClosing += Halaman_FormClosing;
         }
 
         private void btn_kegiatan_Click(object sender, EventArgs e)
@@ -90,29 +89,15 @@ namespace FASILKOMPOINT.View.Mahasiswa
             else if (e.ColumnIndex == dataGridView.Columns["editButton"].Index && e.RowIndex >= 0)
             {
                 int id_aktivitas = Convert.ToInt32(dataGridView.Rows[e.RowIndex].Cells["id_aktivitas"].Value);
-                
-                using (FormEditEntryDataKegiatan formEditEntryKegiatan = new FormEditEntryDataKegiatan(id_aktivitas, username))
+
+                using (FormUbahDataKegiatan formEditEntryKegiatan = new FormUbahDataKegiatan(id_aktivitas, username))
                 {
-                    FormEditEntryDataKegiatan halamaneditKegiatan = new FormEditEntryDataKegiatan(id_aktivitas, username);
+                    FormUbahDataKegiatan halamaneditKegiatan = new FormUbahDataKegiatan(id_aktivitas, username);
                     halamaneditKegiatan.Show();
+                    this.Hide();
                 }
-
-                dataGridView.DataSource = null;
-                dataGridView.DataSource = AktivitasKeikutsertaanContext.showKeikutsertaan;
             }
 
-        }
-        private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            try
-            {
-                CloseAllForms.CloseHiddenForms();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
         }
     }
 }

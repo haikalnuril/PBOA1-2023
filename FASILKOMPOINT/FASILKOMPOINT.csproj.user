@@ -10,13 +10,13 @@
     <Compile Update="View\Mahasiswa\BerandaMahasiswa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="View\Mahasiswa\FormEditEntryDataKegiatan.cs">
+    <Compile Update="View\Mahasiswa\FormUbahDataKegiatan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="View\Mahasiswa\FormEditEntryDataPrestasi.cs">
+    <Compile Update="View\Mahasiswa\FormUbahDataPrestasi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="View\Mahasiswa\FormEditEntrySertifikasi.cs">
+    <Compile Update="View\Mahasiswa\FormUbahDataSertifikasi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="View\Mahasiswa\FormEntryDataKegiatan.cs">
@@ -58,5 +58,10 @@
     <Compile Update="View\TU\BerandaTU.cs">
       <SubType>Form</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="View\Mahasiswa\BerandaMahasiswa.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

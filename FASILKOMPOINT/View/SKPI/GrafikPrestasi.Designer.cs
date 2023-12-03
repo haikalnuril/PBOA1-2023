@@ -30,6 +30,7 @@
         {
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Grafik));
             btn_kegiatan = new Button();
             btn_sertifikasi = new Button();
             btn_prestasi = new Button();
@@ -142,11 +143,11 @@
             Controls.Add(label1);
             Controls.Add(chart1);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
             Name = "Grafik";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Grafik Prestasi";
-            FormClosing += Halaman_FormClosing;
             Load += Grafik_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)chart1).EndInit();

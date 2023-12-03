@@ -1,6 +1,6 @@
 ﻿namespace FASILKOMPOINT.View.Mahasiswa
 {
-    partial class FormEditEntryDataPrestasi
+    partial class FormUbahDataPrestasi
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUbahDataPrestasi));
             cbSubKategoriPrestasi = new ComboBox();
             label3 = new Label();
-            button2 = new Button();
+            btn_kembali = new Button();
             btn_simpan = new Button();
             cbSubButirPrestasi = new ComboBox();
             cbButirPrestasi = new ComboBox();
@@ -74,19 +75,19 @@
             label3.TabIndex = 109;
             label3.Text = "Kategori Prestasi";
             // 
-            // button2
+            // btn_kembali
             // 
-            button2.BackColor = Color.OrangeRed;
-            button2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = Color.Transparent;
-            button2.Location = new Point(627, 512);
-            button2.Margin = new Padding(2);
-            button2.Name = "button2";
-            button2.Size = new Size(79, 24);
-            button2.TabIndex = 108;
-            button2.Text = "Kembali";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+            btn_kembali.BackColor = Color.OrangeRed;
+            btn_kembali.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_kembali.ForeColor = Color.Transparent;
+            btn_kembali.Location = new Point(627, 512);
+            btn_kembali.Margin = new Padding(2);
+            btn_kembali.Name = "btn_kembali";
+            btn_kembali.Size = new Size(79, 24);
+            btn_kembali.TabIndex = 108;
+            btn_kembali.Text = "Kembali";
+            btn_kembali.UseVisualStyleBackColor = false;
+            btn_kembali.Click += btn_kembali_Click;
             // 
             // btn_simpan
             // 
@@ -104,6 +105,7 @@
             // 
             // cbSubButirPrestasi
             // 
+            cbSubButirPrestasi.Enabled = false;
             cbSubButirPrestasi.FormattingEnabled = true;
             cbSubButirPrestasi.Items.AddRange(new object[] { "Pilih Juara", "Juara Lain", "Juara I", "Juara II", "Juara III" });
             cbSubButirPrestasi.Location = new Point(310, 330);
@@ -115,6 +117,7 @@
             // 
             // cbButirPrestasi
             // 
+            cbButirPrestasi.Enabled = false;
             cbButirPrestasi.FormattingEnabled = true;
             cbButirPrestasi.Items.AddRange(new object[] { "Pilih Level", "Fakultas", "Universitas", "Jurusan", "Nasional", "Internasional", "Propinsi", "Kab/Kota", "Wilayah/Regional" });
             cbButirPrestasi.Location = new Point(310, 294);
@@ -173,6 +176,7 @@
             check_hari.TabIndex = 100;
             check_hari.Text = "lebih dari 1 hari";
             check_hari.UseVisualStyleBackColor = false;
+            check_hari.CheckedChanged += check_hari_CheckedChanged;
             // 
             // dateTimePicker2
             // 
@@ -245,7 +249,7 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Location = new Point(124, 337);
+            label2.Location = new Point(124, 333);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
             label2.Size = new Size(34, 15);
@@ -309,11 +313,11 @@
             label1.Location = new Point(310, 58);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(297, 32);
+            label1.Size = new Size(295, 32);
             label1.TabIndex = 86;
-            label1.Text = "Form Entry Data Prestasi";
+            label1.Text = "Form Ubah Data Prestasi";
             // 
-            // FormEditEntryDataPrestasi
+            // FormUbahDataPrestasi
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -321,7 +325,7 @@
             ClientSize = new Size(921, 618);
             Controls.Add(cbSubKategoriPrestasi);
             Controls.Add(label3);
-            Controls.Add(button2);
+            Controls.Add(btn_kembali);
             Controls.Add(btn_simpan);
             Controls.Add(cbSubButirPrestasi);
             Controls.Add(cbButirPrestasi);
@@ -345,9 +349,11 @@
             Controls.Add(lbl_nama);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            Name = "FormEditEntryDataPrestasi";
-            Text = "FormEditEntryDataPrestasi";
-            Load += FormEditEntryDataPrestasi_Load;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Name = "FormUbahDataPrestasi";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Form Ubah Data Prestasi";
+            Load += FormUbahDataPrestasi_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -356,7 +362,7 @@
 
         private ComboBox cbSubKategoriPrestasi;
         private Label label3;
-        private Button button2;
+        private Button btn_kembali;
         private Button btn_simpan;
         private ComboBox cbSubButirPrestasi;
         private ComboBox cbButirPrestasi;

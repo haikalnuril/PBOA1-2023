@@ -30,9 +30,8 @@ namespace FASILKOMPOINT.View.Mahasiswa
             cbSubKategoriPrestasi.DisplayMember = "nama_subkategori";
             cbSubKategoriPrestasi.ValueMember = "id_subkategori";
 
-
-
-            this.FormClosing += Halaman_FormClosing;
+            cbButirPrestasi.Enabled = false;
+            cbSubButirPrestasi.Enabled = false;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -49,7 +48,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
         {
 
         }
-        private void EntriDataSKPI_Load(object sender, EventArgs e)
+        private void EntryDataPrestasi_Load(object sender, EventArgs e)
         {
 
         }
@@ -76,7 +75,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btn_kembali_Click(object sender, EventArgs e)
         {
             EntryDataPrestasi entryDataPrestasi = new EntryDataPrestasi(username);
             entryDataPrestasi.Show();
@@ -119,19 +118,6 @@ namespace FASILKOMPOINT.View.Mahasiswa
                 this.Hide();
                 EntryDataPrestasi entryDataPrestasi = new EntryDataPrestasi(username);
                 entryDataPrestasi.Show();
-
-            }
-        }
-        private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            try
-            {
-                CloseAllForms.CloseHiddenForms();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
         }
 
@@ -154,6 +140,8 @@ namespace FASILKOMPOINT.View.Mahasiswa
 
             cbButirPrestasi.DisplayMember = "nama_butir";
             cbButirPrestasi.ValueMember = "nama_butir";
+
+            cbButirPrestasi.Enabled = true;
         }
 
         private void cbButirPrestasi_SelectedIndexChanged(object sender, EventArgs e)
@@ -192,6 +180,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
                 cbSubButirPrestasi.DisplayMember = null;
                 cbSubButirPrestasi.ValueMember = null;
             }
+            cbSubButirPrestasi.Enabled = true;
         }
 
     }

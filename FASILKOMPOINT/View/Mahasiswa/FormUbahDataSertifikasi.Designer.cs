@@ -1,6 +1,6 @@
 ﻿namespace FASILKOMPOINT.View.Mahasiswa
 {
-    partial class FormEditEntrySertifikasi
+    partial class FormUbahDataSertifikasi
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button2 = new Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUbahDataSertifikasi));
+            btn_kembali = new Button();
             btn_simpan = new Button();
             cbButirSertifikasi = new ComboBox();
             check_hari = new CheckBox();
@@ -46,18 +47,19 @@
             lbl_judul = new Label();
             SuspendLayout();
             // 
-            // button2
+            // btn_kembali
             // 
-            button2.BackColor = Color.OrangeRed;
-            button2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = Color.Transparent;
-            button2.Location = new Point(625, 448);
-            button2.Margin = new Padding(2);
-            button2.Name = "button2";
-            button2.Size = new Size(79, 24);
-            button2.TabIndex = 97;
-            button2.Text = "Kembali";
-            button2.UseVisualStyleBackColor = false;
+            btn_kembali.BackColor = Color.OrangeRed;
+            btn_kembali.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_kembali.ForeColor = Color.Transparent;
+            btn_kembali.Location = new Point(625, 448);
+            btn_kembali.Margin = new Padding(2);
+            btn_kembali.Name = "btn_kembali";
+            btn_kembali.Size = new Size(79, 24);
+            btn_kembali.TabIndex = 97;
+            btn_kembali.Text = "Kembali";
+            btn_kembali.UseVisualStyleBackColor = false;
+            btn_kembali.Click += btn_kembali_Click;
             // 
             // btn_simpan
             // 
@@ -82,6 +84,7 @@
             cbButirSertifikasi.Name = "cbButirSertifikasi";
             cbButirSertifikasi.Size = new Size(226, 23);
             cbButirSertifikasi.TabIndex = 95;
+            cbButirSertifikasi.SelectedIndexChanged += cbButirSertifikasi_SelectedIndexChanged;
             // 
             // check_hari
             // 
@@ -94,6 +97,7 @@
             check_hari.TabIndex = 94;
             check_hari.Text = "lebih dari 1 hari";
             check_hari.UseVisualStyleBackColor = false;
+            check_hari.CheckedChanged += check_hari_CheckedChanged;
             // 
             // dateTimePicker2
             // 
@@ -210,17 +214,17 @@
             lbl_judul.Location = new Point(308, 56);
             lbl_judul.Margin = new Padding(2, 0, 2, 0);
             lbl_judul.Name = "lbl_judul";
-            lbl_judul.Size = new Size(321, 32);
+            lbl_judul.Size = new Size(319, 32);
             lbl_judul.TabIndex = 82;
-            lbl_judul.Text = "Form Entry Data Sertifikasi";
+            lbl_judul.Text = "Form Ubah Data Sertifikasi";
             // 
-            // FormEditEntrySertifikasi
+            // FormUbahDataSertifikasi
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.FASILKOM_POINT__1_;
             ClientSize = new Size(921, 528);
-            Controls.Add(button2);
+            Controls.Add(btn_kembali);
             Controls.Add(btn_simpan);
             Controls.Add(cbButirSertifikasi);
             Controls.Add(check_hari);
@@ -237,16 +241,17 @@
             Controls.Add(lbl_nama);
             Controls.Add(lbl_judul);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            Name = "FormEditEntrySertifikasi";
-            Text = "FormEditEntrySertifikasi";
-            Load += FormEditEntrySertifikasi_Load;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Name = "FormUbahDataSertifikasi";
+            Text = "Form Ubah Data Sertifikasi";
+            Load += FormUbahDataSertifikasi_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button button2;
+        private Button btn_kembali;
         private Button btn_simpan;
         private ComboBox cbButirSertifikasi;
         private CheckBox check_hari;

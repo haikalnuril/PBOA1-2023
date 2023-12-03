@@ -157,11 +157,11 @@ namespace FASILKOMPOINT.View.Mahasiswa
             Controls.Add(dataGridView);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(2);
             Name = "EntryDataSertifikasi";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Entry Data SKPI";
-            FormClosing += Halaman_FormClosing;
             Load += EntryDataSertifikasi_Load;
             ((ISupportInitialize)dataGridView).EndInit();
             panel1.ResumeLayout(false);

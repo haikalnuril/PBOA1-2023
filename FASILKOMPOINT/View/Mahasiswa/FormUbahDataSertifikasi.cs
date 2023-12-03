@@ -13,14 +13,13 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace FASILKOMPOINT.View.Mahasiswa
 {
-    public partial class FormEditEntrySertifikasi : Form
+    public partial class FormUbahDataSertifikasi : Form
     {
         public string username { get; set; }
         public int id_aktivitas { get; set; }
-        public FormEditEntrySertifikasi(string username, int id_aktivitas)
+        public FormUbahDataSertifikasi(string username, int id_aktivitas)
         {
             InitializeComponent();
-            this.username = username;
             dateTimePicker2.Enabled = false;
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker2.Format = DateTimePickerFormat.Custom;
@@ -34,7 +33,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
             this.id_aktivitas = id_aktivitas;
         }
 
-        private void FormEditEntrySertifikasi_Load(object sender, EventArgs e)
+        private void FormUbahDataSertifikasi_Load(object sender, EventArgs e)
         {
 
         }
@@ -68,6 +67,30 @@ namespace FASILKOMPOINT.View.Mahasiswa
                 EntryDataSertifikasi entryDataSertifikasi = new EntryDataSertifikasi(username);
                 entryDataSertifikasi.Show();
             }
+        }
+
+        private void check_hari_CheckedChanged(object sender, EventArgs e)
+        {
+            if (check_hari.Checked)
+            {
+                dateTimePicker2.Enabled = true;
+            }
+            else
+            {
+                dateTimePicker2.Enabled = false;
+            }
+        }
+
+        private void btn_kembali_Click(object sender, EventArgs e)
+        {
+            EntryDataSertifikasi entryDataSertifikasi = new EntryDataSertifikasi(username);
+            entryDataSertifikasi.Show();
+            this.Hide();
+        }
+
+        private void cbButirSertifikasi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

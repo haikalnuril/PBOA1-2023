@@ -35,25 +35,11 @@ namespace FASILKOMPOINT.View.SKPI
             chart1.ChartAreas[0].AxisX.LabelStyle.Interval = 1;
 
             seriesPrestasi.ChartType = SeriesChartType.Column;
-
-            this.FormClosing += Halaman_FormClosing;
         }
 
         private void Grafik_Load(object sender, EventArgs e)
         {
 
-        }
-        private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            try
-            {
-                CloseAllForms.CloseHiddenForms();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
         }
 
         private void btn_kembali_Click(object sender, EventArgs e)

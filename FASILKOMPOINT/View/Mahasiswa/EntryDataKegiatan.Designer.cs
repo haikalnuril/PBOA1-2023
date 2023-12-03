@@ -155,11 +155,11 @@
             Controls.Add(dataGridView);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(2);
             Name = "EntryDataKegiatan";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Entry Data SKPI";
-            FormClosing += Halaman_FormClosing;
             Load += EntryDataKegiatan_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
             panel1.ResumeLayout(false);

@@ -13,12 +13,12 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace FASILKOMPOINT.View.Mahasiswa
 {
-    public partial class FormEditEntryDataPrestasi : Form
+    public partial class FormUbahDataPrestasi : Form
     {
         public string username { get; set; }
         public int id_aktivitas { get; set; }
 
-        public FormEditEntryDataPrestasi(string username, int id_aktivitas)
+        public FormUbahDataPrestasi(string username, int id_aktivitas)
         {
             InitializeComponent();
             this.username = username;
@@ -33,14 +33,17 @@ namespace FASILKOMPOINT.View.Mahasiswa
             cbSubKategoriPrestasi.DataSource = subKategoriContext.showSubKategoriPrestasi();
             cbSubKategoriPrestasi.DisplayMember = "nama_subkategori";
             cbSubKategoriPrestasi.ValueMember = "id_subkategori";
+
+            cbButirPrestasi.Enabled = false;
+            cbSubButirPrestasi.Enabled = false;
         }
 
-        private void FormEditEntryDataPrestasi_Load(object sender, EventArgs e)
+        private void FormUbahDataPrestasi_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btn_kembali_Click(object sender, EventArgs e)
         {
             EntryDataPrestasi entryDataPrestasi = new EntryDataPrestasi(username);
             entryDataPrestasi.Show();
@@ -107,6 +110,8 @@ namespace FASILKOMPOINT.View.Mahasiswa
 
             cbButirPrestasi.DisplayMember = "nama_butir";
             cbButirPrestasi.ValueMember = "nama_butir";
+
+            cbButirPrestasi.Enabled = true;
         }
 
         private void cbButirPrestasi_SelectedIndexChanged(object sender, EventArgs e)
@@ -145,11 +150,24 @@ namespace FASILKOMPOINT.View.Mahasiswa
                 cbSubButirPrestasi.DisplayMember = null;
                 cbSubButirPrestasi.ValueMember = null;
             }
+            cbSubButirPrestasi.Enabled = true;
         }
 
         private void cbSubButirPrestasi_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void check_hari_CheckedChanged(object sender, EventArgs e)
+        {
+            if (check_hari.Checked)
+            {
+                dateTimePicker2.Enabled = true;
+            }
+            else
+            {
+                dateTimePicker2.Enabled = false;
+            }
         }
     }
 }

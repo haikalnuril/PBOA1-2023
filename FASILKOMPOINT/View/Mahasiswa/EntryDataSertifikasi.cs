@@ -29,7 +29,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
             editButton.UseColumnTextForButtonValue = true;
             dataGridView.Columns.Insert(8, editButton);
 
-            this.FormClosing += Halaman_FormClosing;
+            dataGridView.Columns["id_aktivitas"].Visible = false;
         }
 
         private void btn_prestasi_Click(object sender, EventArgs e)
@@ -87,25 +87,11 @@ namespace FASILKOMPOINT.View.Mahasiswa
             {
                 int id_aktivitas = Convert.ToInt32(dataGridView.Rows[e.RowIndex].Cells["id_aktivitas"].Value);
 
-                using (FormEditEntrySertifikasi formEditEntrySertifikasi = new FormEditEntrySertifikasi(username, id_aktivitas))
+                using (FormUbahDataSertifikasi formEditEntrySertifikasi = new FormUbahDataSertifikasi(username, id_aktivitas))
                 {
-                    FormEditEntrySertifikasi halamaneditSertifikasi = new FormEditEntrySertifikasi(username, id_aktivitas);
+                    FormUbahDataSertifikasi halamaneditSertifikasi = new FormUbahDataSertifikasi(username, id_aktivitas);
                     halamaneditSertifikasi.Show();
                 }
-
-                dataGridView.DataSource = null;
-                dataGridView.DataSource = AktivitasSertifikasiContext.showSertifikasi;
-            }
-        }
-        private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            try
-            {
-                CloseAllForms.CloseHiddenForms();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
         }

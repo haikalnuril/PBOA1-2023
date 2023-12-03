@@ -22,8 +22,10 @@ namespace FASILKOMPOINT.View.SKPI
             ValidasiSKPIMahasiswa validasiSKPIMahasiswa = Application.OpenForms["ValidasiSKPIMahasiswa"] as ValidasiSKPIMahasiswa;
 
             dataGridView1.DataSource = MahasiswaContext.showDetailValidasiSKPI(nim);
-            dataGridView1.Columns["Keterangan"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             this.nim = nim;
+
+            dataGridView1.Columns["Keterangan"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
             DataGridViewButtonColumn terimaButton = new DataGridViewButtonColumn();
             terimaButton.HeaderText = "Terima";
             terimaButton.Text = "Terima";
@@ -39,14 +41,11 @@ namespace FASILKOMPOINT.View.SKPI
             dataGridView1.Columns.Insert(5, tolakButton);
 
             dataGridView1.Columns["id_aktivitas"].Visible = false;
-            dataGridView1.Columns["Keterangan"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             dataGridView1.Columns["komentar"].ReadOnly = true;
             dataGridView1.Columns["nama"].ReadOnly = true;
             dataGridView1.Columns["keterangan"].ReadOnly = true;
             dataGridView1.Columns["status"].ReadOnly = true;
             dataGridView1.Columns["poin"].ReadOnly = true;
-
-            this.FormClosing += Halaman_FormClosing;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -94,7 +93,7 @@ namespace FASILKOMPOINT.View.SKPI
                 if (message == DialogResult.Yes)
                 {
                     MahasiswaContext.updateStatustoDitolak(idAktivitas);
-                    DialogResult messageTolak = MessageBox.Show("Data berhasil ditolak, silahkan mengisi kolom komentar", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DialogResult messageTolak = MessageBox.Show("Data berhasil ditolak, silahkan mengisi kolom komentar!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     dataGridView1.Columns["komentar"].ReadOnly = false;
                 }
                 else
@@ -137,18 +136,6 @@ namespace FASILKOMPOINT.View.SKPI
             }
             MessageBox.Show("Komentar berhasil disimpan!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
             refreshform();
-        }
-        private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            try
-            {
-                CloseAllForms.CloseHiddenForms();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
         }
     }
 }

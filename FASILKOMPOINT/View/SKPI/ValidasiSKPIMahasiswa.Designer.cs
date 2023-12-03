@@ -136,7 +136,6 @@
             Name = "ValidasiSKPIMahasiswa";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Validasi SKPI Mahasiswa";
-            FormClosing += Halaman_FormClosing;
             Load += ValidasiSKPIMahasiswa_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

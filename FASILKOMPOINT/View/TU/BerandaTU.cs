@@ -32,8 +32,6 @@ namespace FASILKOMPOINT.View.TU
             PDFButton.Name = "PDFButton";
             PDFButton.UseColumnTextForButtonValue = true;
             dataGridView1.Columns.Add(PDFButton);
-
-            this.FormClosing += Halaman_FormClosing;
         }
 
         private void BerandaTU_Load(object sender, EventArgs e)
@@ -95,7 +93,7 @@ namespace FASILKOMPOINT.View.TU
             }
         }
 
-        
+
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -408,7 +406,7 @@ namespace FASILKOMPOINT.View.TU
                                     Inlined.Spacing(42, Unit.Millimetre);
                                     Inlined.Item().Text("    3.2.1    Prestasi/Penghargaan").Bold().FontSize(9);
                                 });
-                                for ( int i = 0; i < namaPrestasiList.Count; i++)
+                                for (int i = 0; i < namaPrestasiList.Count; i++)
                                 {
                                     x.Item().PaddingLeft(40, Unit.Millimetre).Text($"{i + 1}.   {namaPrestasiList[i]}").FontSize(9);
                                 }
@@ -549,18 +547,6 @@ namespace FASILKOMPOINT.View.TU
                     berandaTU.Show();
                     this.Hide();
                 }
-            }
-        }
-        private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            try
-            {
-                CloseAllForms.CloseHiddenForms();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
         }
     }

@@ -32,8 +32,6 @@ namespace FASILKOMPOINT.View
             passwordtb.PasswordChar = '*';
             loginbutton.MouseEnter += button1_MouseEnter;
             loginbutton.MouseLeave += button1_MouseLeave;
-
-            this.FormClosing += Halaman_FormClosing;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -75,6 +73,10 @@ namespace FASILKOMPOINT.View
                 berandaMahasiswa.Show();
                 this.Hide();
             }
+            else
+            {
+                MessageBox.Show("Maaf username atau password yang Anda inputkan salah, silahkan ulangi kembali.", "Login Gagal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void button1_MouseEnter(object sender, EventArgs e)
@@ -99,19 +101,6 @@ namespace FASILKOMPOINT.View
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            try
-            {
-                CloseAllForms.CloseHiddenForms();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
         }
     }
 }

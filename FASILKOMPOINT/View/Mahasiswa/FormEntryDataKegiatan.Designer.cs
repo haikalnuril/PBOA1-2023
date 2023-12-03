@@ -37,7 +37,7 @@
             lbl_tgl = new Label();
             lbl_nama = new Label();
             lbl_judul = new Label();
-            button2 = new Button();
+            btn_kembali = new Button();
             btn_simpan = new Button();
             label1 = new Label();
             dateTimePicker2 = new DateTimePicker();
@@ -130,19 +130,19 @@
             lbl_judul.Text = "Form Entry Data Kegiatan";
             lbl_judul.Click += lbl_judul_Click;
             // 
-            // button2
+            // btn_kembali
             // 
-            button2.BackColor = Color.OrangeRed;
-            button2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = Color.Transparent;
-            button2.Location = new Point(623, 443);
-            button2.Margin = new Padding(2);
-            button2.Name = "button2";
-            button2.Size = new Size(79, 24);
-            button2.TabIndex = 54;
-            button2.Text = "Kembali";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+            btn_kembali.BackColor = Color.OrangeRed;
+            btn_kembali.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_kembali.ForeColor = Color.Transparent;
+            btn_kembali.Location = new Point(623, 443);
+            btn_kembali.Margin = new Padding(2);
+            btn_kembali.Name = "btn_kembali";
+            btn_kembali.Size = new Size(79, 24);
+            btn_kembali.TabIndex = 54;
+            btn_kembali.Text = "Kembali";
+            btn_kembali.UseVisualStyleBackColor = false;
+            btn_kembali.Click += btn_kembali_Click;
             // 
             // btn_simpan
             // 
@@ -194,6 +194,7 @@
             // 
             // cbSubButirSerta
             // 
+            cbSubButirSerta.Enabled = false;
             cbSubButirSerta.FormattingEnabled = true;
             cbSubButirSerta.Items.AddRange(new object[] { "Pilih Level", "Fakultas", "Universitas", "Jurusan", "Nasional", "Internasional", "Propinsi", "Kab/Kota", "Wilayah/Regional" });
             cbSubButirSerta.Location = new Point(297, 332);
@@ -214,6 +215,7 @@
             // 
             // cbButirSerta
             // 
+            cbButirSerta.Enabled = false;
             cbButirSerta.FormattingEnabled = true;
             cbButirSerta.Location = new Point(297, 292);
             cbButirSerta.Name = "cbButirSerta";
@@ -255,7 +257,7 @@
             Controls.Add(check_hari);
             Controls.Add(dateTimePicker2);
             Controls.Add(label1);
-            Controls.Add(button2);
+            Controls.Add(btn_kembali);
             Controls.Add(btn_simpan);
             Controls.Add(txt_bukti);
             Controls.Add(lbl_bukti);
@@ -266,11 +268,11 @@
             Controls.Add(lbl_nama);
             Controls.Add(lbl_judul);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(2);
             Name = "FormEntryDataKegiatan";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form Entry Data Kegiatan";
-            FormClosing += Halaman_FormClosing;
             Load += FormEntryDataKegiatan_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -286,7 +288,7 @@
         private Label lbl_tgl;
         private Label lbl_nama;
         private Label lbl_judul;
-        private Button button2;
+        private Button btn_kembali;
         private Button btn_simpan;
         private Label label1;
         private DateTimePicker dateTimePicker2;

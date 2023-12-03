@@ -34,7 +34,6 @@ namespace FASILKOMPOINT.View.Mahasiswa
             button4.MouseLeave += button4_MouseLeave;
 
             this.username = username;
-            this.FormClosing += Halaman_FormClosing;
         }
 
         private void BerandaMahasiswa_Load(object sender, EventArgs e)
@@ -671,31 +670,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
                     .Image(linkFooter);
                 });
             })
-
                .GeneratePdfAndShow();
-
-
-            //LihatSKPI LihatSKPI = new LihatSKPI(username);
-            //LihatSKPI.Show();
-            //this.Close();
-        }
-
-        private void GeneratePdfAndShow()
-        {
-            throw new NotImplementedException();
-        }
-
-        private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            try
-            {
-                CloseAllForms.CloseHiddenForms();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
         }
     }
 }

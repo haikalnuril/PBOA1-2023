@@ -164,11 +164,11 @@ namespace FASILKOMPOINT.View.SKPI
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 3, 4, 3);
             Name = "BerandaSKPI";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Beranda SKPI";
-            FormClosing += Halaman_FormClosing;
             Load += BerandaSKPI_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();

@@ -24,7 +24,7 @@ namespace FASILKOMPOINT.View.Mahasiswa
             dataGridView1.DataSource = rekapData;
             dataGridView1.Columns["Keterangan"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
 
-            this.FormClosing += Halaman_FormClosing;
+            defaultpoin.Text = Convert.ToString(AktivitasKeikutsertaanContext.AkumulasiPoin(username));
         }
 
 
@@ -65,17 +65,10 @@ namespace FASILKOMPOINT.View.Mahasiswa
             dataGridView1.DataSource = rekapData;
             dataGridView1.Columns["Keterangan"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
         }
-        private void Halaman_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            try
-            {
-                CloseAllForms.CloseHiddenForms();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            }
+        private void defaultpoin_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

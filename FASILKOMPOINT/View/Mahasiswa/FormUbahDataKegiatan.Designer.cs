@@ -1,6 +1,6 @@
 ﻿namespace FASILKOMPOINT.View.Mahasiswa
 {
-    partial class FormEditEntryDataKegiatan
+    partial class FormUbahDataKegiatan
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUbahDataKegiatan));
             cbSubKategoriKegiatan = new ComboBox();
             label3 = new Label();
             cbButirSerta = new ComboBox();
@@ -36,7 +37,7 @@
             check_hari = new CheckBox();
             dateTimePicker2 = new DateTimePicker();
             label1 = new Label();
-            button2 = new Button();
+            btn_kembali = new Button();
             btn_simpan = new Button();
             txt_bukti = new TextBox();
             lbl_bukti = new Label();
@@ -69,6 +70,7 @@
             // 
             // cbButirSerta
             // 
+            cbButirSerta.Enabled = false;
             cbButirSerta.FormattingEnabled = true;
             cbButirSerta.Location = new Point(290, 289);
             cbButirSerta.Name = "cbButirSerta";
@@ -88,6 +90,7 @@
             // 
             // cbSubButirSerta
             // 
+            cbSubButirSerta.Enabled = false;
             cbSubButirSerta.FormattingEnabled = true;
             cbSubButirSerta.Location = new Point(290, 329);
             cbSubButirSerta.Margin = new Padding(2);
@@ -106,6 +109,7 @@
             check_hari.TabIndex = 100;
             check_hari.Text = "lebih dari 1 hari";
             check_hari.UseVisualStyleBackColor = false;
+            check_hari.CheckedChanged += check_hari_CheckedChanged;
             // 
             // dateTimePicker2
             // 
@@ -127,18 +131,19 @@
             label1.TabIndex = 98;
             label1.Text = "s/d";
             // 
-            // button2
+            // btn_kembali
             // 
-            button2.BackColor = Color.OrangeRed;
-            button2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = Color.Transparent;
-            button2.Location = new Point(634, 456);
-            button2.Margin = new Padding(2);
-            button2.Name = "button2";
-            button2.Size = new Size(79, 24);
-            button2.TabIndex = 97;
-            button2.Text = "Kembali";
-            button2.UseVisualStyleBackColor = false;
+            btn_kembali.BackColor = Color.OrangeRed;
+            btn_kembali.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_kembali.ForeColor = Color.Transparent;
+            btn_kembali.Location = new Point(634, 456);
+            btn_kembali.Margin = new Padding(2);
+            btn_kembali.Name = "btn_kembali";
+            btn_kembali.Size = new Size(79, 24);
+            btn_kembali.TabIndex = 97;
+            btn_kembali.Text = "Kembali";
+            btn_kembali.UseVisualStyleBackColor = false;
+            btn_kembali.Click += btn_kembali_Click;
             // 
             // btn_simpan
             // 
@@ -232,11 +237,11 @@
             lbl_judul.Location = new Point(308, 49);
             lbl_judul.Margin = new Padding(2, 0, 2, 0);
             lbl_judul.Name = "lbl_judul";
-            lbl_judul.Size = new Size(309, 32);
+            lbl_judul.Size = new Size(307, 32);
             lbl_judul.TabIndex = 88;
-            lbl_judul.Text = "Form Entry Data Kegiatan";
+            lbl_judul.Text = "Form Ubah Data Kegiatan";
             // 
-            // FormEditEntryDataKegiatan
+            // FormUbahDataKegiatan
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -250,7 +255,7 @@
             Controls.Add(check_hari);
             Controls.Add(dateTimePicker2);
             Controls.Add(label1);
-            Controls.Add(button2);
+            Controls.Add(btn_kembali);
             Controls.Add(btn_simpan);
             Controls.Add(txt_bukti);
             Controls.Add(lbl_bukti);
@@ -261,11 +266,12 @@
             Controls.Add(lbl_nama);
             Controls.Add(lbl_judul);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            Name = "FormEditEntryDataKegiatan";
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Name = "FormUbahDataKegiatan";
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "FormEditEntryDataKegiatan";
-            Load += FormEditEntryDataKegiatan_Load;
+            Text = "Form Ubah Data Kegiatan";
+            Load += FormUbahDataKegiatan_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -280,7 +286,7 @@
         private CheckBox check_hari;
         private DateTimePicker dateTimePicker2;
         private Label label1;
-        private Button button2;
+        private Button btn_kembali;
         private Button btn_simpan;
         private TextBox txt_bukti;
         private Label lbl_bukti;
