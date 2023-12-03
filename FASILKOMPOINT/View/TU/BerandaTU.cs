@@ -74,7 +74,7 @@ namespace FASILKOMPOINT.View.TU
                     PDFButton.UseColumnTextForButtonValue = true;
                     dataGridView1.Columns.Add(PDFButton);
 
-                    dataGridView1.Columns["nama_mahasiswa"].DisplayIndex = 1;
+                    dataGridView1.Columns["Nama Mahasiswa"].DisplayIndex = 1;
                 }
             }
             catch (Exception ex)
