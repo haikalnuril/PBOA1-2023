@@ -14,6 +14,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FASILKOMPOINT
-build_property.ProjectDir = D:\clone\PBOA1-2023\FASILKOMPOINT\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.ProjectDir = D:\KULIAH SISTEM INFORMASI\SEMESTER 3\PBO\Projek\DEVELOP BGT 4\PBOA1-2023\FASILKOMPOINT\
